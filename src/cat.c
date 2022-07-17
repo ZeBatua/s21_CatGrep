@@ -1,119 +1,121 @@
-#include "s21_cat.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <getopt.h>
 
-int flags_status(flags *status) {
-  status->b = 0;
-  status->e = 0;
-  status->E = 0;
-  status->v = 0;
-  status->n = 0;
-  status->s = 0;
-  status->T = 0;
-  return 0;
-}; 
+struct flag {
+  int b_flag;
+  int e_flag;
+  int n_flag;
+  int s_flag;
+  int t_flag;
+  int v_flag;
+} flags;
 
-int getFlags(flags *status, char f) {
-  int error = 0;
-  switch (f) {
-    case 'b':
-      status->b = 1;
-      break;
-    case 'e':
-      status->e = 1;
-      break;
-    case 'E':
-      status->E = 1;
-      break;
-    case 'v':
-      status->v = 1;
-      break;
-    case 'n':
-      status->n = 1;
-      break;
-    case 's':
-      status->s = 1;
-      break;
-    case 't':
-      status->t = 1;
-      break;
-    case 'T':
-      status->T = 1;
-      break;
+const struct option long_options[] = {
+    {"number-nonblank", no_argument, NULL, 'b'},
+    {"number", no_argument, NULL, 'n'},
+    {"squeeze-blank", no_argument, NULL, 's'},
+};
 
-    default:
-      break;
-  }
+int getFlags(int ARGC, char* ARGV[]) {
+    int find_f;
+    int option_index = 0;
+    find_f = getopt_long(ARGC, ARGV, "benstET", long_options, &option_index);
+    if (find_f != -1) {
+        switch (find_f) {
+            case 'b':
+                flags.b_flag = 1;
+                break;
+            case 'e':
+                flags.e_flag = 1;
+                flags.v_flag = 1;
+                break;
+            case 'E':
+                flags.e_flag = 1;
+                break;
+            case 'n':
+                flags.n_flag = 1;
+                break;
+            case 's':
+                flags.s_flag = 1;
+                break;
+            case 't':
+                flags.t_flag = 1;
+                flags.v_flag = 1;
+                break;
+            case 'T':
+                flags.t_flag = 1;
+                break;
+            case '?':
+                break;
+        }
+    }
+    return find_f;
 }
 
-int main(int ARGC, char **ARGV) {  //  подается  s21_cat -l test.txt
-  // int count = 0;
-  // if (ARGC > 1) {
-  //   while (ARGV) {
-  //     if (ARGV[count][0] == '-') break;
-  //   }
-  // }
+void s21_cat (char* ARGV[]) {
+    FILE *file = NULL;
+    file = fopen(*ARGV, "r");
 
-  // fscanf(f, "%s", c);
-
+    if (file == NULL) { //кароче  у меня косяк когда подаешь --- и в если в иначе
+        fprintf(stderr, "s21_cat: %s: No such file or 12345678directory\n", *ARGV);
+    } else {
+        int count_line = 1;
+        int empty_lines = -1;
+        char read_char = '\0';
+        char last = '\n';
+        while ((read_char = fgetc(file)) != EOF) {
+            if ((flags.b_flag != 1 && flags.n_flag == 1 && last == '\n') ||
+                (flags.b_flag == 1 && read_char != '\n' && last == '\n')) {
+                fprintf(stdout, "%6d\t", count_line++);
+            }
+            if (flags.e_flag == 1 && read_char == '\n') {
+                fprintf(stdout, "%c", '$');
+            }
+            if (flags.s_flag == 1 && read_char == '\n') {
+                if (empty_lines >= 1) {
+                    continue;
+                }
+                empty_lines++;
+            } else {
+                empty_lines = -1;
+            }
+            if (flags.t_flag == 1 && read_char == '\t') {
+                fprintf(stdout, "^I");
+                continue;
+            }
+            if (flags.v_flag == 1 && read_char != '\t' && read_char != '\n') {
+                if (read_char >= 32 && read_char <= 126) {
+                    fprintf(stdout, "%c", read_char);
+                    continue;
+                } else {
+                    fprintf(stdout, "^%c", read_char + 64);
+                    continue;
+                }
+            }
+            fprintf(stdout, "%c", read_char);
+            last = read_char;
+        }        
+    }
+    fclose(file);
 }
 
+int main(int ARGC, char *ARGV[]) {  //  подается  s21_cat -l test.txt
+    int error = 0;
+    int flags_num = 0;
+    for (int i = 0; i < ARGC; i++){
+        error = getFlags(ARGC, ARGV);
+        if (error == -1) {
+            continue;
+        } else if (error == '?') {
+            exit(0);
+        } else {
+            flags_num++;
+        }
+    }
+    for (int i = 1 + flags_num; i < ARGC; i++) {
+        s21_cat(&ARGV[i]);
+    }
+    return 0; // 0 если все ок, 1 если произошла любая ошибка
 
-int flag_n() {
-  FILE *f;
-  char c[1000];
-  int i = 1;
-  f = fopen("test_file.txt", "r");
-	while(!feof(f)) {
-		if (fgets(c, 1000, f) != NULL) {
-				if (c[0] == '\n') {
-					printf("%8s", c);
-				} else {
-			printf("%6d%2s", i, c);
-			i++;
-			}
-		}
-	}
-  fclose(f);
-  return 0;
-}
-
-int flag_b() {
-  FILE *f; 
-  char c[1000];
-  int i = 1;
-  f = fopen("test_file.txt", "r");
-	while(!feof(f)) {
-		if (fgets(c, 1000, f) != NULL) {
-			printf("%6d%2s", i, c);
-			i++;
-		}
-	}
-  fclose(f);
-  return 0;
-} 
-
-int flag_s() {
-  FILE *f;
-  char c[1000];
-  int count = 0;
-  int double_print = 0;
-  f = fopen("test_file.txt", "r");
-	while(!feof(f)) {
-		if (fgets(c, 1000, f) != NULL) {
-			if (c[0] == '\n') {
-				count++;
-			}
-			if (count == 2) {
-				count = 1;
-			} else {
-				printf("%s", c);
-				double_print++;
-				if (double_print == 2) { 
-					count = 0;
-					double_print = 0;
-				}
-			}
-		}
-	}
-  fclose(f);
-  return 0;
 }
