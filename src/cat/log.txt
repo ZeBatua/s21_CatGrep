@@ -1,0 +1,3791 @@
+
+-E test1.txt
+-T test1.txt
+--number-nonblank test1.txt
+--number test1.txt
+--squeeze-blank test1.txt
+-b -E test1.txt
+-b -T test1.txt
+-b --number-nonblank test1.txt
+-b --number test1.txt
+-b --squeeze-blank test1.txt
+-e -E test1.txt
+-e -T test1.txt
+-e --number-nonblank test1.txt
+-e --number test1.txt
+-e --squeeze-blank test1.txt
+-n -E test1.txt
+-n -T test1.txt
+-n --number-nonblank test1.txt
+-n --number test1.txt
+-n --squeeze-blank test1.txt
+-s -E test1.txt
+-s -T test1.txt
+-s --number-nonblank test1.txt
+-s --number test1.txt
+-s --squeeze-blank test1.txt
+-t -E test1.txt
+-t -T test1.txt
+-t --number-nonblank test1.txt
+-t --number test1.txt
+-t --squeeze-blank test1.txt
+-v -E test1.txt
+-v -T test1.txt
+-v --number-nonblank test1.txt
+-v --number test1.txt
+-v --squeeze-blank test1.txt
+-E -b test1.txt
+-E -e test1.txt
+-E -n test1.txt
+-E -s test1.txt
+-E -t test1.txt
+-E -v test1.txt
+-E -T test1.txt
+-E --number-nonblank test1.txt
+-E --number test1.txt
+-E --squeeze-blank test1.txt
+-T -b test1.txt
+-T -e test1.txt
+-T -n test1.txt
+-T -s test1.txt
+-T -t test1.txt
+-T -v test1.txt
+-T -E test1.txt
+-T --number-nonblank test1.txt
+-T --number test1.txt
+-T --squeeze-blank test1.txt
+--number-nonblank -b test1.txt
+--number-nonblank -e test1.txt
+--number-nonblank -n test1.txt
+--number-nonblank -s test1.txt
+--number-nonblank -t test1.txt
+--number-nonblank -v test1.txt
+--number-nonblank -E test1.txt
+--number-nonblank -T test1.txt
+--number-nonblank --number test1.txt
+--number-nonblank --squeeze-blank test1.txt
+--number -b test1.txt
+--number -e test1.txt
+--number -n test1.txt
+--number -s test1.txt
+--number -t test1.txt
+--number -v test1.txt
+--number -E test1.txt
+--number -T test1.txt
+--number --number-nonblank test1.txt
+--number --squeeze-blank test1.txt
+--squeeze-blank -b test1.txt
+--squeeze-blank -e test1.txt
+--squeeze-blank -n test1.txt
+--squeeze-blank -s test1.txt
+--squeeze-blank -t test1.txt
+--squeeze-blank -v test1.txt
+--squeeze-blank -E test1.txt
+--squeeze-blank -T test1.txt
+--squeeze-blank --number-nonblank test1.txt
+--squeeze-blank --number test1.txt
+-b -e -E test1.txt
+-b -e -T test1.txt
+-b -e --number-nonblank test1.txt
+-b -e --number test1.txt
+-b -e --squeeze-blank test1.txt
+-b -n -E test1.txt
+-b -n -T test1.txt
+-b -n --number-nonblank test1.txt
+-b -n --number test1.txt
+-b -n --squeeze-blank test1.txt
+-b -s -E test1.txt
+-b -s -T test1.txt
+-b -s --number-nonblank test1.txt
+-b -s --number test1.txt
+-b -s --squeeze-blank test1.txt
+-b -t -E test1.txt
+-b -t -T test1.txt
+-b -t --number-nonblank test1.txt
+-b -t --number test1.txt
+-b -t --squeeze-blank test1.txt
+-b -v -E test1.txt
+-b -v -T test1.txt
+-b -v --number-nonblank test1.txt
+-b -v --number test1.txt
+-b -v --squeeze-blank test1.txt
+-b -E -e test1.txt
+-b -E -n test1.txt
+-b -E -s test1.txt
+-b -E -t test1.txt
+-b -E -v test1.txt
+-b -E -T test1.txt
+-b -E --number-nonblank test1.txt
+-b -E --number test1.txt
+-b -E --squeeze-blank test1.txt
+-b -T -e test1.txt
+-b -T -n test1.txt
+-b -T -s test1.txt
+-b -T -t test1.txt
+-b -T -v test1.txt
+-b -T -E test1.txt
+-b -T --number-nonblank test1.txt
+-b -T --number test1.txt
+-b -T --squeeze-blank test1.txt
+-b --number-nonblank -e test1.txt
+-b --number-nonblank -n test1.txt
+-b --number-nonblank -s test1.txt
+-b --number-nonblank -t test1.txt
+-b --number-nonblank -v test1.txt
+-b --number-nonblank -E test1.txt
+-b --number-nonblank -T test1.txt
+-b --number-nonblank --number test1.txt
+-b --number-nonblank --squeeze-blank test1.txt
+-b --number -e test1.txt
+-b --number -n test1.txt
+-b --number -s test1.txt
+-b --number -t test1.txt
+-b --number -v test1.txt
+-b --number -E test1.txt
+-b --number -T test1.txt
+-b --number --number-nonblank test1.txt
+-b --number --squeeze-blank test1.txt
+-b --squeeze-blank -e test1.txt
+-b --squeeze-blank -n test1.txt
+-b --squeeze-blank -s test1.txt
+-b --squeeze-blank -t test1.txt
+-b --squeeze-blank -v test1.txt
+-b --squeeze-blank -E test1.txt
+-b --squeeze-blank -T test1.txt
+-b --squeeze-blank --number-nonblank test1.txt
+-b --squeeze-blank --number test1.txt
+-e -b -E test1.txt
+-e -b -T test1.txt
+-e -b --number-nonblank test1.txt
+-e -b --number test1.txt
+-e -b --squeeze-blank test1.txt
+-e -n -E test1.txt
+-e -n -T test1.txt
+-e -n --number-nonblank test1.txt
+-e -n --number test1.txt
+-e -n --squeeze-blank test1.txt
+-e -s -E test1.txt
+-e -s -T test1.txt
+-e -s --number-nonblank test1.txt
+-e -s --number test1.txt
+-e -s --squeeze-blank test1.txt
+-e -t -E test1.txt
+-e -t -T test1.txt
+-e -t --number-nonblank test1.txt
+-e -t --number test1.txt
+-e -t --squeeze-blank test1.txt
+-e -v -E test1.txt
+-e -v -T test1.txt
+-e -v --number-nonblank test1.txt
+-e -v --number test1.txt
+-e -v --squeeze-blank test1.txt
+-e -E -b test1.txt
+-e -E -n test1.txt
+-e -E -s test1.txt
+-e -E -t test1.txt
+-e -E -v test1.txt
+-e -E -T test1.txt
+-e -E --number-nonblank test1.txt
+-e -E --number test1.txt
+-e -E --squeeze-blank test1.txt
+-e -T -b test1.txt
+-e -T -n test1.txt
+-e -T -s test1.txt
+-e -T -t test1.txt
+-e -T -v test1.txt
+-e -T -E test1.txt
+-e -T --number-nonblank test1.txt
+-e -T --number test1.txt
+-e -T --squeeze-blank test1.txt
+-e --number-nonblank -b test1.txt
+-e --number-nonblank -n test1.txt
+-e --number-nonblank -s test1.txt
+-e --number-nonblank -t test1.txt
+-e --number-nonblank -v test1.txt
+-e --number-nonblank -E test1.txt
+-e --number-nonblank -T test1.txt
+-e --number-nonblank --number test1.txt
+-e --number-nonblank --squeeze-blank test1.txt
+-e --number -b test1.txt
+-e --number -n test1.txt
+-e --number -s test1.txt
+-e --number -t test1.txt
+-e --number -v test1.txt
+-e --number -E test1.txt
+-e --number -T test1.txt
+-e --number --number-nonblank test1.txt
+-e --number --squeeze-blank test1.txt
+-e --squeeze-blank -b test1.txt
+-e --squeeze-blank -n test1.txt
+-e --squeeze-blank -s test1.txt
+-e --squeeze-blank -t test1.txt
+-e --squeeze-blank -v test1.txt
+-e --squeeze-blank -E test1.txt
+-e --squeeze-blank -T test1.txt
+-e --squeeze-blank --number-nonblank test1.txt
+-e --squeeze-blank --number test1.txt
+-n -b -E test1.txt
+-n -b -T test1.txt
+-n -b --number-nonblank test1.txt
+-n -b --number test1.txt
+-n -b --squeeze-blank test1.txt
+-n -e -E test1.txt
+-n -e -T test1.txt
+-n -e --number-nonblank test1.txt
+-n -e --number test1.txt
+-n -e --squeeze-blank test1.txt
+-n -s -E test1.txt
+-n -s -T test1.txt
+-n -s --number-nonblank test1.txt
+-n -s --number test1.txt
+-n -s --squeeze-blank test1.txt
+-n -t -E test1.txt
+-n -t -T test1.txt
+-n -t --number-nonblank test1.txt
+-n -t --number test1.txt
+-n -t --squeeze-blank test1.txt
+-n -v -E test1.txt
+-n -v -T test1.txt
+-n -v --number-nonblank test1.txt
+-n -v --number test1.txt
+-n -v --squeeze-blank test1.txt
+-n -E -b test1.txt
+-n -E -e test1.txt
+-n -E -s test1.txt
+-n -E -t test1.txt
+-n -E -v test1.txt
+-n -E -T test1.txt
+-n -E --number-nonblank test1.txt
+-n -E --number test1.txt
+-n -E --squeeze-blank test1.txt
+-n -T -b test1.txt
+-n -T -e test1.txt
+-n -T -s test1.txt
+-n -T -t test1.txt
+-n -T -v test1.txt
+-n -T -E test1.txt
+-n -T --number-nonblank test1.txt
+-n -T --number test1.txt
+-n -T --squeeze-blank test1.txt
+-n --number-nonblank -b test1.txt
+-n --number-nonblank -e test1.txt
+-n --number-nonblank -s test1.txt
+-n --number-nonblank -t test1.txt
+-n --number-nonblank -v test1.txt
+-n --number-nonblank -E test1.txt
+-n --number-nonblank -T test1.txt
+-n --number-nonblank --number test1.txt
+-n --number-nonblank --squeeze-blank test1.txt
+-n --number -b test1.txt
+-n --number -e test1.txt
+-n --number -s test1.txt
+-n --number -t test1.txt
+-n --number -v test1.txt
+-n --number -E test1.txt
+-n --number -T test1.txt
+-n --number --number-nonblank test1.txt
+-n --number --squeeze-blank test1.txt
+-n --squeeze-blank -b test1.txt
+-n --squeeze-blank -e test1.txt
+-n --squeeze-blank -s test1.txt
+-n --squeeze-blank -t test1.txt
+-n --squeeze-blank -v test1.txt
+-n --squeeze-blank -E test1.txt
+-n --squeeze-blank -T test1.txt
+-n --squeeze-blank --number-nonblank test1.txt
+-n --squeeze-blank --number test1.txt
+-s -b -E test1.txt
+-s -b -T test1.txt
+-s -b --number-nonblank test1.txt
+-s -b --number test1.txt
+-s -b --squeeze-blank test1.txt
+-s -e -E test1.txt
+-s -e -T test1.txt
+-s -e --number-nonblank test1.txt
+-s -e --number test1.txt
+-s -e --squeeze-blank test1.txt
+-s -n -E test1.txt
+-s -n -T test1.txt
+-s -n --number-nonblank test1.txt
+-s -n --number test1.txt
+-s -n --squeeze-blank test1.txt
+-s -t -E test1.txt
+-s -t -T test1.txt
+-s -t --number-nonblank test1.txt
+-s -t --number test1.txt
+-s -t --squeeze-blank test1.txt
+-s -v -E test1.txt
+-s -v -T test1.txt
+-s -v --number-nonblank test1.txt
+-s -v --number test1.txt
+-s -v --squeeze-blank test1.txt
+-s -E -b test1.txt
+-s -E -e test1.txt
+-s -E -n test1.txt
+-s -E -t test1.txt
+-s -E -v test1.txt
+-s -E -T test1.txt
+-s -E --number-nonblank test1.txt
+-s -E --number test1.txt
+-s -E --squeeze-blank test1.txt
+-s -T -b test1.txt
+-s -T -e test1.txt
+-s -T -n test1.txt
+-s -T -t test1.txt
+-s -T -v test1.txt
+-s -T -E test1.txt
+-s -T --number-nonblank test1.txt
+-s -T --number test1.txt
+-s -T --squeeze-blank test1.txt
+-s --number-nonblank -b test1.txt
+-s --number-nonblank -e test1.txt
+-s --number-nonblank -n test1.txt
+-s --number-nonblank -t test1.txt
+-s --number-nonblank -v test1.txt
+-s --number-nonblank -E test1.txt
+-s --number-nonblank -T test1.txt
+-s --number-nonblank --number test1.txt
+-s --number-nonblank --squeeze-blank test1.txt
+-s --number -b test1.txt
+-s --number -e test1.txt
+-s --number -n test1.txt
+-s --number -t test1.txt
+-s --number -v test1.txt
+-s --number -E test1.txt
+-s --number -T test1.txt
+-s --number --number-nonblank test1.txt
+-s --number --squeeze-blank test1.txt
+-s --squeeze-blank -b test1.txt
+-s --squeeze-blank -e test1.txt
+-s --squeeze-blank -n test1.txt
+-s --squeeze-blank -t test1.txt
+-s --squeeze-blank -v test1.txt
+-s --squeeze-blank -E test1.txt
+-s --squeeze-blank -T test1.txt
+-s --squeeze-blank --number-nonblank test1.txt
+-s --squeeze-blank --number test1.txt
+-t -b -E test1.txt
+-t -b -T test1.txt
+-t -b --number-nonblank test1.txt
+-t -b --number test1.txt
+-t -b --squeeze-blank test1.txt
+-t -e -E test1.txt
+-t -e -T test1.txt
+-t -e --number-nonblank test1.txt
+-t -e --number test1.txt
+-t -e --squeeze-blank test1.txt
+-t -n -E test1.txt
+-t -n -T test1.txt
+-t -n --number-nonblank test1.txt
+-t -n --number test1.txt
+-t -n --squeeze-blank test1.txt
+-t -s -E test1.txt
+-t -s -T test1.txt
+-t -s --number-nonblank test1.txt
+-t -s --number test1.txt
+-t -s --squeeze-blank test1.txt
+-t -v -E test1.txt
+-t -v -T test1.txt
+-t -v --number-nonblank test1.txt
+-t -v --number test1.txt
+-t -v --squeeze-blank test1.txt
+-t -E -b test1.txt
+-t -E -e test1.txt
+-t -E -n test1.txt
+-t -E -s test1.txt
+-t -E -v test1.txt
+-t -E -T test1.txt
+-t -E --number-nonblank test1.txt
+-t -E --number test1.txt
+-t -E --squeeze-blank test1.txt
+-t -T -b test1.txt
+-t -T -e test1.txt
+-t -T -n test1.txt
+-t -T -s test1.txt
+-t -T -v test1.txt
+-t -T -E test1.txt
+-t -T --number-nonblank test1.txt
+-t -T --number test1.txt
+-t -T --squeeze-blank test1.txt
+-t --number-nonblank -b test1.txt
+-t --number-nonblank -e test1.txt
+-t --number-nonblank -n test1.txt
+-t --number-nonblank -s test1.txt
+-t --number-nonblank -v test1.txt
+-t --number-nonblank -E test1.txt
+-t --number-nonblank -T test1.txt
+-t --number-nonblank --number test1.txt
+-t --number-nonblank --squeeze-blank test1.txt
+-t --number -b test1.txt
+-t --number -e test1.txt
+-t --number -n test1.txt
+-t --number -s test1.txt
+-t --number -v test1.txt
+-t --number -E test1.txt
+-t --number -T test1.txt
+-t --number --number-nonblank test1.txt
+-t --number --squeeze-blank test1.txt
+-t --squeeze-blank -b test1.txt
+-t --squeeze-blank -e test1.txt
+-t --squeeze-blank -n test1.txt
+-t --squeeze-blank -s test1.txt
+-t --squeeze-blank -v test1.txt
+-t --squeeze-blank -E test1.txt
+-t --squeeze-blank -T test1.txt
+-t --squeeze-blank --number-nonblank test1.txt
+-t --squeeze-blank --number test1.txt
+-v -b -E test1.txt
+-v -b -T test1.txt
+-v -b --number-nonblank test1.txt
+-v -b --number test1.txt
+-v -b --squeeze-blank test1.txt
+-v -e -E test1.txt
+-v -e -T test1.txt
+-v -e --number-nonblank test1.txt
+-v -e --number test1.txt
+-v -e --squeeze-blank test1.txt
+-v -n -E test1.txt
+-v -n -T test1.txt
+-v -n --number-nonblank test1.txt
+-v -n --number test1.txt
+-v -n --squeeze-blank test1.txt
+-v -s -E test1.txt
+-v -s -T test1.txt
+-v -s --number-nonblank test1.txt
+-v -s --number test1.txt
+-v -s --squeeze-blank test1.txt
+-v -t -E test1.txt
+-v -t -T test1.txt
+-v -t --number-nonblank test1.txt
+-v -t --number test1.txt
+-v -t --squeeze-blank test1.txt
+-v -E -b test1.txt
+-v -E -e test1.txt
+-v -E -n test1.txt
+-v -E -s test1.txt
+-v -E -t test1.txt
+-v -E -T test1.txt
+-v -E --number-nonblank test1.txt
+-v -E --number test1.txt
+-v -E --squeeze-blank test1.txt
+-v -T -b test1.txt
+-v -T -e test1.txt
+-v -T -n test1.txt
+-v -T -s test1.txt
+-v -T -t test1.txt
+-v -T -E test1.txt
+-v -T --number-nonblank test1.txt
+-v -T --number test1.txt
+-v -T --squeeze-blank test1.txt
+-v --number-nonblank -b test1.txt
+-v --number-nonblank -e test1.txt
+-v --number-nonblank -n test1.txt
+-v --number-nonblank -s test1.txt
+-v --number-nonblank -t test1.txt
+-v --number-nonblank -E test1.txt
+-v --number-nonblank -T test1.txt
+-v --number-nonblank --number test1.txt
+-v --number-nonblank --squeeze-blank test1.txt
+-v --number -b test1.txt
+-v --number -e test1.txt
+-v --number -n test1.txt
+-v --number -s test1.txt
+-v --number -t test1.txt
+-v --number -E test1.txt
+-v --number -T test1.txt
+-v --number --number-nonblank test1.txt
+-v --number --squeeze-blank test1.txt
+-v --squeeze-blank -b test1.txt
+-v --squeeze-blank -e test1.txt
+-v --squeeze-blank -n test1.txt
+-v --squeeze-blank -s test1.txt
+-v --squeeze-blank -t test1.txt
+-v --squeeze-blank -E test1.txt
+-v --squeeze-blank -T test1.txt
+-v --squeeze-blank --number-nonblank test1.txt
+-v --squeeze-blank --number test1.txt
+-E -b -e test1.txt
+-E -b -n test1.txt
+-E -b -s test1.txt
+-E -b -t test1.txt
+-E -b -v test1.txt
+-E -b -T test1.txt
+-E -b --number-nonblank test1.txt
+-E -b --number test1.txt
+-E -b --squeeze-blank test1.txt
+-E -e -b test1.txt
+-E -e -n test1.txt
+-E -e -s test1.txt
+-E -e -t test1.txt
+-E -e -v test1.txt
+-E -e -T test1.txt
+-E -e --number-nonblank test1.txt
+-E -e --number test1.txt
+-E -e --squeeze-blank test1.txt
+-E -n -b test1.txt
+-E -n -e test1.txt
+-E -n -s test1.txt
+-E -n -t test1.txt
+-E -n -v test1.txt
+-E -n -T test1.txt
+-E -n --number-nonblank test1.txt
+-E -n --number test1.txt
+-E -n --squeeze-blank test1.txt
+-E -s -b test1.txt
+-E -s -e test1.txt
+-E -s -n test1.txt
+-E -s -t test1.txt
+-E -s -v test1.txt
+-E -s -T test1.txt
+-E -s --number-nonblank test1.txt
+-E -s --number test1.txt
+-E -s --squeeze-blank test1.txt
+-E -t -b test1.txt
+-E -t -e test1.txt
+-E -t -n test1.txt
+-E -t -s test1.txt
+-E -t -v test1.txt
+-E -t -T test1.txt
+-E -t --number-nonblank test1.txt
+-E -t --number test1.txt
+-E -t --squeeze-blank test1.txt
+-E -v -b test1.txt
+-E -v -e test1.txt
+-E -v -n test1.txt
+-E -v -s test1.txt
+-E -v -t test1.txt
+-E -v -T test1.txt
+-E -v --number-nonblank test1.txt
+-E -v --number test1.txt
+-E -v --squeeze-blank test1.txt
+-E -T -b test1.txt
+-E -T -e test1.txt
+-E -T -n test1.txt
+-E -T -s test1.txt
+-E -T -t test1.txt
+-E -T -v test1.txt
+-E -T --number-nonblank test1.txt
+-E -T --number test1.txt
+-E -T --squeeze-blank test1.txt
+-E --number-nonblank -b test1.txt
+-E --number-nonblank -e test1.txt
+-E --number-nonblank -n test1.txt
+-E --number-nonblank -s test1.txt
+-E --number-nonblank -t test1.txt
+-E --number-nonblank -v test1.txt
+-E --number-nonblank -T test1.txt
+-E --number-nonblank --number test1.txt
+-E --number-nonblank --squeeze-blank test1.txt
+-E --number -b test1.txt
+-E --number -e test1.txt
+-E --number -n test1.txt
+-E --number -s test1.txt
+-E --number -t test1.txt
+-E --number -v test1.txt
+-E --number -T test1.txt
+-E --number --number-nonblank test1.txt
+-E --number --squeeze-blank test1.txt
+-E --squeeze-blank -b test1.txt
+-E --squeeze-blank -e test1.txt
+-E --squeeze-blank -n test1.txt
+-E --squeeze-blank -s test1.txt
+-E --squeeze-blank -t test1.txt
+-E --squeeze-blank -v test1.txt
+-E --squeeze-blank -T test1.txt
+-E --squeeze-blank --number-nonblank test1.txt
+-E --squeeze-blank --number test1.txt
+-T -b -e test1.txt
+-T -b -n test1.txt
+-T -b -s test1.txt
+-T -b -t test1.txt
+-T -b -v test1.txt
+-T -b -E test1.txt
+-T -b --number-nonblank test1.txt
+-T -b --number test1.txt
+-T -b --squeeze-blank test1.txt
+-T -e -b test1.txt
+-T -e -n test1.txt
+-T -e -s test1.txt
+-T -e -t test1.txt
+-T -e -v test1.txt
+-T -e -E test1.txt
+-T -e --number-nonblank test1.txt
+-T -e --number test1.txt
+-T -e --squeeze-blank test1.txt
+-T -n -b test1.txt
+-T -n -e test1.txt
+-T -n -s test1.txt
+-T -n -t test1.txt
+-T -n -v test1.txt
+-T -n -E test1.txt
+-T -n --number-nonblank test1.txt
+-T -n --number test1.txt
+-T -n --squeeze-blank test1.txt
+-T -s -b test1.txt
+-T -s -e test1.txt
+-T -s -n test1.txt
+-T -s -t test1.txt
+-T -s -v test1.txt
+-T -s -E test1.txt
+-T -s --number-nonblank test1.txt
+-T -s --number test1.txt
+-T -s --squeeze-blank test1.txt
+-T -t -b test1.txt
+-T -t -e test1.txt
+-T -t -n test1.txt
+-T -t -s test1.txt
+-T -t -v test1.txt
+-T -t -E test1.txt
+-T -t --number-nonblank test1.txt
+-T -t --number test1.txt
+-T -t --squeeze-blank test1.txt
+-T -v -b test1.txt
+-T -v -e test1.txt
+-T -v -n test1.txt
+-T -v -s test1.txt
+-T -v -t test1.txt
+-T -v -E test1.txt
+-T -v --number-nonblank test1.txt
+-T -v --number test1.txt
+-T -v --squeeze-blank test1.txt
+-T -E -b test1.txt
+-T -E -e test1.txt
+-T -E -n test1.txt
+-T -E -s test1.txt
+-T -E -t test1.txt
+-T -E -v test1.txt
+-T -E --number-nonblank test1.txt
+-T -E --number test1.txt
+-T -E --squeeze-blank test1.txt
+-T --number-nonblank -b test1.txt
+-T --number-nonblank -e test1.txt
+-T --number-nonblank -n test1.txt
+-T --number-nonblank -s test1.txt
+-T --number-nonblank -t test1.txt
+-T --number-nonblank -v test1.txt
+-T --number-nonblank -E test1.txt
+-T --number-nonblank --number test1.txt
+-T --number-nonblank --squeeze-blank test1.txt
+-T --number -b test1.txt
+-T --number -e test1.txt
+-T --number -n test1.txt
+-T --number -s test1.txt
+-T --number -t test1.txt
+-T --number -v test1.txt
+-T --number -E test1.txt
+-T --number --number-nonblank test1.txt
+-T --number --squeeze-blank test1.txt
+-T --squeeze-blank -b test1.txt
+-T --squeeze-blank -e test1.txt
+-T --squeeze-blank -n test1.txt
+-T --squeeze-blank -s test1.txt
+-T --squeeze-blank -t test1.txt
+-T --squeeze-blank -v test1.txt
+-T --squeeze-blank -E test1.txt
+-T --squeeze-blank --number-nonblank test1.txt
+-T --squeeze-blank --number test1.txt
+--number-nonblank -b -e test1.txt
+--number-nonblank -b -n test1.txt
+--number-nonblank -b -s test1.txt
+--number-nonblank -b -t test1.txt
+--number-nonblank -b -v test1.txt
+--number-nonblank -b -E test1.txt
+--number-nonblank -b -T test1.txt
+--number-nonblank -b --number test1.txt
+--number-nonblank -b --squeeze-blank test1.txt
+--number-nonblank -e -b test1.txt
+--number-nonblank -e -n test1.txt
+--number-nonblank -e -s test1.txt
+--number-nonblank -e -t test1.txt
+--number-nonblank -e -v test1.txt
+--number-nonblank -e -E test1.txt
+--number-nonblank -e -T test1.txt
+--number-nonblank -e --number test1.txt
+--number-nonblank -e --squeeze-blank test1.txt
+--number-nonblank -n -b test1.txt
+--number-nonblank -n -e test1.txt
+--number-nonblank -n -s test1.txt
+--number-nonblank -n -t test1.txt
+--number-nonblank -n -v test1.txt
+--number-nonblank -n -E test1.txt
+--number-nonblank -n -T test1.txt
+--number-nonblank -n --number test1.txt
+--number-nonblank -n --squeeze-blank test1.txt
+--number-nonblank -s -b test1.txt
+--number-nonblank -s -e test1.txt
+--number-nonblank -s -n test1.txt
+--number-nonblank -s -t test1.txt
+--number-nonblank -s -v test1.txt
+--number-nonblank -s -E test1.txt
+--number-nonblank -s -T test1.txt
+--number-nonblank -s --number test1.txt
+--number-nonblank -s --squeeze-blank test1.txt
+--number-nonblank -t -b test1.txt
+--number-nonblank -t -e test1.txt
+--number-nonblank -t -n test1.txt
+--number-nonblank -t -s test1.txt
+--number-nonblank -t -v test1.txt
+--number-nonblank -t -E test1.txt
+--number-nonblank -t -T test1.txt
+--number-nonblank -t --number test1.txt
+--number-nonblank -t --squeeze-blank test1.txt
+--number-nonblank -v -b test1.txt
+--number-nonblank -v -e test1.txt
+--number-nonblank -v -n test1.txt
+--number-nonblank -v -s test1.txt
+--number-nonblank -v -t test1.txt
+--number-nonblank -v -E test1.txt
+--number-nonblank -v -T test1.txt
+--number-nonblank -v --number test1.txt
+--number-nonblank -v --squeeze-blank test1.txt
+--number-nonblank -E -b test1.txt
+--number-nonblank -E -e test1.txt
+--number-nonblank -E -n test1.txt
+--number-nonblank -E -s test1.txt
+--number-nonblank -E -t test1.txt
+--number-nonblank -E -v test1.txt
+--number-nonblank -E -T test1.txt
+--number-nonblank -E --number test1.txt
+--number-nonblank -E --squeeze-blank test1.txt
+--number-nonblank -T -b test1.txt
+--number-nonblank -T -e test1.txt
+--number-nonblank -T -n test1.txt
+--number-nonblank -T -s test1.txt
+--number-nonblank -T -t test1.txt
+--number-nonblank -T -v test1.txt
+--number-nonblank -T -E test1.txt
+--number-nonblank -T --number test1.txt
+--number-nonblank -T --squeeze-blank test1.txt
+--number-nonblank --number -b test1.txt
+--number-nonblank --number -e test1.txt
+--number-nonblank --number -n test1.txt
+--number-nonblank --number -s test1.txt
+--number-nonblank --number -t test1.txt
+--number-nonblank --number -v test1.txt
+--number-nonblank --number -E test1.txt
+--number-nonblank --number -T test1.txt
+--number-nonblank --number --squeeze-blank test1.txt
+--number-nonblank --squeeze-blank -b test1.txt
+--number-nonblank --squeeze-blank -e test1.txt
+--number-nonblank --squeeze-blank -n test1.txt
+--number-nonblank --squeeze-blank -s test1.txt
+--number-nonblank --squeeze-blank -t test1.txt
+--number-nonblank --squeeze-blank -v test1.txt
+--number-nonblank --squeeze-blank -E test1.txt
+--number-nonblank --squeeze-blank -T test1.txt
+--number-nonblank --squeeze-blank --number test1.txt
+--number -b -e test1.txt
+--number -b -n test1.txt
+--number -b -s test1.txt
+--number -b -t test1.txt
+--number -b -v test1.txt
+--number -b -E test1.txt
+--number -b -T test1.txt
+--number -b --number-nonblank test1.txt
+--number -b --squeeze-blank test1.txt
+--number -e -b test1.txt
+--number -e -n test1.txt
+--number -e -s test1.txt
+--number -e -t test1.txt
+--number -e -v test1.txt
+--number -e -E test1.txt
+--number -e -T test1.txt
+--number -e --number-nonblank test1.txt
+--number -e --squeeze-blank test1.txt
+--number -n -b test1.txt
+--number -n -e test1.txt
+--number -n -s test1.txt
+--number -n -t test1.txt
+--number -n -v test1.txt
+--number -n -E test1.txt
+--number -n -T test1.txt
+--number -n --number-nonblank test1.txt
+--number -n --squeeze-blank test1.txt
+--number -s -b test1.txt
+--number -s -e test1.txt
+--number -s -n test1.txt
+--number -s -t test1.txt
+--number -s -v test1.txt
+--number -s -E test1.txt
+--number -s -T test1.txt
+--number -s --number-nonblank test1.txt
+--number -s --squeeze-blank test1.txt
+--number -t -b test1.txt
+--number -t -e test1.txt
+--number -t -n test1.txt
+--number -t -s test1.txt
+--number -t -v test1.txt
+--number -t -E test1.txt
+--number -t -T test1.txt
+--number -t --number-nonblank test1.txt
+--number -t --squeeze-blank test1.txt
+--number -v -b test1.txt
+--number -v -e test1.txt
+--number -v -n test1.txt
+--number -v -s test1.txt
+--number -v -t test1.txt
+--number -v -E test1.txt
+--number -v -T test1.txt
+--number -v --number-nonblank test1.txt
+--number -v --squeeze-blank test1.txt
+--number -E -b test1.txt
+--number -E -e test1.txt
+--number -E -n test1.txt
+--number -E -s test1.txt
+--number -E -t test1.txt
+--number -E -v test1.txt
+--number -E -T test1.txt
+--number -E --number-nonblank test1.txt
+--number -E --squeeze-blank test1.txt
+--number -T -b test1.txt
+--number -T -e test1.txt
+--number -T -n test1.txt
+--number -T -s test1.txt
+--number -T -t test1.txt
+--number -T -v test1.txt
+--number -T -E test1.txt
+--number -T --number-nonblank test1.txt
+--number -T --squeeze-blank test1.txt
+--number --number-nonblank -b test1.txt
+--number --number-nonblank -e test1.txt
+--number --number-nonblank -n test1.txt
+--number --number-nonblank -s test1.txt
+--number --number-nonblank -t test1.txt
+--number --number-nonblank -v test1.txt
+--number --number-nonblank -E test1.txt
+--number --number-nonblank -T test1.txt
+--number --number-nonblank --squeeze-blank test1.txt
+--number --squeeze-blank -b test1.txt
+--number --squeeze-blank -e test1.txt
+--number --squeeze-blank -n test1.txt
+--number --squeeze-blank -s test1.txt
+--number --squeeze-blank -t test1.txt
+--number --squeeze-blank -v test1.txt
+--number --squeeze-blank -E test1.txt
+--number --squeeze-blank -T test1.txt
+--number --squeeze-blank --number-nonblank test1.txt
+--squeeze-blank -b -e test1.txt
+--squeeze-blank -b -n test1.txt
+--squeeze-blank -b -s test1.txt
+--squeeze-blank -b -t test1.txt
+--squeeze-blank -b -v test1.txt
+--squeeze-blank -b -E test1.txt
+--squeeze-blank -b -T test1.txt
+--squeeze-blank -b --number-nonblank test1.txt
+--squeeze-blank -b --number test1.txt
+--squeeze-blank -e -b test1.txt
+--squeeze-blank -e -n test1.txt
+--squeeze-blank -e -s test1.txt
+--squeeze-blank -e -t test1.txt
+--squeeze-blank -e -v test1.txt
+--squeeze-blank -e -E test1.txt
+--squeeze-blank -e -T test1.txt
+--squeeze-blank -e --number-nonblank test1.txt
+--squeeze-blank -e --number test1.txt
+--squeeze-blank -n -b test1.txt
+--squeeze-blank -n -e test1.txt
+--squeeze-blank -n -s test1.txt
+--squeeze-blank -n -t test1.txt
+--squeeze-blank -n -v test1.txt
+--squeeze-blank -n -E test1.txt
+--squeeze-blank -n -T test1.txt
+--squeeze-blank -n --number-nonblank test1.txt
+--squeeze-blank -n --number test1.txt
+--squeeze-blank -s -b test1.txt
+--squeeze-blank -s -e test1.txt
+--squeeze-blank -s -n test1.txt
+--squeeze-blank -s -t test1.txt
+--squeeze-blank -s -v test1.txt
+--squeeze-blank -s -E test1.txt
+--squeeze-blank -s -T test1.txt
+--squeeze-blank -s --number-nonblank test1.txt
+--squeeze-blank -s --number test1.txt
+--squeeze-blank -t -b test1.txt
+--squeeze-blank -t -e test1.txt
+--squeeze-blank -t -n test1.txt
+--squeeze-blank -t -s test1.txt
+--squeeze-blank -t -v test1.txt
+--squeeze-blank -t -E test1.txt
+--squeeze-blank -t -T test1.txt
+--squeeze-blank -t --number-nonblank test1.txt
+--squeeze-blank -t --number test1.txt
+--squeeze-blank -v -b test1.txt
+--squeeze-blank -v -e test1.txt
+--squeeze-blank -v -n test1.txt
+--squeeze-blank -v -s test1.txt
+--squeeze-blank -v -t test1.txt
+--squeeze-blank -v -E test1.txt
+--squeeze-blank -v -T test1.txt
+--squeeze-blank -v --number-nonblank test1.txt
+--squeeze-blank -v --number test1.txt
+--squeeze-blank -E -b test1.txt
+--squeeze-blank -E -e test1.txt
+--squeeze-blank -E -n test1.txt
+--squeeze-blank -E -s test1.txt
+--squeeze-blank -E -t test1.txt
+--squeeze-blank -E -v test1.txt
+--squeeze-blank -E -T test1.txt
+--squeeze-blank -E --number-nonblank test1.txt
+--squeeze-blank -E --number test1.txt
+--squeeze-blank -T -b test1.txt
+--squeeze-blank -T -e test1.txt
+--squeeze-blank -T -n test1.txt
+--squeeze-blank -T -s test1.txt
+--squeeze-blank -T -t test1.txt
+--squeeze-blank -T -v test1.txt
+--squeeze-blank -T -E test1.txt
+--squeeze-blank -T --number-nonblank test1.txt
+--squeeze-blank -T --number test1.txt
+--squeeze-blank --number-nonblank -b test1.txt
+--squeeze-blank --number-nonblank -e test1.txt
+--squeeze-blank --number-nonblank -n test1.txt
+--squeeze-blank --number-nonblank -s test1.txt
+--squeeze-blank --number-nonblank -t test1.txt
+--squeeze-blank --number-nonblank -v test1.txt
+--squeeze-blank --number-nonblank -E test1.txt
+--squeeze-blank --number-nonblank -T test1.txt
+--squeeze-blank --number-nonblank --number test1.txt
+--squeeze-blank --number -b test1.txt
+--squeeze-blank --number -e test1.txt
+--squeeze-blank --number -n test1.txt
+--squeeze-blank --number -s test1.txt
+--squeeze-blank --number -t test1.txt
+--squeeze-blank --number -v test1.txt
+--squeeze-blank --number -E test1.txt
+--squeeze-blank --number -T test1.txt
+--squeeze-blank --number --number-nonblank test1.txt
+-b -e -n -E test1.txt
+-b -e -n -T test1.txt
+-b -e -n --number-nonblank test1.txt
+-b -e -n --number test1.txt
+-b -e -n --squeeze-blank test1.txt
+-b -e -s -E test1.txt
+-b -e -s -T test1.txt
+-b -e -s --number-nonblank test1.txt
+-b -e -s --number test1.txt
+-b -e -s --squeeze-blank test1.txt
+-b -e -t -E test1.txt
+-b -e -t -T test1.txt
+-b -e -t --number-nonblank test1.txt
+-b -e -t --number test1.txt
+-b -e -t --squeeze-blank test1.txt
+-b -e -v -E test1.txt
+-b -e -v -T test1.txt
+-b -e -v --number-nonblank test1.txt
+-b -e -v --number test1.txt
+-b -e -v --squeeze-blank test1.txt
+-b -e -E -n test1.txt
+-b -e -E -s test1.txt
+-b -e -E -t test1.txt
+-b -e -E -v test1.txt
+-b -e -E -T test1.txt
+-b -e -E --number-nonblank test1.txt
+-b -e -E --number test1.txt
+-b -e -E --squeeze-blank test1.txt
+-b -e -T -n test1.txt
+-b -e -T -s test1.txt
+-b -e -T -t test1.txt
+-b -e -T -v test1.txt
+-b -e -T -E test1.txt
+-b -e -T --number-nonblank test1.txt
+-b -e -T --number test1.txt
+-b -e -T --squeeze-blank test1.txt
+-b -e --number-nonblank -n test1.txt
+-b -e --number-nonblank -s test1.txt
+-b -e --number-nonblank -t test1.txt
+-b -e --number-nonblank -v test1.txt
+-b -e --number-nonblank -E test1.txt
+-b -e --number-nonblank -T test1.txt
+-b -e --number-nonblank --number test1.txt
+-b -e --number-nonblank --squeeze-blank test1.txt
+-b -e --number -n test1.txt
+-b -e --number -s test1.txt
+-b -e --number -t test1.txt
+-b -e --number -v test1.txt
+-b -e --number -E test1.txt
+-b -e --number -T test1.txt
+-b -e --number --number-nonblank test1.txt
+-b -e --number --squeeze-blank test1.txt
+-b -e --squeeze-blank -n test1.txt
+-b -e --squeeze-blank -s test1.txt
+-b -e --squeeze-blank -t test1.txt
+-b -e --squeeze-blank -v test1.txt
+-b -e --squeeze-blank -E test1.txt
+-b -e --squeeze-blank -T test1.txt
+-b -e --squeeze-blank --number-nonblank test1.txt
+-b -e --squeeze-blank --number test1.txt
+-b -n -e -E test1.txt
+-b -n -e -T test1.txt
+-b -n -e --number-nonblank test1.txt
+-b -n -e --number test1.txt
+-b -n -e --squeeze-blank test1.txt
+-b -n -s -E test1.txt
+-b -n -s -T test1.txt
+-b -n -s --number-nonblank test1.txt
+-b -n -s --number test1.txt
+-b -n -s --squeeze-blank test1.txt
+-b -n -t -E test1.txt
+-b -n -t -T test1.txt
+-b -n -t --number-nonblank test1.txt
+-b -n -t --number test1.txt
+-b -n -t --squeeze-blank test1.txt
+-b -n -v -E test1.txt
+-b -n -v -T test1.txt
+-b -n -v --number-nonblank test1.txt
+-b -n -v --number test1.txt
+-b -n -v --squeeze-blank test1.txt
+-b -n -E -e test1.txt
+-b -n -E -s test1.txt
+-b -n -E -t test1.txt
+-b -n -E -v test1.txt
+-b -n -E -T test1.txt
+-b -n -E --number-nonblank test1.txt
+-b -n -E --number test1.txt
+-b -n -E --squeeze-blank test1.txt
+-b -n -T -e test1.txt
+-b -n -T -s test1.txt
+-b -n -T -t test1.txt
+-b -n -T -v test1.txt
+-b -n -T -E test1.txt
+-b -n -T --number-nonblank test1.txt
+-b -n -T --number test1.txt
+-b -n -T --squeeze-blank test1.txt
+-b -n --number-nonblank -e test1.txt
+-b -n --number-nonblank -s test1.txt
+-b -n --number-nonblank -t test1.txt
+-b -n --number-nonblank -v test1.txt
+-b -n --number-nonblank -E test1.txt
+-b -n --number-nonblank -T test1.txt
+-b -n --number-nonblank --number test1.txt
+-b -n --number-nonblank --squeeze-blank test1.txt
+-b -n --number -e test1.txt
+-b -n --number -s test1.txt
+-b -n --number -t test1.txt
+-b -n --number -v test1.txt
+-b -n --number -E test1.txt
+-b -n --number -T test1.txt
+-b -n --number --number-nonblank test1.txt
+-b -n --number --squeeze-blank test1.txt
+-b -n --squeeze-blank -e test1.txt
+-b -n --squeeze-blank -s test1.txt
+-b -n --squeeze-blank -t test1.txt
+-b -n --squeeze-blank -v test1.txt
+-b -n --squeeze-blank -E test1.txt
+-b -n --squeeze-blank -T test1.txt
+-b -n --squeeze-blank --number-nonblank test1.txt
+-b -n --squeeze-blank --number test1.txt
+-b -s -e -E test1.txt
+-b -s -e -T test1.txt
+-b -s -e --number-nonblank test1.txt
+-b -s -e --number test1.txt
+-b -s -e --squeeze-blank test1.txt
+-b -s -n -E test1.txt
+-b -s -n -T test1.txt
+-b -s -n --number-nonblank test1.txt
+-b -s -n --number test1.txt
+-b -s -n --squeeze-blank test1.txt
+-b -s -t -E test1.txt
+-b -s -t -T test1.txt
+-b -s -t --number-nonblank test1.txt
+-b -s -t --number test1.txt
+-b -s -t --squeeze-blank test1.txt
+-b -s -v -E test1.txt
+-b -s -v -T test1.txt
+-b -s -v --number-nonblank test1.txt
+-b -s -v --number test1.txt
+-b -s -v --squeeze-blank test1.txt
+-b -s -E -e test1.txt
+-b -s -E -n test1.txt
+-b -s -E -t test1.txt
+-b -s -E -v test1.txt
+-b -s -E -T test1.txt
+-b -s -E --number-nonblank test1.txt
+-b -s -E --number test1.txt
+-b -s -E --squeeze-blank test1.txt
+-b -s -T -e test1.txt
+-b -s -T -n test1.txt
+-b -s -T -t test1.txt
+-b -s -T -v test1.txt
+-b -s -T -E test1.txt
+-b -s -T --number-nonblank test1.txt
+-b -s -T --number test1.txt
+-b -s -T --squeeze-blank test1.txt
+-b -s --number-nonblank -e test1.txt
+-b -s --number-nonblank -n test1.txt
+-b -s --number-nonblank -t test1.txt
+-b -s --number-nonblank -v test1.txt
+-b -s --number-nonblank -E test1.txt
+-b -s --number-nonblank -T test1.txt
+-b -s --number-nonblank --number test1.txt
+-b -s --number-nonblank --squeeze-blank test1.txt
+-b -s --number -e test1.txt
+-b -s --number -n test1.txt
+-b -s --number -t test1.txt
+-b -s --number -v test1.txt
+-b -s --number -E test1.txt
+-b -s --number -T test1.txt
+-b -s --number --number-nonblank test1.txt
+-b -s --number --squeeze-blank test1.txt
+-b -s --squeeze-blank -e test1.txt
+-b -s --squeeze-blank -n test1.txt
+-b -s --squeeze-blank -t test1.txt
+-b -s --squeeze-blank -v test1.txt
+-b -s --squeeze-blank -E test1.txt
+-b -s --squeeze-blank -T test1.txt
+-b -s --squeeze-blank --number-nonblank test1.txt
+-b -s --squeeze-blank --number test1.txt
+-b -t -e -E test1.txt
+-b -t -e -T test1.txt
+-b -t -e --number-nonblank test1.txt
+-b -t -e --number test1.txt
+-b -t -e --squeeze-blank test1.txt
+-b -t -n -E test1.txt
+-b -t -n -T test1.txt
+-b -t -n --number-nonblank test1.txt
+-b -t -n --number test1.txt
+-b -t -n --squeeze-blank test1.txt
+-b -t -s -E test1.txt
+-b -t -s -T test1.txt
+-b -t -s --number-nonblank test1.txt
+-b -t -s --number test1.txt
+-b -t -s --squeeze-blank test1.txt
+-b -t -v -E test1.txt
+-b -t -v -T test1.txt
+-b -t -v --number-nonblank test1.txt
+-b -t -v --number test1.txt
+-b -t -v --squeeze-blank test1.txt
+-b -t -E -e test1.txt
+-b -t -E -n test1.txt
+-b -t -E -s test1.txt
+-b -t -E -v test1.txt
+-b -t -E -T test1.txt
+-b -t -E --number-nonblank test1.txt
+-b -t -E --number test1.txt
+-b -t -E --squeeze-blank test1.txt
+-b -t -T -e test1.txt
+-b -t -T -n test1.txt
+-b -t -T -s test1.txt
+-b -t -T -v test1.txt
+-b -t -T -E test1.txt
+-b -t -T --number-nonblank test1.txt
+-b -t -T --number test1.txt
+-b -t -T --squeeze-blank test1.txt
+-b -t --number-nonblank -e test1.txt
+-b -t --number-nonblank -n test1.txt
+-b -t --number-nonblank -s test1.txt
+-b -t --number-nonblank -v test1.txt
+-b -t --number-nonblank -E test1.txt
+-b -t --number-nonblank -T test1.txt
+-b -t --number-nonblank --number test1.txt
+-b -t --number-nonblank --squeeze-blank test1.txt
+-b -t --number -e test1.txt
+-b -t --number -n test1.txt
+-b -t --number -s test1.txt
+-b -t --number -v test1.txt
+-b -t --number -E test1.txt
+-b -t --number -T test1.txt
+-b -t --number --number-nonblank test1.txt
+-b -t --number --squeeze-blank test1.txt
+-b -t --squeeze-blank -e test1.txt
+-b -t --squeeze-blank -n test1.txt
+-b -t --squeeze-blank -s test1.txt
+-b -t --squeeze-blank -v test1.txt
+-b -t --squeeze-blank -E test1.txt
+-b -t --squeeze-blank -T test1.txt
+-b -t --squeeze-blank --number-nonblank test1.txt
+-b -t --squeeze-blank --number test1.txt
+-b -v -e -E test1.txt
+-b -v -e -T test1.txt
+-b -v -e --number-nonblank test1.txt
+-b -v -e --number test1.txt
+-b -v -e --squeeze-blank test1.txt
+-b -v -n -E test1.txt
+-b -v -n -T test1.txt
+-b -v -n --number-nonblank test1.txt
+-b -v -n --number test1.txt
+-b -v -n --squeeze-blank test1.txt
+-b -v -s -E test1.txt
+-b -v -s -T test1.txt
+-b -v -s --number-nonblank test1.txt
+-b -v -s --number test1.txt
+-b -v -s --squeeze-blank test1.txt
+-b -v -t -E test1.txt
+-b -v -t -T test1.txt
+-b -v -t --number-nonblank test1.txt
+-b -v -t --number test1.txt
+-b -v -t --squeeze-blank test1.txt
+-b -v -E -e test1.txt
+-b -v -E -n test1.txt
+-b -v -E -s test1.txt
+-b -v -E -t test1.txt
+-b -v -E -T test1.txt
+-b -v -E --number-nonblank test1.txt
+-b -v -E --number test1.txt
+-b -v -E --squeeze-blank test1.txt
+-b -v -T -e test1.txt
+-b -v -T -n test1.txt
+-b -v -T -s test1.txt
+-b -v -T -t test1.txt
+-b -v -T -E test1.txt
+-b -v -T --number-nonblank test1.txt
+-b -v -T --number test1.txt
+-b -v -T --squeeze-blank test1.txt
+-b -v --number-nonblank -e test1.txt
+-b -v --number-nonblank -n test1.txt
+-b -v --number-nonblank -s test1.txt
+-b -v --number-nonblank -t test1.txt
+-b -v --number-nonblank -E test1.txt
+-b -v --number-nonblank -T test1.txt
+-b -v --number-nonblank --number test1.txt
+-b -v --number-nonblank --squeeze-blank test1.txt
+-b -v --number -e test1.txt
+-b -v --number -n test1.txt
+-b -v --number -s test1.txt
+-b -v --number -t test1.txt
+-b -v --number -E test1.txt
+-b -v --number -T test1.txt
+-b -v --number --number-nonblank test1.txt
+-b -v --number --squeeze-blank test1.txt
+-b -v --squeeze-blank -e test1.txt
+-b -v --squeeze-blank -n test1.txt
+-b -v --squeeze-blank -s test1.txt
+-b -v --squeeze-blank -t test1.txt
+-b -v --squeeze-blank -E test1.txt
+-b -v --squeeze-blank -T test1.txt
+-b -v --squeeze-blank --number-nonblank test1.txt
+-b -v --squeeze-blank --number test1.txt
+-b -E -e -n test1.txt
+-b -E -e -s test1.txt
+-b -E -e -t test1.txt
+-b -E -e -v test1.txt
+-b -E -e -T test1.txt
+-b -E -e --number-nonblank test1.txt
+-b -E -e --number test1.txt
+-b -E -e --squeeze-blank test1.txt
+-b -E -n -e test1.txt
+-b -E -n -s test1.txt
+-b -E -n -t test1.txt
+-b -E -n -v test1.txt
+-b -E -n -T test1.txt
+-b -E -n --number-nonblank test1.txt
+-b -E -n --number test1.txt
+-b -E -n --squeeze-blank test1.txt
+-b -E -s -e test1.txt
+-b -E -s -n test1.txt
+-b -E -s -t test1.txt
+-b -E -s -v test1.txt
+-b -E -s -T test1.txt
+-b -E -s --number-nonblank test1.txt
+-b -E -s --number test1.txt
+-b -E -s --squeeze-blank test1.txt
+-b -E -t -e test1.txt
+-b -E -t -n test1.txt
+-b -E -t -s test1.txt
+-b -E -t -v test1.txt
+-b -E -t -T test1.txt
+-b -E -t --number-nonblank test1.txt
+-b -E -t --number test1.txt
+-b -E -t --squeeze-blank test1.txt
+-b -E -v -e test1.txt
+-b -E -v -n test1.txt
+-b -E -v -s test1.txt
+-b -E -v -t test1.txt
+-b -E -v -T test1.txt
+-b -E -v --number-nonblank test1.txt
+-b -E -v --number test1.txt
+-b -E -v --squeeze-blank test1.txt
+-b -E -T -e test1.txt
+-b -E -T -n test1.txt
+-b -E -T -s test1.txt
+-b -E -T -t test1.txt
+-b -E -T -v test1.txt
+-b -E -T --number-nonblank test1.txt
+-b -E -T --number test1.txt
+-b -E -T --squeeze-blank test1.txt
+-b -E --number-nonblank -e test1.txt
+-b -E --number-nonblank -n test1.txt
+-b -E --number-nonblank -s test1.txt
+-b -E --number-nonblank -t test1.txt
+-b -E --number-nonblank -v test1.txt
+-b -E --number-nonblank -T test1.txt
+-b -E --number-nonblank --number test1.txt
+-b -E --number-nonblank --squeeze-blank test1.txt
+-b -E --number -e test1.txt
+-b -E --number -n test1.txt
+-b -E --number -s test1.txt
+-b -E --number -t test1.txt
+-b -E --number -v test1.txt
+-b -E --number -T test1.txt
+-b -E --number --number-nonblank test1.txt
+-b -E --number --squeeze-blank test1.txt
+-b -E --squeeze-blank -e test1.txt
+-b -E --squeeze-blank -n test1.txt
+-b -E --squeeze-blank -s test1.txt
+-b -E --squeeze-blank -t test1.txt
+-b -E --squeeze-blank -v test1.txt
+-b -E --squeeze-blank -T test1.txt
+-b -E --squeeze-blank --number-nonblank test1.txt
+-b -E --squeeze-blank --number test1.txt
+-b -T -e -n test1.txt
+-b -T -e -s test1.txt
+-b -T -e -t test1.txt
+-b -T -e -v test1.txt
+-b -T -e -E test1.txt
+-b -T -e --number-nonblank test1.txt
+-b -T -e --number test1.txt
+-b -T -e --squeeze-blank test1.txt
+-b -T -n -e test1.txt
+-b -T -n -s test1.txt
+-b -T -n -t test1.txt
+-b -T -n -v test1.txt
+-b -T -n -E test1.txt
+-b -T -n --number-nonblank test1.txt
+-b -T -n --number test1.txt
+-b -T -n --squeeze-blank test1.txt
+-b -T -s -e test1.txt
+-b -T -s -n test1.txt
+-b -T -s -t test1.txt
+-b -T -s -v test1.txt
+-b -T -s -E test1.txt
+-b -T -s --number-nonblank test1.txt
+-b -T -s --number test1.txt
+-b -T -s --squeeze-blank test1.txt
+-b -T -t -e test1.txt
+-b -T -t -n test1.txt
+-b -T -t -s test1.txt
+-b -T -t -v test1.txt
+-b -T -t -E test1.txt
+-b -T -t --number-nonblank test1.txt
+-b -T -t --number test1.txt
+-b -T -t --squeeze-blank test1.txt
+-b -T -v -e test1.txt
+-b -T -v -n test1.txt
+-b -T -v -s test1.txt
+-b -T -v -t test1.txt
+-b -T -v -E test1.txt
+-b -T -v --number-nonblank test1.txt
+-b -T -v --number test1.txt
+-b -T -v --squeeze-blank test1.txt
+-b -T -E -e test1.txt
+-b -T -E -n test1.txt
+-b -T -E -s test1.txt
+-b -T -E -t test1.txt
+-b -T -E -v test1.txt
+-b -T -E --number-nonblank test1.txt
+-b -T -E --number test1.txt
+-b -T -E --squeeze-blank test1.txt
+-b -T --number-nonblank -e test1.txt
+-b -T --number-nonblank -n test1.txt
+-b -T --number-nonblank -s test1.txt
+-b -T --number-nonblank -t test1.txt
+-b -T --number-nonblank -v test1.txt
+-b -T --number-nonblank -E test1.txt
+-b -T --number-nonblank --number test1.txt
+-b -T --number-nonblank --squeeze-blank test1.txt
+-b -T --number -e test1.txt
+-b -T --number -n test1.txt
+-b -T --number -s test1.txt
+-b -T --number -t test1.txt
+-b -T --number -v test1.txt
+-b -T --number -E test1.txt
+-b -T --number --number-nonblank test1.txt
+-b -T --number --squeeze-blank test1.txt
+-b -T --squeeze-blank -e test1.txt
+-b -T --squeeze-blank -n test1.txt
+-b -T --squeeze-blank -s test1.txt
+-b -T --squeeze-blank -t test1.txt
+-b -T --squeeze-blank -v test1.txt
+-b -T --squeeze-blank -E test1.txt
+-b -T --squeeze-blank --number-nonblank test1.txt
+-b -T --squeeze-blank --number test1.txt
+-b --number-nonblank -e -n test1.txt
+-b --number-nonblank -e -s test1.txt
+-b --number-nonblank -e -t test1.txt
+-b --number-nonblank -e -v test1.txt
+-b --number-nonblank -e -E test1.txt
+-b --number-nonblank -e -T test1.txt
+-b --number-nonblank -e --number test1.txt
+-b --number-nonblank -e --squeeze-blank test1.txt
+-b --number-nonblank -n -e test1.txt
+-b --number-nonblank -n -s test1.txt
+-b --number-nonblank -n -t test1.txt
+-b --number-nonblank -n -v test1.txt
+-b --number-nonblank -n -E test1.txt
+-b --number-nonblank -n -T test1.txt
+-b --number-nonblank -n --number test1.txt
+-b --number-nonblank -n --squeeze-blank test1.txt
+-b --number-nonblank -s -e test1.txt
+-b --number-nonblank -s -n test1.txt
+-b --number-nonblank -s -t test1.txt
+-b --number-nonblank -s -v test1.txt
+-b --number-nonblank -s -E test1.txt
+-b --number-nonblank -s -T test1.txt
+-b --number-nonblank -s --number test1.txt
+-b --number-nonblank -s --squeeze-blank test1.txt
+-b --number-nonblank -t -e test1.txt
+-b --number-nonblank -t -n test1.txt
+-b --number-nonblank -t -s test1.txt
+-b --number-nonblank -t -v test1.txt
+-b --number-nonblank -t -E test1.txt
+-b --number-nonblank -t -T test1.txt
+-b --number-nonblank -t --number test1.txt
+-b --number-nonblank -t --squeeze-blank test1.txt
+-b --number-nonblank -v -e test1.txt
+-b --number-nonblank -v -n test1.txt
+-b --number-nonblank -v -s test1.txt
+-b --number-nonblank -v -t test1.txt
+-b --number-nonblank -v -E test1.txt
+-b --number-nonblank -v -T test1.txt
+-b --number-nonblank -v --number test1.txt
+-b --number-nonblank -v --squeeze-blank test1.txt
+-b --number-nonblank -E -e test1.txt
+-b --number-nonblank -E -n test1.txt
+-b --number-nonblank -E -s test1.txt
+-b --number-nonblank -E -t test1.txt
+-b --number-nonblank -E -v test1.txt
+-b --number-nonblank -E -T test1.txt
+-b --number-nonblank -E --number test1.txt
+-b --number-nonblank -E --squeeze-blank test1.txt
+-b --number-nonblank -T -e test1.txt
+-b --number-nonblank -T -n test1.txt
+-b --number-nonblank -T -s test1.txt
+-b --number-nonblank -T -t test1.txt
+-b --number-nonblank -T -v test1.txt
+-b --number-nonblank -T -E test1.txt
+-b --number-nonblank -T --number test1.txt
+-b --number-nonblank -T --squeeze-blank test1.txt
+-b --number-nonblank --number -e test1.txt
+-b --number-nonblank --number -n test1.txt
+-b --number-nonblank --number -s test1.txt
+-b --number-nonblank --number -t test1.txt
+-b --number-nonblank --number -v test1.txt
+-b --number-nonblank --number -E test1.txt
+-b --number-nonblank --number -T test1.txt
+-b --number-nonblank --number --squeeze-blank test1.txt
+-b --number-nonblank --squeeze-blank -e test1.txt
+-b --number-nonblank --squeeze-blank -n test1.txt
+-b --number-nonblank --squeeze-blank -s test1.txt
+-b --number-nonblank --squeeze-blank -t test1.txt
+-b --number-nonblank --squeeze-blank -v test1.txt
+-b --number-nonblank --squeeze-blank -E test1.txt
+-b --number-nonblank --squeeze-blank -T test1.txt
+-b --number-nonblank --squeeze-blank --number test1.txt
+-b --number -e -n test1.txt
+-b --number -e -s test1.txt
+-b --number -e -t test1.txt
+-b --number -e -v test1.txt
+-b --number -e -E test1.txt
+-b --number -e -T test1.txt
+-b --number -e --number-nonblank test1.txt
+-b --number -e --squeeze-blank test1.txt
+-b --number -n -e test1.txt
+-b --number -n -s test1.txt
+-b --number -n -t test1.txt
+-b --number -n -v test1.txt
+-b --number -n -E test1.txt
+-b --number -n -T test1.txt
+-b --number -n --number-nonblank test1.txt
+-b --number -n --squeeze-blank test1.txt
+-b --number -s -e test1.txt
+-b --number -s -n test1.txt
+-b --number -s -t test1.txt
+-b --number -s -v test1.txt
+-b --number -s -E test1.txt
+-b --number -s -T test1.txt
+-b --number -s --number-nonblank test1.txt
+-b --number -s --squeeze-blank test1.txt
+-b --number -t -e test1.txt
+-b --number -t -n test1.txt
+-b --number -t -s test1.txt
+-b --number -t -v test1.txt
+-b --number -t -E test1.txt
+-b --number -t -T test1.txt
+-b --number -t --number-nonblank test1.txt
+-b --number -t --squeeze-blank test1.txt
+-b --number -v -e test1.txt
+-b --number -v -n test1.txt
+-b --number -v -s test1.txt
+-b --number -v -t test1.txt
+-b --number -v -E test1.txt
+-b --number -v -T test1.txt
+-b --number -v --number-nonblank test1.txt
+-b --number -v --squeeze-blank test1.txt
+-b --number -E -e test1.txt
+-b --number -E -n test1.txt
+-b --number -E -s test1.txt
+-b --number -E -t test1.txt
+-b --number -E -v test1.txt
+-b --number -E -T test1.txt
+-b --number -E --number-nonblank test1.txt
+-b --number -E --squeeze-blank test1.txt
+-b --number -T -e test1.txt
+-b --number -T -n test1.txt
+-b --number -T -s test1.txt
+-b --number -T -t test1.txt
+-b --number -T -v test1.txt
+-b --number -T -E test1.txt
+-b --number -T --number-nonblank test1.txt
+-b --number -T --squeeze-blank test1.txt
+-b --number --number-nonblank -e test1.txt
+-b --number --number-nonblank -n test1.txt
+-b --number --number-nonblank -s test1.txt
+-b --number --number-nonblank -t test1.txt
+-b --number --number-nonblank -v test1.txt
+-b --number --number-nonblank -E test1.txt
+-b --number --number-nonblank -T test1.txt
+-b --number --number-nonblank --squeeze-blank test1.txt
+-b --number --squeeze-blank -e test1.txt
+-b --number --squeeze-blank -n test1.txt
+-b --number --squeeze-blank -s test1.txt
+-b --number --squeeze-blank -t test1.txt
+-b --number --squeeze-blank -v test1.txt
+-b --number --squeeze-blank -E test1.txt
+-b --number --squeeze-blank -T test1.txt
+-b --number --squeeze-blank --number-nonblank test1.txt
+-b --squeeze-blank -e -n test1.txt
+-b --squeeze-blank -e -s test1.txt
+-b --squeeze-blank -e -t test1.txt
+-b --squeeze-blank -e -v test1.txt
+-b --squeeze-blank -e -E test1.txt
+-b --squeeze-blank -e -T test1.txt
+-b --squeeze-blank -e --number-nonblank test1.txt
+-b --squeeze-blank -e --number test1.txt
+-b --squeeze-blank -n -e test1.txt
+-b --squeeze-blank -n -s test1.txt
+-b --squeeze-blank -n -t test1.txt
+-b --squeeze-blank -n -v test1.txt
+-b --squeeze-blank -n -E test1.txt
+-b --squeeze-blank -n -T test1.txt
+-b --squeeze-blank -n --number-nonblank test1.txt
+-b --squeeze-blank -n --number test1.txt
+-b --squeeze-blank -s -e test1.txt
+-b --squeeze-blank -s -n test1.txt
+-b --squeeze-blank -s -t test1.txt
+-b --squeeze-blank -s -v test1.txt
+-b --squeeze-blank -s -E test1.txt
+-b --squeeze-blank -s -T test1.txt
+-b --squeeze-blank -s --number-nonblank test1.txt
+-b --squeeze-blank -s --number test1.txt
+-b --squeeze-blank -t -e test1.txt
+-b --squeeze-blank -t -n test1.txt
+-b --squeeze-blank -t -s test1.txt
+-b --squeeze-blank -t -v test1.txt
+-b --squeeze-blank -t -E test1.txt
+-b --squeeze-blank -t -T test1.txt
+-b --squeeze-blank -t --number-nonblank test1.txt
+-b --squeeze-blank -t --number test1.txt
+-b --squeeze-blank -v -e test1.txt
+-b --squeeze-blank -v -n test1.txt
+-b --squeeze-blank -v -s test1.txt
+-b --squeeze-blank -v -t test1.txt
+-b --squeeze-blank -v -E test1.txt
+-b --squeeze-blank -v -T test1.txt
+-b --squeeze-blank -v --number-nonblank test1.txt
+-b --squeeze-blank -v --number test1.txt
+-b --squeeze-blank -E -e test1.txt
+-b --squeeze-blank -E -n test1.txt
+-b --squeeze-blank -E -s test1.txt
+-b --squeeze-blank -E -t test1.txt
+-b --squeeze-blank -E -v test1.txt
+-b --squeeze-blank -E -T test1.txt
+-b --squeeze-blank -E --number-nonblank test1.txt
+-b --squeeze-blank -E --number test1.txt
+-b --squeeze-blank -T -e test1.txt
+-b --squeeze-blank -T -n test1.txt
+-b --squeeze-blank -T -s test1.txt
+-b --squeeze-blank -T -t test1.txt
+-b --squeeze-blank -T -v test1.txt
+-b --squeeze-blank -T -E test1.txt
+-b --squeeze-blank -T --number-nonblank test1.txt
+-b --squeeze-blank -T --number test1.txt
+-b --squeeze-blank --number-nonblank -e test1.txt
+-b --squeeze-blank --number-nonblank -n test1.txt
+-b --squeeze-blank --number-nonblank -s test1.txt
+-b --squeeze-blank --number-nonblank -t test1.txt
+-b --squeeze-blank --number-nonblank -v test1.txt
+-b --squeeze-blank --number-nonblank -E test1.txt
+-b --squeeze-blank --number-nonblank -T test1.txt
+-b --squeeze-blank --number-nonblank --number test1.txt
+-b --squeeze-blank --number -e test1.txt
+-b --squeeze-blank --number -n test1.txt
+-b --squeeze-blank --number -s test1.txt
+-b --squeeze-blank --number -t test1.txt
+-b --squeeze-blank --number -v test1.txt
+-b --squeeze-blank --number -E test1.txt
+-b --squeeze-blank --number -T test1.txt
+-b --squeeze-blank --number --number-nonblank test1.txt
+-e -b -n -E test1.txt
+-e -b -n -T test1.txt
+-e -b -n --number-nonblank test1.txt
+-e -b -n --number test1.txt
+-e -b -n --squeeze-blank test1.txt
+-e -b -s -E test1.txt
+-e -b -s -T test1.txt
+-e -b -s --number-nonblank test1.txt
+-e -b -s --number test1.txt
+-e -b -s --squeeze-blank test1.txt
+-e -b -t -E test1.txt
+-e -b -t -T test1.txt
+-e -b -t --number-nonblank test1.txt
+-e -b -t --number test1.txt
+-e -b -t --squeeze-blank test1.txt
+-e -b -v -E test1.txt
+-e -b -v -T test1.txt
+-e -b -v --number-nonblank test1.txt
+-e -b -v --number test1.txt
+-e -b -v --squeeze-blank test1.txt
+-e -b -E -n test1.txt
+-e -b -E -s test1.txt
+-e -b -E -t test1.txt
+-e -b -E -v test1.txt
+-e -b -E -T test1.txt
+-e -b -E --number-nonblank test1.txt
+-e -b -E --number test1.txt
+-e -b -E --squeeze-blank test1.txt
+-e -b -T -n test1.txt
+-e -b -T -s test1.txt
+-e -b -T -t test1.txt
+-e -b -T -v test1.txt
+-e -b -T -E test1.txt
+-e -b -T --number-nonblank test1.txt
+-e -b -T --number test1.txt
+-e -b -T --squeeze-blank test1.txt
+-e -b --number-nonblank -n test1.txt
+-e -b --number-nonblank -s test1.txt
+-e -b --number-nonblank -t test1.txt
+-e -b --number-nonblank -v test1.txt
+-e -b --number-nonblank -E test1.txt
+-e -b --number-nonblank -T test1.txt
+-e -b --number-nonblank --number test1.txt
+-e -b --number-nonblank --squeeze-blank test1.txt
+-e -b --number -n test1.txt
+-e -b --number -s test1.txt
+-e -b --number -t test1.txt
+-e -b --number -v test1.txt
+-e -b --number -E test1.txt
+-e -b --number -T test1.txt
+-e -b --number --number-nonblank test1.txt
+-e -b --number --squeeze-blank test1.txt
+-e -b --squeeze-blank -n test1.txt
+-e -b --squeeze-blank -s test1.txt
+-e -b --squeeze-blank -t test1.txt
+-e -b --squeeze-blank -v test1.txt
+-e -b --squeeze-blank -E test1.txt
+-e -b --squeeze-blank -T test1.txt
+-e -b --squeeze-blank --number-nonblank test1.txt
+-e -b --squeeze-blank --number test1.txt
+-e -n -b -E test1.txt
+-e -n -b -T test1.txt
+-e -n -b --number-nonblank test1.txt
+-e -n -b --number test1.txt
+-e -n -b --squeeze-blank test1.txt
+-e -n -s -E test1.txt
+-e -n -s -T test1.txt
+-e -n -s --number-nonblank test1.txt
+-e -n -s --number test1.txt
+-e -n -s --squeeze-blank test1.txt
+-e -n -t -E test1.txt
+-e -n -t -T test1.txt
+-e -n -t --number-nonblank test1.txt
+-e -n -t --number test1.txt
+-e -n -t --squeeze-blank test1.txt
+-e -n -v -E test1.txt
+-e -n -v -T test1.txt
+-e -n -v --number-nonblank test1.txt
+-e -n -v --number test1.txt
+-e -n -v --squeeze-blank test1.txt
+-e -n -E -b test1.txt
+-e -n -E -s test1.txt
+-e -n -E -t test1.txt
+-e -n -E -v test1.txt
+-e -n -E -T test1.txt
+-e -n -E --number-nonblank test1.txt
+-e -n -E --number test1.txt
+-e -n -E --squeeze-blank test1.txt
+-e -n -T -b test1.txt
+-e -n -T -s test1.txt
+-e -n -T -t test1.txt
+-e -n -T -v test1.txt
+-e -n -T -E test1.txt
+-e -n -T --number-nonblank test1.txt
+-e -n -T --number test1.txt
+-e -n -T --squeeze-blank test1.txt
+-e -n --number-nonblank -b test1.txt
+-e -n --number-nonblank -s test1.txt
+-e -n --number-nonblank -t test1.txt
+-e -n --number-nonblank -v test1.txt
+-e -n --number-nonblank -E test1.txt
+-e -n --number-nonblank -T test1.txt
+-e -n --number-nonblank --number test1.txt
+-e -n --number-nonblank --squeeze-blank test1.txt
+-e -n --number -b test1.txt
+-e -n --number -s test1.txt
+-e -n --number -t test1.txt
+-e -n --number -v test1.txt
+-e -n --number -E test1.txt
+-e -n --number -T test1.txt
+-e -n --number --number-nonblank test1.txt
+-e -n --number --squeeze-blank test1.txt
+-e -n --squeeze-blank -b test1.txt
+-e -n --squeeze-blank -s test1.txt
+-e -n --squeeze-blank -t test1.txt
+-e -n --squeeze-blank -v test1.txt
+-e -n --squeeze-blank -E test1.txt
+-e -n --squeeze-blank -T test1.txt
+-e -n --squeeze-blank --number-nonblank test1.txt
+-e -n --squeeze-blank --number test1.txt
+-e -s -b -E test1.txt
+-e -s -b -T test1.txt
+-e -s -b --number-nonblank test1.txt
+-e -s -b --number test1.txt
+-e -s -b --squeeze-blank test1.txt
+-e -s -n -E test1.txt
+-e -s -n -T test1.txt
+-e -s -n --number-nonblank test1.txt
+-e -s -n --number test1.txt
+-e -s -n --squeeze-blank test1.txt
+-e -s -t -E test1.txt
+-e -s -t -T test1.txt
+-e -s -t --number-nonblank test1.txt
+-e -s -t --number test1.txt
+-e -s -t --squeeze-blank test1.txt
+-e -s -v -E test1.txt
+-e -s -v -T test1.txt
+-e -s -v --number-nonblank test1.txt
+-e -s -v --number test1.txt
+-e -s -v --squeeze-blank test1.txt
+-e -s -E -b test1.txt
+-e -s -E -n test1.txt
+-e -s -E -t test1.txt
+-e -s -E -v test1.txt
+-e -s -E -T test1.txt
+-e -s -E --number-nonblank test1.txt
+-e -s -E --number test1.txt
+-e -s -E --squeeze-blank test1.txt
+-e -s -T -b test1.txt
+-e -s -T -n test1.txt
+-e -s -T -t test1.txt
+-e -s -T -v test1.txt
+-e -s -T -E test1.txt
+-e -s -T --number-nonblank test1.txt
+-e -s -T --number test1.txt
+-e -s -T --squeeze-blank test1.txt
+-e -s --number-nonblank -b test1.txt
+-e -s --number-nonblank -n test1.txt
+-e -s --number-nonblank -t test1.txt
+-e -s --number-nonblank -v test1.txt
+-e -s --number-nonblank -E test1.txt
+-e -s --number-nonblank -T test1.txt
+-e -s --number-nonblank --number test1.txt
+-e -s --number-nonblank --squeeze-blank test1.txt
+-e -s --number -b test1.txt
+-e -s --number -n test1.txt
+-e -s --number -t test1.txt
+-e -s --number -v test1.txt
+-e -s --number -E test1.txt
+-e -s --number -T test1.txt
+-e -s --number --number-nonblank test1.txt
+-e -s --number --squeeze-blank test1.txt
+-e -s --squeeze-blank -b test1.txt
+-e -s --squeeze-blank -n test1.txt
+-e -s --squeeze-blank -t test1.txt
+-e -s --squeeze-blank -v test1.txt
+-e -s --squeeze-blank -E test1.txt
+-e -s --squeeze-blank -T test1.txt
+-e -s --squeeze-blank --number-nonblank test1.txt
+-e -s --squeeze-blank --number test1.txt
+-e -t -b -E test1.txt
+-e -t -b -T test1.txt
+-e -t -b --number-nonblank test1.txt
+-e -t -b --number test1.txt
+-e -t -b --squeeze-blank test1.txt
+-e -t -n -E test1.txt
+-e -t -n -T test1.txt
+-e -t -n --number-nonblank test1.txt
+-e -t -n --number test1.txt
+-e -t -n --squeeze-blank test1.txt
+-e -t -s -E test1.txt
+-e -t -s -T test1.txt
+-e -t -s --number-nonblank test1.txt
+-e -t -s --number test1.txt
+-e -t -s --squeeze-blank test1.txt
+-e -t -v -E test1.txt
+-e -t -v -T test1.txt
+-e -t -v --number-nonblank test1.txt
+-e -t -v --number test1.txt
+-e -t -v --squeeze-blank test1.txt
+-e -t -E -b test1.txt
+-e -t -E -n test1.txt
+-e -t -E -s test1.txt
+-e -t -E -v test1.txt
+-e -t -E -T test1.txt
+-e -t -E --number-nonblank test1.txt
+-e -t -E --number test1.txt
+-e -t -E --squeeze-blank test1.txt
+-e -t -T -b test1.txt
+-e -t -T -n test1.txt
+-e -t -T -s test1.txt
+-e -t -T -v test1.txt
+-e -t -T -E test1.txt
+-e -t -T --number-nonblank test1.txt
+-e -t -T --number test1.txt
+-e -t -T --squeeze-blank test1.txt
+-e -t --number-nonblank -b test1.txt
+-e -t --number-nonblank -n test1.txt
+-e -t --number-nonblank -s test1.txt
+-e -t --number-nonblank -v test1.txt
+-e -t --number-nonblank -E test1.txt
+-e -t --number-nonblank -T test1.txt
+-e -t --number-nonblank --number test1.txt
+-e -t --number-nonblank --squeeze-blank test1.txt
+-e -t --number -b test1.txt
+-e -t --number -n test1.txt
+-e -t --number -s test1.txt
+-e -t --number -v test1.txt
+-e -t --number -E test1.txt
+-e -t --number -T test1.txt
+-e -t --number --number-nonblank test1.txt
+-e -t --number --squeeze-blank test1.txt
+-e -t --squeeze-blank -b test1.txt
+-e -t --squeeze-blank -n test1.txt
+-e -t --squeeze-blank -s test1.txt
+-e -t --squeeze-blank -v test1.txt
+-e -t --squeeze-blank -E test1.txt
+-e -t --squeeze-blank -T test1.txt
+-e -t --squeeze-blank --number-nonblank test1.txt
+-e -t --squeeze-blank --number test1.txt
+-e -v -b -E test1.txt
+-e -v -b -T test1.txt
+-e -v -b --number-nonblank test1.txt
+-e -v -b --number test1.txt
+-e -v -b --squeeze-blank test1.txt
+-e -v -n -E test1.txt
+-e -v -n -T test1.txt
+-e -v -n --number-nonblank test1.txt
+-e -v -n --number test1.txt
+-e -v -n --squeeze-blank test1.txt
+-e -v -s -E test1.txt
+-e -v -s -T test1.txt
+-e -v -s --number-nonblank test1.txt
+-e -v -s --number test1.txt
+-e -v -s --squeeze-blank test1.txt
+-e -v -t -E test1.txt
+-e -v -t -T test1.txt
+-e -v -t --number-nonblank test1.txt
+-e -v -t --number test1.txt
+-e -v -t --squeeze-blank test1.txt
+-e -v -E -b test1.txt
+-e -v -E -n test1.txt
+-e -v -E -s test1.txt
+-e -v -E -t test1.txt
+-e -v -E -T test1.txt
+-e -v -E --number-nonblank test1.txt
+-e -v -E --number test1.txt
+-e -v -E --squeeze-blank test1.txt
+-e -v -T -b test1.txt
+-e -v -T -n test1.txt
+-e -v -T -s test1.txt
+-e -v -T -t test1.txt
+-e -v -T -E test1.txt
+-e -v -T --number-nonblank test1.txt
+-e -v -T --number test1.txt
+-e -v -T --squeeze-blank test1.txt
+-e -v --number-nonblank -b test1.txt
+-e -v --number-nonblank -n test1.txt
+-e -v --number-nonblank -s test1.txt
+-e -v --number-nonblank -t test1.txt
+-e -v --number-nonblank -E test1.txt
+-e -v --number-nonblank -T test1.txt
+-e -v --number-nonblank --number test1.txt
+-e -v --number-nonblank --squeeze-blank test1.txt
+-e -v --number -b test1.txt
+-e -v --number -n test1.txt
+-e -v --number -s test1.txt
+-e -v --number -t test1.txt
+-e -v --number -E test1.txt
+-e -v --number -T test1.txt
+-e -v --number --number-nonblank test1.txt
+-e -v --number --squeeze-blank test1.txt
+-e -v --squeeze-blank -b test1.txt
+-e -v --squeeze-blank -n test1.txt
+-e -v --squeeze-blank -s test1.txt
+-e -v --squeeze-blank -t test1.txt
+-e -v --squeeze-blank -E test1.txt
+-e -v --squeeze-blank -T test1.txt
+-e -v --squeeze-blank --number-nonblank test1.txt
+-e -v --squeeze-blank --number test1.txt
+-e -E -b -n test1.txt
+-e -E -b -s test1.txt
+-e -E -b -t test1.txt
+-e -E -b -v test1.txt
+-e -E -b -T test1.txt
+-e -E -b --number-nonblank test1.txt
+-e -E -b --number test1.txt
+-e -E -b --squeeze-blank test1.txt
+-e -E -n -b test1.txt
+-e -E -n -s test1.txt
+-e -E -n -t test1.txt
+-e -E -n -v test1.txt
+-e -E -n -T test1.txt
+-e -E -n --number-nonblank test1.txt
+-e -E -n --number test1.txt
+-e -E -n --squeeze-blank test1.txt
+-e -E -s -b test1.txt
+-e -E -s -n test1.txt
+-e -E -s -t test1.txt
+-e -E -s -v test1.txt
+-e -E -s -T test1.txt
+-e -E -s --number-nonblank test1.txt
+-e -E -s --number test1.txt
+-e -E -s --squeeze-blank test1.txt
+-e -E -t -b test1.txt
+-e -E -t -n test1.txt
+-e -E -t -s test1.txt
+-e -E -t -v test1.txt
+-e -E -t -T test1.txt
+-e -E -t --number-nonblank test1.txt
+-e -E -t --number test1.txt
+-e -E -t --squeeze-blank test1.txt
+-e -E -v -b test1.txt
+-e -E -v -n test1.txt
+-e -E -v -s test1.txt
+-e -E -v -t test1.txt
+-e -E -v -T test1.txt
+-e -E -v --number-nonblank test1.txt
+-e -E -v --number test1.txt
+-e -E -v --squeeze-blank test1.txt
+-e -E -T -b test1.txt
+-e -E -T -n test1.txt
+-e -E -T -s test1.txt
+-e -E -T -t test1.txt
+-e -E -T -v test1.txt
+-e -E -T --number-nonblank test1.txt
+-e -E -T --number test1.txt
+-e -E -T --squeeze-blank test1.txt
+-e -E --number-nonblank -b test1.txt
+-e -E --number-nonblank -n test1.txt
+-e -E --number-nonblank -s test1.txt
+-e -E --number-nonblank -t test1.txt
+-e -E --number-nonblank -v test1.txt
+-e -E --number-nonblank -T test1.txt
+-e -E --number-nonblank --number test1.txt
+-e -E --number-nonblank --squeeze-blank test1.txt
+-e -E --number -b test1.txt
+-e -E --number -n test1.txt
+-e -E --number -s test1.txt
+-e -E --number -t test1.txt
+-e -E --number -v test1.txt
+-e -E --number -T test1.txt
+-e -E --number --number-nonblank test1.txt
+-e -E --number --squeeze-blank test1.txt
+-e -E --squeeze-blank -b test1.txt
+-e -E --squeeze-blank -n test1.txt
+-e -E --squeeze-blank -s test1.txt
+-e -E --squeeze-blank -t test1.txt
+-e -E --squeeze-blank -v test1.txt
+-e -E --squeeze-blank -T test1.txt
+-e -E --squeeze-blank --number-nonblank test1.txt
+-e -E --squeeze-blank --number test1.txt
+-e -T -b -n test1.txt
+-e -T -b -s test1.txt
+-e -T -b -t test1.txt
+-e -T -b -v test1.txt
+-e -T -b -E test1.txt
+-e -T -b --number-nonblank test1.txt
+-e -T -b --number test1.txt
+-e -T -b --squeeze-blank test1.txt
+-e -T -n -b test1.txt
+-e -T -n -s test1.txt
+-e -T -n -t test1.txt
+-e -T -n -v test1.txt
+-e -T -n -E test1.txt
+-e -T -n --number-nonblank test1.txt
+-e -T -n --number test1.txt
+-e -T -n --squeeze-blank test1.txt
+-e -T -s -b test1.txt
+-e -T -s -n test1.txt
+-e -T -s -t test1.txt
+-e -T -s -v test1.txt
+-e -T -s -E test1.txt
+-e -T -s --number-nonblank test1.txt
+-e -T -s --number test1.txt
+-e -T -s --squeeze-blank test1.txt
+-e -T -t -b test1.txt
+-e -T -t -n test1.txt
+-e -T -t -s test1.txt
+-e -T -t -v test1.txt
+-e -T -t -E test1.txt
+-e -T -t --number-nonblank test1.txt
+-e -T -t --number test1.txt
+-e -T -t --squeeze-blank test1.txt
+-e -T -v -b test1.txt
+-e -T -v -n test1.txt
+-e -T -v -s test1.txt
+-e -T -v -t test1.txt
+-e -T -v -E test1.txt
+-e -T -v --number-nonblank test1.txt
+-e -T -v --number test1.txt
+-e -T -v --squeeze-blank test1.txt
+-e -T -E -b test1.txt
+-e -T -E -n test1.txt
+-e -T -E -s test1.txt
+-e -T -E -t test1.txt
+-e -T -E -v test1.txt
+-e -T -E --number-nonblank test1.txt
+-e -T -E --number test1.txt
+-e -T -E --squeeze-blank test1.txt
+-e -T --number-nonblank -b test1.txt
+-e -T --number-nonblank -n test1.txt
+-e -T --number-nonblank -s test1.txt
+-e -T --number-nonblank -t test1.txt
+-e -T --number-nonblank -v test1.txt
+-e -T --number-nonblank -E test1.txt
+-e -T --number-nonblank --number test1.txt
+-e -T --number-nonblank --squeeze-blank test1.txt
+-e -T --number -b test1.txt
+-e -T --number -n test1.txt
+-e -T --number -s test1.txt
+-e -T --number -t test1.txt
+-e -T --number -v test1.txt
+-e -T --number -E test1.txt
+-e -T --number --number-nonblank test1.txt
+-e -T --number --squeeze-blank test1.txt
+-e -T --squeeze-blank -b test1.txt
+-e -T --squeeze-blank -n test1.txt
+-e -T --squeeze-blank -s test1.txt
+-e -T --squeeze-blank -t test1.txt
+-e -T --squeeze-blank -v test1.txt
+-e -T --squeeze-blank -E test1.txt
+-e -T --squeeze-blank --number-nonblank test1.txt
+-e -T --squeeze-blank --number test1.txt
+-e --number-nonblank -b -n test1.txt
+-e --number-nonblank -b -s test1.txt
+-e --number-nonblank -b -t test1.txt
+-e --number-nonblank -b -v test1.txt
+-e --number-nonblank -b -E test1.txt
+-e --number-nonblank -b -T test1.txt
+-e --number-nonblank -b --number test1.txt
+-e --number-nonblank -b --squeeze-blank test1.txt
+-e --number-nonblank -n -b test1.txt
+-e --number-nonblank -n -s test1.txt
+-e --number-nonblank -n -t test1.txt
+-e --number-nonblank -n -v test1.txt
+-e --number-nonblank -n -E test1.txt
+-e --number-nonblank -n -T test1.txt
+-e --number-nonblank -n --number test1.txt
+-e --number-nonblank -n --squeeze-blank test1.txt
+-e --number-nonblank -s -b test1.txt
+-e --number-nonblank -s -n test1.txt
+-e --number-nonblank -s -t test1.txt
+-e --number-nonblank -s -v test1.txt
+-e --number-nonblank -s -E test1.txt
+-e --number-nonblank -s -T test1.txt
+-e --number-nonblank -s --number test1.txt
+-e --number-nonblank -s --squeeze-blank test1.txt
+-e --number-nonblank -t -b test1.txt
+-e --number-nonblank -t -n test1.txt
+-e --number-nonblank -t -s test1.txt
+-e --number-nonblank -t -v test1.txt
+-e --number-nonblank -t -E test1.txt
+-e --number-nonblank -t -T test1.txt
+-e --number-nonblank -t --number test1.txt
+-e --number-nonblank -t --squeeze-blank test1.txt
+-e --number-nonblank -v -b test1.txt
+-e --number-nonblank -v -n test1.txt
+-e --number-nonblank -v -s test1.txt
+-e --number-nonblank -v -t test1.txt
+-e --number-nonblank -v -E test1.txt
+-e --number-nonblank -v -T test1.txt
+-e --number-nonblank -v --number test1.txt
+-e --number-nonblank -v --squeeze-blank test1.txt
+-e --number-nonblank -E -b test1.txt
+-e --number-nonblank -E -n test1.txt
+-e --number-nonblank -E -s test1.txt
+-e --number-nonblank -E -t test1.txt
+-e --number-nonblank -E -v test1.txt
+-e --number-nonblank -E -T test1.txt
+-e --number-nonblank -E --number test1.txt
+-e --number-nonblank -E --squeeze-blank test1.txt
+-e --number-nonblank -T -b test1.txt
+-e --number-nonblank -T -n test1.txt
+-e --number-nonblank -T -s test1.txt
+-e --number-nonblank -T -t test1.txt
+-e --number-nonblank -T -v test1.txt
+-e --number-nonblank -T -E test1.txt
+-e --number-nonblank -T --number test1.txt
+-e --number-nonblank -T --squeeze-blank test1.txt
+-e --number-nonblank --number -b test1.txt
+-e --number-nonblank --number -n test1.txt
+-e --number-nonblank --number -s test1.txt
+-e --number-nonblank --number -t test1.txt
+-e --number-nonblank --number -v test1.txt
+-e --number-nonblank --number -E test1.txt
+-e --number-nonblank --number -T test1.txt
+-e --number-nonblank --number --squeeze-blank test1.txt
+-e --number-nonblank --squeeze-blank -b test1.txt
+-e --number-nonblank --squeeze-blank -n test1.txt
+-e --number-nonblank --squeeze-blank -s test1.txt
+-e --number-nonblank --squeeze-blank -t test1.txt
+-e --number-nonblank --squeeze-blank -v test1.txt
+-e --number-nonblank --squeeze-blank -E test1.txt
+-e --number-nonblank --squeeze-blank -T test1.txt
+-e --number-nonblank --squeeze-blank --number test1.txt
+-e --number -b -n test1.txt
+-e --number -b -s test1.txt
+-e --number -b -t test1.txt
+-e --number -b -v test1.txt
+-e --number -b -E test1.txt
+-e --number -b -T test1.txt
+-e --number -b --number-nonblank test1.txt
+-e --number -b --squeeze-blank test1.txt
+-e --number -n -b test1.txt
+-e --number -n -s test1.txt
+-e --number -n -t test1.txt
+-e --number -n -v test1.txt
+-e --number -n -E test1.txt
+-e --number -n -T test1.txt
+-e --number -n --number-nonblank test1.txt
+-e --number -n --squeeze-blank test1.txt
+-e --number -s -b test1.txt
+-e --number -s -n test1.txt
+-e --number -s -t test1.txt
+-e --number -s -v test1.txt
+-e --number -s -E test1.txt
+-e --number -s -T test1.txt
+-e --number -s --number-nonblank test1.txt
+-e --number -s --squeeze-blank test1.txt
+-e --number -t -b test1.txt
+-e --number -t -n test1.txt
+-e --number -t -s test1.txt
+-e --number -t -v test1.txt
+-e --number -t -E test1.txt
+-e --number -t -T test1.txt
+-e --number -t --number-nonblank test1.txt
+-e --number -t --squeeze-blank test1.txt
+-e --number -v -b test1.txt
+-e --number -v -n test1.txt
+-e --number -v -s test1.txt
+-e --number -v -t test1.txt
+-e --number -v -E test1.txt
+-e --number -v -T test1.txt
+-e --number -v --number-nonblank test1.txt
+-e --number -v --squeeze-blank test1.txt
+-e --number -E -b test1.txt
+-e --number -E -n test1.txt
+-e --number -E -s test1.txt
+-e --number -E -t test1.txt
+-e --number -E -v test1.txt
+-e --number -E -T test1.txt
+-e --number -E --number-nonblank test1.txt
+-e --number -E --squeeze-blank test1.txt
+-e --number -T -b test1.txt
+-e --number -T -n test1.txt
+-e --number -T -s test1.txt
+-e --number -T -t test1.txt
+-e --number -T -v test1.txt
+-e --number -T -E test1.txt
+-e --number -T --number-nonblank test1.txt
+-e --number -T --squeeze-blank test1.txt
+-e --number --number-nonblank -b test1.txt
+-e --number --number-nonblank -n test1.txt
+-e --number --number-nonblank -s test1.txt
+-e --number --number-nonblank -t test1.txt
+-e --number --number-nonblank -v test1.txt
+-e --number --number-nonblank -E test1.txt
+-e --number --number-nonblank -T test1.txt
+-e --number --number-nonblank --squeeze-blank test1.txt
+-e --number --squeeze-blank -b test1.txt
+-e --number --squeeze-blank -n test1.txt
+-e --number --squeeze-blank -s test1.txt
+-e --number --squeeze-blank -t test1.txt
+-e --number --squeeze-blank -v test1.txt
+-e --number --squeeze-blank -E test1.txt
+-e --number --squeeze-blank -T test1.txt
+-e --number --squeeze-blank --number-nonblank test1.txt
+-e --squeeze-blank -b -n test1.txt
+-e --squeeze-blank -b -s test1.txt
+-e --squeeze-blank -b -t test1.txt
+-e --squeeze-blank -b -v test1.txt
+-e --squeeze-blank -b -E test1.txt
+-e --squeeze-blank -b -T test1.txt
+-e --squeeze-blank -b --number-nonblank test1.txt
+-e --squeeze-blank -b --number test1.txt
+-e --squeeze-blank -n -b test1.txt
+-e --squeeze-blank -n -s test1.txt
+-e --squeeze-blank -n -t test1.txt
+-e --squeeze-blank -n -v test1.txt
+-e --squeeze-blank -n -E test1.txt
+-e --squeeze-blank -n -T test1.txt
+-e --squeeze-blank -n --number-nonblank test1.txt
+-e --squeeze-blank -n --number test1.txt
+-e --squeeze-blank -s -b test1.txt
+-e --squeeze-blank -s -n test1.txt
+-e --squeeze-blank -s -t test1.txt
+-e --squeeze-blank -s -v test1.txt
+-e --squeeze-blank -s -E test1.txt
+-e --squeeze-blank -s -T test1.txt
+-e --squeeze-blank -s --number-nonblank test1.txt
+-e --squeeze-blank -s --number test1.txt
+-e --squeeze-blank -t -b test1.txt
+-e --squeeze-blank -t -n test1.txt
+-e --squeeze-blank -t -s test1.txt
+-e --squeeze-blank -t -v test1.txt
+-e --squeeze-blank -t -E test1.txt
+-e --squeeze-blank -t -T test1.txt
+-e --squeeze-blank -t --number-nonblank test1.txt
+-e --squeeze-blank -t --number test1.txt
+-e --squeeze-blank -v -b test1.txt
+-e --squeeze-blank -v -n test1.txt
+-e --squeeze-blank -v -s test1.txt
+-e --squeeze-blank -v -t test1.txt
+-e --squeeze-blank -v -E test1.txt
+-e --squeeze-blank -v -T test1.txt
+-e --squeeze-blank -v --number-nonblank test1.txt
+-e --squeeze-blank -v --number test1.txt
+-e --squeeze-blank -E -b test1.txt
+-e --squeeze-blank -E -n test1.txt
+-e --squeeze-blank -E -s test1.txt
+-e --squeeze-blank -E -t test1.txt
+-e --squeeze-blank -E -v test1.txt
+-e --squeeze-blank -E -T test1.txt
+-e --squeeze-blank -E --number-nonblank test1.txt
+-e --squeeze-blank -E --number test1.txt
+-e --squeeze-blank -T -b test1.txt
+-e --squeeze-blank -T -n test1.txt
+-e --squeeze-blank -T -s test1.txt
+-e --squeeze-blank -T -t test1.txt
+-e --squeeze-blank -T -v test1.txt
+-e --squeeze-blank -T -E test1.txt
+-e --squeeze-blank -T --number-nonblank test1.txt
+-e --squeeze-blank -T --number test1.txt
+-e --squeeze-blank --number-nonblank -b test1.txt
+-e --squeeze-blank --number-nonblank -n test1.txt
+-e --squeeze-blank --number-nonblank -s test1.txt
+-e --squeeze-blank --number-nonblank -t test1.txt
+-e --squeeze-blank --number-nonblank -v test1.txt
+-e --squeeze-blank --number-nonblank -E test1.txt
+-e --squeeze-blank --number-nonblank -T test1.txt
+-e --squeeze-blank --number-nonblank --number test1.txt
+-e --squeeze-blank --number -b test1.txt
+-e --squeeze-blank --number -n test1.txt
+-e --squeeze-blank --number -s test1.txt
+-e --squeeze-blank --number -t test1.txt
+-e --squeeze-blank --number -v test1.txt
+-e --squeeze-blank --number -E test1.txt
+-e --squeeze-blank --number -T test1.txt
+-e --squeeze-blank --number --number-nonblank test1.txt
+-n -b -e -E test1.txt
+-n -b -e -T test1.txt
+-n -b -e --number-nonblank test1.txt
+-n -b -e --number test1.txt
+-n -b -e --squeeze-blank test1.txt
+-n -b -s -E test1.txt
+-n -b -s -T test1.txt
+-n -b -s --number-nonblank test1.txt
+-n -b -s --number test1.txt
+-n -b -s --squeeze-blank test1.txt
+-n -b -t -E test1.txt
+-n -b -t -T test1.txt
+-n -b -t --number-nonblank test1.txt
+-n -b -t --number test1.txt
+-n -b -t --squeeze-blank test1.txt
+-n -b -v -E test1.txt
+-n -b -v -T test1.txt
+-n -b -v --number-nonblank test1.txt
+-n -b -v --number test1.txt
+-n -b -v --squeeze-blank test1.txt
+-n -b -E -e test1.txt
+-n -b -E -s test1.txt
+-n -b -E -t test1.txt
+-n -b -E -v test1.txt
+-n -b -E -T test1.txt
+-n -b -E --number-nonblank test1.txt
+-n -b -E --number test1.txt
+-n -b -E --squeeze-blank test1.txt
+-n -b -T -e test1.txt
+-n -b -T -s test1.txt
+-n -b -T -t test1.txt
+-n -b -T -v test1.txt
+-n -b -T -E test1.txt
+-n -b -T --number-nonblank test1.txt
+-n -b -T --number test1.txt
+-n -b -T --squeeze-blank test1.txt
+-n -b --number-nonblank -e test1.txt
+-n -b --number-nonblank -s test1.txt
+-n -b --number-nonblank -t test1.txt
+-n -b --number-nonblank -v test1.txt
+-n -b --number-nonblank -E test1.txt
+-n -b --number-nonblank -T test1.txt
+-n -b --number-nonblank --number test1.txt
+-n -b --number-nonblank --squeeze-blank test1.txt
+-n -b --number -e test1.txt
+-n -b --number -s test1.txt
+-n -b --number -t test1.txt
+-n -b --number -v test1.txt
+-n -b --number -E test1.txt
+-n -b --number -T test1.txt
+-n -b --number --number-nonblank test1.txt
+-n -b --number --squeeze-blank test1.txt
+-n -b --squeeze-blank -e test1.txt
+-n -b --squeeze-blank -s test1.txt
+-n -b --squeeze-blank -t test1.txt
+-n -b --squeeze-blank -v test1.txt
+-n -b --squeeze-blank -E test1.txt
+-n -b --squeeze-blank -T test1.txt
+-n -b --squeeze-blank --number-nonblank test1.txt
+-n -b --squeeze-blank --number test1.txt
+-n -e -b -E test1.txt
+-n -e -b -T test1.txt
+-n -e -b --number-nonblank test1.txt
+-n -e -b --number test1.txt
+-n -e -b --squeeze-blank test1.txt
+-n -e -s -E test1.txt
+-n -e -s -T test1.txt
+-n -e -s --number-nonblank test1.txt
+-n -e -s --number test1.txt
+-n -e -s --squeeze-blank test1.txt
+-n -e -t -E test1.txt
+-n -e -t -T test1.txt
+-n -e -t --number-nonblank test1.txt
+-n -e -t --number test1.txt
+-n -e -t --squeeze-blank test1.txt
+-n -e -v -E test1.txt
+-n -e -v -T test1.txt
+-n -e -v --number-nonblank test1.txt
+-n -e -v --number test1.txt
+-n -e -v --squeeze-blank test1.txt
+-n -e -E -b test1.txt
+-n -e -E -s test1.txt
+-n -e -E -t test1.txt
+-n -e -E -v test1.txt
+-n -e -E -T test1.txt
+-n -e -E --number-nonblank test1.txt
+-n -e -E --number test1.txt
+-n -e -E --squeeze-blank test1.txt
+-n -e -T -b test1.txt
+-n -e -T -s test1.txt
+-n -e -T -t test1.txt
+-n -e -T -v test1.txt
+-n -e -T -E test1.txt
+-n -e -T --number-nonblank test1.txt
+-n -e -T --number test1.txt
+-n -e -T --squeeze-blank test1.txt
+-n -e --number-nonblank -b test1.txt
+-n -e --number-nonblank -s test1.txt
+-n -e --number-nonblank -t test1.txt
+-n -e --number-nonblank -v test1.txt
+-n -e --number-nonblank -E test1.txt
+-n -e --number-nonblank -T test1.txt
+-n -e --number-nonblank --number test1.txt
+-n -e --number-nonblank --squeeze-blank test1.txt
+-n -e --number -b test1.txt
+-n -e --number -s test1.txt
+-n -e --number -t test1.txt
+-n -e --number -v test1.txt
+-n -e --number -E test1.txt
+-n -e --number -T test1.txt
+-n -e --number --number-nonblank test1.txt
+-n -e --number --squeeze-blank test1.txt
+-n -e --squeeze-blank -b test1.txt
+-n -e --squeeze-blank -s test1.txt
+-n -e --squeeze-blank -t test1.txt
+-n -e --squeeze-blank -v test1.txt
+-n -e --squeeze-blank -E test1.txt
+-n -e --squeeze-blank -T test1.txt
+-n -e --squeeze-blank --number-nonblank test1.txt
+-n -e --squeeze-blank --number test1.txt
+-n -s -b -E test1.txt
+-n -s -b -T test1.txt
+-n -s -b --number-nonblank test1.txt
+-n -s -b --number test1.txt
+-n -s -b --squeeze-blank test1.txt
+-n -s -e -E test1.txt
+-n -s -e -T test1.txt
+-n -s -e --number-nonblank test1.txt
+-n -s -e --number test1.txt
+-n -s -e --squeeze-blank test1.txt
+-n -s -t -E test1.txt
+-n -s -t -T test1.txt
+-n -s -t --number-nonblank test1.txt
+-n -s -t --number test1.txt
+-n -s -t --squeeze-blank test1.txt
+-n -s -v -E test1.txt
+-n -s -v -T test1.txt
+-n -s -v --number-nonblank test1.txt
+-n -s -v --number test1.txt
+-n -s -v --squeeze-blank test1.txt
+-n -s -E -b test1.txt
+-n -s -E -e test1.txt
+-n -s -E -t test1.txt
+-n -s -E -v test1.txt
+-n -s -E -T test1.txt
+-n -s -E --number-nonblank test1.txt
+-n -s -E --number test1.txt
+-n -s -E --squeeze-blank test1.txt
+-n -s -T -b test1.txt
+-n -s -T -e test1.txt
+-n -s -T -t test1.txt
+-n -s -T -v test1.txt
+-n -s -T -E test1.txt
+-n -s -T --number-nonblank test1.txt
+-n -s -T --number test1.txt
+-n -s -T --squeeze-blank test1.txt
+-n -s --number-nonblank -b test1.txt
+-n -s --number-nonblank -e test1.txt
+-n -s --number-nonblank -t test1.txt
+-n -s --number-nonblank -v test1.txt
+-n -s --number-nonblank -E test1.txt
+-n -s --number-nonblank -T test1.txt
+-n -s --number-nonblank --number test1.txt
+-n -s --number-nonblank --squeeze-blank test1.txt
+-n -s --number -b test1.txt
+-n -s --number -e test1.txt
+-n -s --number -t test1.txt
+-n -s --number -v test1.txt
+-n -s --number -E test1.txt
+-n -s --number -T test1.txt
+-n -s --number --number-nonblank test1.txt
+-n -s --number --squeeze-blank test1.txt
+-n -s --squeeze-blank -b test1.txt
+-n -s --squeeze-blank -e test1.txt
+-n -s --squeeze-blank -t test1.txt
+-n -s --squeeze-blank -v test1.txt
+-n -s --squeeze-blank -E test1.txt
+-n -s --squeeze-blank -T test1.txt
+-n -s --squeeze-blank --number-nonblank test1.txt
+-n -s --squeeze-blank --number test1.txt
+-n -t -b -E test1.txt
+-n -t -b -T test1.txt
+-n -t -b --number-nonblank test1.txt
+-n -t -b --number test1.txt
+-n -t -b --squeeze-blank test1.txt
+-n -t -e -E test1.txt
+-n -t -e -T test1.txt
+-n -t -e --number-nonblank test1.txt
+-n -t -e --number test1.txt
+-n -t -e --squeeze-blank test1.txt
+-n -t -s -E test1.txt
+-n -t -s -T test1.txt
+-n -t -s --number-nonblank test1.txt
+-n -t -s --number test1.txt
+-n -t -s --squeeze-blank test1.txt
+-n -t -v -E test1.txt
+-n -t -v -T test1.txt
+-n -t -v --number-nonblank test1.txt
+-n -t -v --number test1.txt
+-n -t -v --squeeze-blank test1.txt
+-n -t -E -b test1.txt
+-n -t -E -e test1.txt
+-n -t -E -s test1.txt
+-n -t -E -v test1.txt
+-n -t -E -T test1.txt
+-n -t -E --number-nonblank test1.txt
+-n -t -E --number test1.txt
+-n -t -E --squeeze-blank test1.txt
+-n -t -T -b test1.txt
+-n -t -T -e test1.txt
+-n -t -T -s test1.txt
+-n -t -T -v test1.txt
+-n -t -T -E test1.txt
+-n -t -T --number-nonblank test1.txt
+-n -t -T --number test1.txt
+-n -t -T --squeeze-blank test1.txt
+-n -t --number-nonblank -b test1.txt
+-n -t --number-nonblank -e test1.txt
+-n -t --number-nonblank -s test1.txt
+-n -t --number-nonblank -v test1.txt
+-n -t --number-nonblank -E test1.txt
+-n -t --number-nonblank -T test1.txt
+-n -t --number-nonblank --number test1.txt
+-n -t --number-nonblank --squeeze-blank test1.txt
+-n -t --number -b test1.txt
+-n -t --number -e test1.txt
+-n -t --number -s test1.txt
+-n -t --number -v test1.txt
+-n -t --number -E test1.txt
+-n -t --number -T test1.txt
+-n -t --number --number-nonblank test1.txt
+-n -t --number --squeeze-blank test1.txt
+-n -t --squeeze-blank -b test1.txt
+-n -t --squeeze-blank -e test1.txt
+-n -t --squeeze-blank -s test1.txt
+-n -t --squeeze-blank -v test1.txt
+-n -t --squeeze-blank -E test1.txt
+-n -t --squeeze-blank -T test1.txt
+-n -t --squeeze-blank --number-nonblank test1.txt
+-n -t --squeeze-blank --number test1.txt
+-n -v -b -E test1.txt
+-n -v -b -T test1.txt
+-n -v -b --number-nonblank test1.txt
+-n -v -b --number test1.txt
+-n -v -b --squeeze-blank test1.txt
+-n -v -e -E test1.txt
+-n -v -e -T test1.txt
+-n -v -e --number-nonblank test1.txt
+-n -v -e --number test1.txt
+-n -v -e --squeeze-blank test1.txt
+-n -v -s -E test1.txt
+-n -v -s -T test1.txt
+-n -v -s --number-nonblank test1.txt
+-n -v -s --number test1.txt
+-n -v -s --squeeze-blank test1.txt
+-n -v -t -E test1.txt
+-n -v -t -T test1.txt
+-n -v -t --number-nonblank test1.txt
+-n -v -t --number test1.txt
+-n -v -t --squeeze-blank test1.txt
+-n -v -E -b test1.txt
+-n -v -E -e test1.txt
+-n -v -E -s test1.txt
+-n -v -E -t test1.txt
+-n -v -E -T test1.txt
+-n -v -E --number-nonblank test1.txt
+-n -v -E --number test1.txt
+-n -v -E --squeeze-blank test1.txt
+-n -v -T -b test1.txt
+-n -v -T -e test1.txt
+-n -v -T -s test1.txt
+-n -v -T -t test1.txt
+-n -v -T -E test1.txt
+-n -v -T --number-nonblank test1.txt
+-n -v -T --number test1.txt
+-n -v -T --squeeze-blank test1.txt
+-n -v --number-nonblank -b test1.txt
+-n -v --number-nonblank -e test1.txt
+-n -v --number-nonblank -s test1.txt
+-n -v --number-nonblank -t test1.txt
+-n -v --number-nonblank -E test1.txt
+-n -v --number-nonblank -T test1.txt
+-n -v --number-nonblank --number test1.txt
+-n -v --number-nonblank --squeeze-blank test1.txt
+-n -v --number -b test1.txt
+-n -v --number -e test1.txt
+-n -v --number -s test1.txt
+-n -v --number -t test1.txt
+-n -v --number -E test1.txt
+-n -v --number -T test1.txt
+-n -v --number --number-nonblank test1.txt
+-n -v --number --squeeze-blank test1.txt
+-n -v --squeeze-blank -b test1.txt
+-n -v --squeeze-blank -e test1.txt
+-n -v --squeeze-blank -s test1.txt
+-n -v --squeeze-blank -t test1.txt
+-n -v --squeeze-blank -E test1.txt
+-n -v --squeeze-blank -T test1.txt
+-n -v --squeeze-blank --number-nonblank test1.txt
+-n -v --squeeze-blank --number test1.txt
+-n -E -b -e test1.txt
+-n -E -b -s test1.txt
+-n -E -b -t test1.txt
+-n -E -b -v test1.txt
+-n -E -b -T test1.txt
+-n -E -b --number-nonblank test1.txt
+-n -E -b --number test1.txt
+-n -E -b --squeeze-blank test1.txt
+-n -E -e -b test1.txt
+-n -E -e -s test1.txt
+-n -E -e -t test1.txt
+-n -E -e -v test1.txt
+-n -E -e -T test1.txt
+-n -E -e --number-nonblank test1.txt
+-n -E -e --number test1.txt
+-n -E -e --squeeze-blank test1.txt
+-n -E -s -b test1.txt
+-n -E -s -e test1.txt
+-n -E -s -t test1.txt
+-n -E -s -v test1.txt
+-n -E -s -T test1.txt
+-n -E -s --number-nonblank test1.txt
+-n -E -s --number test1.txt
+-n -E -s --squeeze-blank test1.txt
+-n -E -t -b test1.txt
+-n -E -t -e test1.txt
+-n -E -t -s test1.txt
+-n -E -t -v test1.txt
+-n -E -t -T test1.txt
+-n -E -t --number-nonblank test1.txt
+-n -E -t --number test1.txt
+-n -E -t --squeeze-blank test1.txt
+-n -E -v -b test1.txt
+-n -E -v -e test1.txt
+-n -E -v -s test1.txt
+-n -E -v -t test1.txt
+-n -E -v -T test1.txt
+-n -E -v --number-nonblank test1.txt
+-n -E -v --number test1.txt
+-n -E -v --squeeze-blank test1.txt
+-n -E -T -b test1.txt
+-n -E -T -e test1.txt
+-n -E -T -s test1.txt
+-n -E -T -t test1.txt
+-n -E -T -v test1.txt
+-n -E -T --number-nonblank test1.txt
+-n -E -T --number test1.txt
+-n -E -T --squeeze-blank test1.txt
+-n -E --number-nonblank -b test1.txt
+-n -E --number-nonblank -e test1.txt
+-n -E --number-nonblank -s test1.txt
+-n -E --number-nonblank -t test1.txt
+-n -E --number-nonblank -v test1.txt
+-n -E --number-nonblank -T test1.txt
+-n -E --number-nonblank --number test1.txt
+-n -E --number-nonblank --squeeze-blank test1.txt
+-n -E --number -b test1.txt
+-n -E --number -e test1.txt
+-n -E --number -s test1.txt
+-n -E --number -t test1.txt
+-n -E --number -v test1.txt
+-n -E --number -T test1.txt
+-n -E --number --number-nonblank test1.txt
+-n -E --number --squeeze-blank test1.txt
+-n -E --squeeze-blank -b test1.txt
+-n -E --squeeze-blank -e test1.txt
+-n -E --squeeze-blank -s test1.txt
+-n -E --squeeze-blank -t test1.txt
+-n -E --squeeze-blank -v test1.txt
+-n -E --squeeze-blank -T test1.txt
+-n -E --squeeze-blank --number-nonblank test1.txt
+-n -E --squeeze-blank --number test1.txt
+-n -T -b -e test1.txt
+-n -T -b -s test1.txt
+-n -T -b -t test1.txt
+-n -T -b -v test1.txt
+-n -T -b -E test1.txt
+-n -T -b --number-nonblank test1.txt
+-n -T -b --number test1.txt
+-n -T -b --squeeze-blank test1.txt
+-n -T -e -b test1.txt
+-n -T -e -s test1.txt
+-n -T -e -t test1.txt
+-n -T -e -v test1.txt
+-n -T -e -E test1.txt
+-n -T -e --number-nonblank test1.txt
+-n -T -e --number test1.txt
+-n -T -e --squeeze-blank test1.txt
+-n -T -s -b test1.txt
+-n -T -s -e test1.txt
+-n -T -s -t test1.txt
+-n -T -s -v test1.txt
+-n -T -s -E test1.txt
+-n -T -s --number-nonblank test1.txt
+-n -T -s --number test1.txt
+-n -T -s --squeeze-blank test1.txt
+-n -T -t -b test1.txt
+-n -T -t -e test1.txt
+-n -T -t -s test1.txt
+-n -T -t -v test1.txt
+-n -T -t -E test1.txt
+-n -T -t --number-nonblank test1.txt
+-n -T -t --number test1.txt
+-n -T -t --squeeze-blank test1.txt
+-n -T -v -b test1.txt
+-n -T -v -e test1.txt
+-n -T -v -s test1.txt
+-n -T -v -t test1.txt
+-n -T -v -E test1.txt
+-n -T -v --number-nonblank test1.txt
+-n -T -v --number test1.txt
+-n -T -v --squeeze-blank test1.txt
+-n -T -E -b test1.txt
+-n -T -E -e test1.txt
+-n -T -E -s test1.txt
+-n -T -E -t test1.txt
+-n -T -E -v test1.txt
+-n -T -E --number-nonblank test1.txt
+-n -T -E --number test1.txt
+-n -T -E --squeeze-blank test1.txt
+-n -T --number-nonblank -b test1.txt
+-n -T --number-nonblank -e test1.txt
+-n -T --number-nonblank -s test1.txt
+-n -T --number-nonblank -t test1.txt
+-n -T --number-nonblank -v test1.txt
+-n -T --number-nonblank -E test1.txt
+-n -T --number-nonblank --number test1.txt
+-n -T --number-nonblank --squeeze-blank test1.txt
+-n -T --number -b test1.txt
+-n -T --number -e test1.txt
+-n -T --number -s test1.txt
+-n -T --number -t test1.txt
+-n -T --number -v test1.txt
+-n -T --number -E test1.txt
+-n -T --number --number-nonblank test1.txt
+-n -T --number --squeeze-blank test1.txt
+-n -T --squeeze-blank -b test1.txt
+-n -T --squeeze-blank -e test1.txt
+-n -T --squeeze-blank -s test1.txt
+-n -T --squeeze-blank -t test1.txt
+-n -T --squeeze-blank -v test1.txt
+-n -T --squeeze-blank -E test1.txt
+-n -T --squeeze-blank --number-nonblank test1.txt
+-n -T --squeeze-blank --number test1.txt
+-n --number-nonblank -b -e test1.txt
+-n --number-nonblank -b -s test1.txt
+-n --number-nonblank -b -t test1.txt
+-n --number-nonblank -b -v test1.txt
+-n --number-nonblank -b -E test1.txt
+-n --number-nonblank -b -T test1.txt
+-n --number-nonblank -b --number test1.txt
+-n --number-nonblank -b --squeeze-blank test1.txt
+-n --number-nonblank -e -b test1.txt
+-n --number-nonblank -e -s test1.txt
+-n --number-nonblank -e -t test1.txt
+-n --number-nonblank -e -v test1.txt
+-n --number-nonblank -e -E test1.txt
+-n --number-nonblank -e -T test1.txt
+-n --number-nonblank -e --number test1.txt
+-n --number-nonblank -e --squeeze-blank test1.txt
+-n --number-nonblank -s -b test1.txt
+-n --number-nonblank -s -e test1.txt
+-n --number-nonblank -s -t test1.txt
+-n --number-nonblank -s -v test1.txt
+-n --number-nonblank -s -E test1.txt
+-n --number-nonblank -s -T test1.txt
+-n --number-nonblank -s --number test1.txt
+-n --number-nonblank -s --squeeze-blank test1.txt
+-n --number-nonblank -t -b test1.txt
+-n --number-nonblank -t -e test1.txt
+-n --number-nonblank -t -s test1.txt
+-n --number-nonblank -t -v test1.txt
+-n --number-nonblank -t -E test1.txt
+-n --number-nonblank -t -T test1.txt
+-n --number-nonblank -t --number test1.txt
+-n --number-nonblank -t --squeeze-blank test1.txt
+-n --number-nonblank -v -b test1.txt
+-n --number-nonblank -v -e test1.txt
+-n --number-nonblank -v -s test1.txt
+-n --number-nonblank -v -t test1.txt
+-n --number-nonblank -v -E test1.txt
+-n --number-nonblank -v -T test1.txt
+-n --number-nonblank -v --number test1.txt
+-n --number-nonblank -v --squeeze-blank test1.txt
+-n --number-nonblank -E -b test1.txt
+-n --number-nonblank -E -e test1.txt
+-n --number-nonblank -E -s test1.txt
+-n --number-nonblank -E -t test1.txt
+-n --number-nonblank -E -v test1.txt
+-n --number-nonblank -E -T test1.txt
+-n --number-nonblank -E --number test1.txt
+-n --number-nonblank -E --squeeze-blank test1.txt
+-n --number-nonblank -T -b test1.txt
+-n --number-nonblank -T -e test1.txt
+-n --number-nonblank -T -s test1.txt
+-n --number-nonblank -T -t test1.txt
+-n --number-nonblank -T -v test1.txt
+-n --number-nonblank -T -E test1.txt
+-n --number-nonblank -T --number test1.txt
+-n --number-nonblank -T --squeeze-blank test1.txt
+-n --number-nonblank --number -b test1.txt
+-n --number-nonblank --number -e test1.txt
+-n --number-nonblank --number -s test1.txt
+-n --number-nonblank --number -t test1.txt
+-n --number-nonblank --number -v test1.txt
+-n --number-nonblank --number -E test1.txt
+-n --number-nonblank --number -T test1.txt
+-n --number-nonblank --number --squeeze-blank test1.txt
+-n --number-nonblank --squeeze-blank -b test1.txt
+-n --number-nonblank --squeeze-blank -e test1.txt
+-n --number-nonblank --squeeze-blank -s test1.txt
+-n --number-nonblank --squeeze-blank -t test1.txt
+-n --number-nonblank --squeeze-blank -v test1.txt
+-n --number-nonblank --squeeze-blank -E test1.txt
+-n --number-nonblank --squeeze-blank -T test1.txt
+-n --number-nonblank --squeeze-blank --number test1.txt
+-n --number -b -e test1.txt
+-n --number -b -s test1.txt
+-n --number -b -t test1.txt
+-n --number -b -v test1.txt
+-n --number -b -E test1.txt
+-n --number -b -T test1.txt
+-n --number -b --number-nonblank test1.txt
+-n --number -b --squeeze-blank test1.txt
+-n --number -e -b test1.txt
+-n --number -e -s test1.txt
+-n --number -e -t test1.txt
+-n --number -e -v test1.txt
+-n --number -e -E test1.txt
+-n --number -e -T test1.txt
+-n --number -e --number-nonblank test1.txt
+-n --number -e --squeeze-blank test1.txt
+-n --number -s -b test1.txt
+-n --number -s -e test1.txt
+-n --number -s -t test1.txt
+-n --number -s -v test1.txt
+-n --number -s -E test1.txt
+-n --number -s -T test1.txt
+-n --number -s --number-nonblank test1.txt
+-n --number -s --squeeze-blank test1.txt
+-n --number -t -b test1.txt
+-n --number -t -e test1.txt
+-n --number -t -s test1.txt
+-n --number -t -v test1.txt
+-n --number -t -E test1.txt
+-n --number -t -T test1.txt
+-n --number -t --number-nonblank test1.txt
+-n --number -t --squeeze-blank test1.txt
+-n --number -v -b test1.txt
+-n --number -v -e test1.txt
+-n --number -v -s test1.txt
+-n --number -v -t test1.txt
+-n --number -v -E test1.txt
+-n --number -v -T test1.txt
+-n --number -v --number-nonblank test1.txt
+-n --number -v --squeeze-blank test1.txt
+-n --number -E -b test1.txt
+-n --number -E -e test1.txt
+-n --number -E -s test1.txt
+-n --number -E -t test1.txt
+-n --number -E -v test1.txt
+-n --number -E -T test1.txt
+-n --number -E --number-nonblank test1.txt
+-n --number -E --squeeze-blank test1.txt
+-n --number -T -b test1.txt
+-n --number -T -e test1.txt
+-n --number -T -s test1.txt
+-n --number -T -t test1.txt
+-n --number -T -v test1.txt
+-n --number -T -E test1.txt
+-n --number -T --number-nonblank test1.txt
+-n --number -T --squeeze-blank test1.txt
+-n --number --number-nonblank -b test1.txt
+-n --number --number-nonblank -e test1.txt
+-n --number --number-nonblank -s test1.txt
+-n --number --number-nonblank -t test1.txt
+-n --number --number-nonblank -v test1.txt
+-n --number --number-nonblank -E test1.txt
+-n --number --number-nonblank -T test1.txt
+-n --number --number-nonblank --squeeze-blank test1.txt
+-n --number --squeeze-blank -b test1.txt
+-n --number --squeeze-blank -e test1.txt
+-n --number --squeeze-blank -s test1.txt
+-n --number --squeeze-blank -t test1.txt
+-n --number --squeeze-blank -v test1.txt
+-n --number --squeeze-blank -E test1.txt
+-n --number --squeeze-blank -T test1.txt
+-n --number --squeeze-blank --number-nonblank test1.txt
+-n --squeeze-blank -b -e test1.txt
+-n --squeeze-blank -b -s test1.txt
+-n --squeeze-blank -b -t test1.txt
+-n --squeeze-blank -b -v test1.txt
+-n --squeeze-blank -b -E test1.txt
+-n --squeeze-blank -b -T test1.txt
+-n --squeeze-blank -b --number-nonblank test1.txt
+-n --squeeze-blank -b --number test1.txt
+-n --squeeze-blank -e -b test1.txt
+-n --squeeze-blank -e -s test1.txt
+-n --squeeze-blank -e -t test1.txt
+-n --squeeze-blank -e -v test1.txt
+-n --squeeze-blank -e -E test1.txt
+-n --squeeze-blank -e -T test1.txt
+-n --squeeze-blank -e --number-nonblank test1.txt
+-n --squeeze-blank -e --number test1.txt
+-n --squeeze-blank -s -b test1.txt
+-n --squeeze-blank -s -e test1.txt
+-n --squeeze-blank -s -t test1.txt
+-n --squeeze-blank -s -v test1.txt
+-n --squeeze-blank -s -E test1.txt
+-n --squeeze-blank -s -T test1.txt
+-n --squeeze-blank -s --number-nonblank test1.txt
+-n --squeeze-blank -s --number test1.txt
+-n --squeeze-blank -t -b test1.txt
+-n --squeeze-blank -t -e test1.txt
+-n --squeeze-blank -t -s test1.txt
+-n --squeeze-blank -t -v test1.txt
+-n --squeeze-blank -t -E test1.txt
+-n --squeeze-blank -t -T test1.txt
+-n --squeeze-blank -t --number-nonblank test1.txt
+-n --squeeze-blank -t --number test1.txt
+-n --squeeze-blank -v -b test1.txt
+-n --squeeze-blank -v -e test1.txt
+-n --squeeze-blank -v -s test1.txt
+-n --squeeze-blank -v -t test1.txt
+-n --squeeze-blank -v -E test1.txt
+-n --squeeze-blank -v -T test1.txt
+-n --squeeze-blank -v --number-nonblank test1.txt
+-n --squeeze-blank -v --number test1.txt
+-n --squeeze-blank -E -b test1.txt
+-n --squeeze-blank -E -e test1.txt
+-n --squeeze-blank -E -s test1.txt
+-n --squeeze-blank -E -t test1.txt
+-n --squeeze-blank -E -v test1.txt
+-n --squeeze-blank -E -T test1.txt
+-n --squeeze-blank -E --number-nonblank test1.txt
+-n --squeeze-blank -E --number test1.txt
+-n --squeeze-blank -T -b test1.txt
+-n --squeeze-blank -T -e test1.txt
+-n --squeeze-blank -T -s test1.txt
+-n --squeeze-blank -T -t test1.txt
+-n --squeeze-blank -T -v test1.txt
+-n --squeeze-blank -T -E test1.txt
+-n --squeeze-blank -T --number-nonblank test1.txt
+-n --squeeze-blank -T --number test1.txt
+-n --squeeze-blank --number-nonblank -b test1.txt
+-n --squeeze-blank --number-nonblank -e test1.txt
+-n --squeeze-blank --number-nonblank -s test1.txt
+-n --squeeze-blank --number-nonblank -t test1.txt
+-n --squeeze-blank --number-nonblank -v test1.txt
+-n --squeeze-blank --number-nonblank -E test1.txt
+-n --squeeze-blank --number-nonblank -T test1.txt
+-n --squeeze-blank --number-nonblank --number test1.txt
+-n --squeeze-blank --number -b test1.txt
+-n --squeeze-blank --number -e test1.txt
+-n --squeeze-blank --number -s test1.txt
+-n --squeeze-blank --number -t test1.txt
+-n --squeeze-blank --number -v test1.txt
+-n --squeeze-blank --number -E test1.txt
+-n --squeeze-blank --number -T test1.txt
+-n --squeeze-blank --number --number-nonblank test1.txt
+-s -b -e -E test1.txt
+-s -b -e -T test1.txt
+-s -b -e --number-nonblank test1.txt
+-s -b -e --number test1.txt
+-s -b -e --squeeze-blank test1.txt
+-s -b -n -E test1.txt
+-s -b -n -T test1.txt
+-s -b -n --number-nonblank test1.txt
+-s -b -n --number test1.txt
+-s -b -n --squeeze-blank test1.txt
+-s -b -t -E test1.txt
+-s -b -t -T test1.txt
+-s -b -t --number-nonblank test1.txt
+-s -b -t --number test1.txt
+-s -b -t --squeeze-blank test1.txt
+-s -b -v -E test1.txt
+-s -b -v -T test1.txt
+-s -b -v --number-nonblank test1.txt
+-s -b -v --number test1.txt
+-s -b -v --squeeze-blank test1.txt
+-s -b -E -e test1.txt
+-s -b -E -n test1.txt
+-s -b -E -t test1.txt
+-s -b -E -v test1.txt
+-s -b -E -T test1.txt
+-s -b -E --number-nonblank test1.txt
+-s -b -E --number test1.txt
+-s -b -E --squeeze-blank test1.txt
+-s -b -T -e test1.txt
+-s -b -T -n test1.txt
+-s -b -T -t test1.txt
+-s -b -T -v test1.txt
+-s -b -T -E test1.txt
+-s -b -T --number-nonblank test1.txt
+-s -b -T --number test1.txt
+-s -b -T --squeeze-blank test1.txt
+-s -b --number-nonblank -e test1.txt
+-s -b --number-nonblank -n test1.txt
+-s -b --number-nonblank -t test1.txt
+-s -b --number-nonblank -v test1.txt
+-s -b --number-nonblank -E test1.txt
+-s -b --number-nonblank -T test1.txt
+-s -b --number-nonblank --number test1.txt
+-s -b --number-nonblank --squeeze-blank test1.txt
+-s -b --number -e test1.txt
+-s -b --number -n test1.txt
+-s -b --number -t test1.txt
+-s -b --number -v test1.txt
+-s -b --number -E test1.txt
+-s -b --number -T test1.txt
+-s -b --number --number-nonblank test1.txt
+-s -b --number --squeeze-blank test1.txt
+-s -b --squeeze-blank -e test1.txt
+-s -b --squeeze-blank -n test1.txt
+-s -b --squeeze-blank -t test1.txt
+-s -b --squeeze-blank -v test1.txt
+-s -b --squeeze-blank -E test1.txt
+-s -b --squeeze-blank -T test1.txt
+-s -b --squeeze-blank --number-nonblank test1.txt
+-s -b --squeeze-blank --number test1.txt
+-s -e -b -E test1.txt
+-s -e -b -T test1.txt
+-s -e -b --number-nonblank test1.txt
+-s -e -b --number test1.txt
+-s -e -b --squeeze-blank test1.txt
+-s -e -n -E test1.txt
+-s -e -n -T test1.txt
+-s -e -n --number-nonblank test1.txt
+-s -e -n --number test1.txt
+-s -e -n --squeeze-blank test1.txt
+-s -e -t -E test1.txt
+-s -e -t -T test1.txt
+-s -e -t --number-nonblank test1.txt
+-s -e -t --number test1.txt
+-s -e -t --squeeze-blank test1.txt
+-s -e -v -E test1.txt
+-s -e -v -T test1.txt
+-s -e -v --number-nonblank test1.txt
+-s -e -v --number test1.txt
+-s -e -v --squeeze-blank test1.txt
+-s -e -E -b test1.txt
+-s -e -E -n test1.txt
+-s -e -E -t test1.txt
+-s -e -E -v test1.txt
+-s -e -E -T test1.txt
+-s -e -E --number-nonblank test1.txt
+-s -e -E --number test1.txt
+-s -e -E --squeeze-blank test1.txt
+-s -e -T -b test1.txt
+-s -e -T -n test1.txt
+-s -e -T -t test1.txt
+-s -e -T -v test1.txt
+-s -e -T -E test1.txt
+-s -e -T --number-nonblank test1.txt
+-s -e -T --number test1.txt
+-s -e -T --squeeze-blank test1.txt
+-s -e --number-nonblank -b test1.txt
+-s -e --number-nonblank -n test1.txt
+-s -e --number-nonblank -t test1.txt
+-s -e --number-nonblank -v test1.txt
+-s -e --number-nonblank -E test1.txt
+-s -e --number-nonblank -T test1.txt
+-s -e --number-nonblank --number test1.txt
+-s -e --number-nonblank --squeeze-blank test1.txt
+-s -e --number -b test1.txt
+-s -e --number -n test1.txt
+-s -e --number -t test1.txt
+-s -e --number -v test1.txt
+-s -e --number -E test1.txt
+-s -e --number -T test1.txt
+-s -e --number --number-nonblank test1.txt
+-s -e --number --squeeze-blank test1.txt
+-s -e --squeeze-blank -b test1.txt
+-s -e --squeeze-blank -n test1.txt
+-s -e --squeeze-blank -t test1.txt
+-s -e --squeeze-blank -v test1.txt
+-s -e --squeeze-blank -E test1.txt
+-s -e --squeeze-blank -T test1.txt
+-s -e --squeeze-blank --number-nonblank test1.txt
+-s -e --squeeze-blank --number test1.txt
+-s -n -b -E test1.txt
+-s -n -b -T test1.txt
+-s -n -b --number-nonblank test1.txt
+-s -n -b --number test1.txt
+-s -n -b --squeeze-blank test1.txt
+-s -n -e -E test1.txt
+-s -n -e -T test1.txt
+-s -n -e --number-nonblank test1.txt
+-s -n -e --number test1.txt
+-s -n -e --squeeze-blank test1.txt
+-s -n -t -E test1.txt
+-s -n -t -T test1.txt
+-s -n -t --number-nonblank test1.txt
+-s -n -t --number test1.txt
+-s -n -t --squeeze-blank test1.txt
+-s -n -v -E test1.txt
+-s -n -v -T test1.txt
+-s -n -v --number-nonblank test1.txt
+-s -n -v --number test1.txt
+-s -n -v --squeeze-blank test1.txt
+-s -n -E -b test1.txt
+-s -n -E -e test1.txt
+-s -n -E -t test1.txt
+-s -n -E -v test1.txt
+-s -n -E -T test1.txt
+-s -n -E --number-nonblank test1.txt
+-s -n -E --number test1.txt
+-s -n -E --squeeze-blank test1.txt
+-s -n -T -b test1.txt
+-s -n -T -e test1.txt
+-s -n -T -t test1.txt
+-s -n -T -v test1.txt
+-s -n -T -E test1.txt
+-s -n -T --number-nonblank test1.txt
+-s -n -T --number test1.txt
+-s -n -T --squeeze-blank test1.txt
+-s -n --number-nonblank -b test1.txt
+-s -n --number-nonblank -e test1.txt
+-s -n --number-nonblank -t test1.txt
+-s -n --number-nonblank -v test1.txt
+-s -n --number-nonblank -E test1.txt
+-s -n --number-nonblank -T test1.txt
+-s -n --number-nonblank --number test1.txt
+-s -n --number-nonblank --squeeze-blank test1.txt
+-s -n --number -b test1.txt
+-s -n --number -e test1.txt
+-s -n --number -t test1.txt
+-s -n --number -v test1.txt
+-s -n --number -E test1.txt
+-s -n --number -T test1.txt
+-s -n --number --number-nonblank test1.txt
+-s -n --number --squeeze-blank test1.txt
+-s -n --squeeze-blank -b test1.txt
+-s -n --squeeze-blank -e test1.txt
+-s -n --squeeze-blank -t test1.txt
+-s -n --squeeze-blank -v test1.txt
+-s -n --squeeze-blank -E test1.txt
+-s -n --squeeze-blank -T test1.txt
+-s -n --squeeze-blank --number-nonblank test1.txt
+-s -n --squeeze-blank --number test1.txt
+-s -t -b -E test1.txt
+-s -t -b -T test1.txt
+-s -t -b --number-nonblank test1.txt
+-s -t -b --number test1.txt
+-s -t -b --squeeze-blank test1.txt
+-s -t -e -E test1.txt
+-s -t -e -T test1.txt
+-s -t -e --number-nonblank test1.txt
+-s -t -e --number test1.txt
+-s -t -e --squeeze-blank test1.txt
+-s -t -n -E test1.txt
+-s -t -n -T test1.txt
+-s -t -n --number-nonblank test1.txt
+-s -t -n --number test1.txt
+-s -t -n --squeeze-blank test1.txt
+-s -t -v -E test1.txt
+-s -t -v -T test1.txt
+-s -t -v --number-nonblank test1.txt
+-s -t -v --number test1.txt
+-s -t -v --squeeze-blank test1.txt
+-s -t -E -b test1.txt
+-s -t -E -e test1.txt
+-s -t -E -n test1.txt
+-s -t -E -v test1.txt
+-s -t -E -T test1.txt
+-s -t -E --number-nonblank test1.txt
+-s -t -E --number test1.txt
+-s -t -E --squeeze-blank test1.txt
+-s -t -T -b test1.txt
+-s -t -T -e test1.txt
+-s -t -T -n test1.txt
+-s -t -T -v test1.txt
+-s -t -T -E test1.txt
+-s -t -T --number-nonblank test1.txt
+-s -t -T --number test1.txt
+-s -t -T --squeeze-blank test1.txt
+-s -t --number-nonblank -b test1.txt
+-s -t --number-nonblank -e test1.txt
+-s -t --number-nonblank -n test1.txt
+-s -t --number-nonblank -v test1.txt
+-s -t --number-nonblank -E test1.txt
+-s -t --number-nonblank -T test1.txt
+-s -t --number-nonblank --number test1.txt
+-s -t --number-nonblank --squeeze-blank test1.txt
+-s -t --number -b test1.txt
+-s -t --number -e test1.txt
+-s -t --number -n test1.txt
+-s -t --number -v test1.txt
+-s -t --number -E test1.txt
+-s -t --number -T test1.txt
+-s -t --number --number-nonblank test1.txt
+-s -t --number --squeeze-blank test1.txt
+-s -t --squeeze-blank -b test1.txt
+-s -t --squeeze-blank -e test1.txt
+-s -t --squeeze-blank -n test1.txt
+-s -t --squeeze-blank -v test1.txt
+-s -t --squeeze-blank -E test1.txt
+-s -t --squeeze-blank -T test1.txt
+-s -t --squeeze-blank --number-nonblank test1.txt
+-s -t --squeeze-blank --number test1.txt
+-s -v -b -E test1.txt
+-s -v -b -T test1.txt
+-s -v -b --number-nonblank test1.txt
+-s -v -b --number test1.txt
+-s -v -b --squeeze-blank test1.txt
+-s -v -e -E test1.txt
+-s -v -e -T test1.txt
+-s -v -e --number-nonblank test1.txt
+-s -v -e --number test1.txt
+-s -v -e --squeeze-blank test1.txt
+-s -v -n -E test1.txt
+-s -v -n -T test1.txt
+-s -v -n --number-nonblank test1.txt
+-s -v -n --number test1.txt
+-s -v -n --squeeze-blank test1.txt
+-s -v -t -E test1.txt
+-s -v -t -T test1.txt
+-s -v -t --number-nonblank test1.txt
+-s -v -t --number test1.txt
+-s -v -t --squeeze-blank test1.txt
+-s -v -E -b test1.txt
+-s -v -E -e test1.txt
+-s -v -E -n test1.txt
+-s -v -E -t test1.txt
+-s -v -E -T test1.txt
+-s -v -E --number-nonblank test1.txt
+-s -v -E --number test1.txt
+-s -v -E --squeeze-blank test1.txt
+-s -v -T -b test1.txt
+-s -v -T -e test1.txt
+-s -v -T -n test1.txt
+-s -v -T -t test1.txt
+-s -v -T -E test1.txt
+-s -v -T --number-nonblank test1.txt
+-s -v -T --number test1.txt
+-s -v -T --squeeze-blank test1.txt
+-s -v --number-nonblank -b test1.txt
+-s -v --number-nonblank -e test1.txt
+-s -v --number-nonblank -n test1.txt
+-s -v --number-nonblank -t test1.txt
+-s -v --number-nonblank -E test1.txt
+-s -v --number-nonblank -T test1.txt
+-s -v --number-nonblank --number test1.txt
+-s -v --number-nonblank --squeeze-blank test1.txt
+-s -v --number -b test1.txt
+-s -v --number -e test1.txt
+-s -v --number -n test1.txt
+-s -v --number -t test1.txt
+-s -v --number -E test1.txt
+-s -v --number -T test1.txt
+-s -v --number --number-nonblank test1.txt
+-s -v --number --squeeze-blank test1.txt
+-s -v --squeeze-blank -b test1.txt
+-s -v --squeeze-blank -e test1.txt
+-s -v --squeeze-blank -n test1.txt
+-s -v --squeeze-blank -t test1.txt
+-s -v --squeeze-blank -E test1.txt
+-s -v --squeeze-blank -T test1.txt
+-s -v --squeeze-blank --number-nonblank test1.txt
+-s -v --squeeze-blank --number test1.txt
+-s -E -b -e test1.txt
+-s -E -b -n test1.txt
+-s -E -b -t test1.txt
+-s -E -b -v test1.txt
+-s -E -b -T test1.txt
+-s -E -b --number-nonblank test1.txt
+-s -E -b --number test1.txt
+-s -E -b --squeeze-blank test1.txt
+-s -E -e -b test1.txt
+-s -E -e -n test1.txt
+-s -E -e -t test1.txt
+-s -E -e -v test1.txt
+-s -E -e -T test1.txt
+-s -E -e --number-nonblank test1.txt
+-s -E -e --number test1.txt
+-s -E -e --squeeze-blank test1.txt
+-s -E -n -b test1.txt
+-s -E -n -e test1.txt
+-s -E -n -t test1.txt
+-s -E -n -v test1.txt
+-s -E -n -T test1.txt
+-s -E -n --number-nonblank test1.txt
+-s -E -n --number test1.txt
+-s -E -n --squeeze-blank test1.txt
+-s -E -t -b test1.txt
+-s -E -t -e test1.txt
+-s -E -t -n test1.txt
+-s -E -t -v test1.txt
+-s -E -t -T test1.txt
+-s -E -t --number-nonblank test1.txt
+-s -E -t --number test1.txt
+-s -E -t --squeeze-blank test1.txt
+-s -E -v -b test1.txt
+-s -E -v -e test1.txt
+-s -E -v -n test1.txt
+-s -E -v -t test1.txt
+-s -E -v -T test1.txt
+-s -E -v --number-nonblank test1.txt
+-s -E -v --number test1.txt
+-s -E -v --squeeze-blank test1.txt
+-s -E -T -b test1.txt
+-s -E -T -e test1.txt
+-s -E -T -n test1.txt
+-s -E -T -t test1.txt
+-s -E -T -v test1.txt
+-s -E -T --number-nonblank test1.txt
+-s -E -T --number test1.txt
+-s -E -T --squeeze-blank test1.txt
+-s -E --number-nonblank -b test1.txt
+-s -E --number-nonblank -e test1.txt
+-s -E --number-nonblank -n test1.txt
+-s -E --number-nonblank -t test1.txt
+-s -E --number-nonblank -v test1.txt
+-s -E --number-nonblank -T test1.txt
+-s -E --number-nonblank --number test1.txt
+-s -E --number-nonblank --squeeze-blank test1.txt
+-s -E --number -b test1.txt
+-s -E --number -e test1.txt
+-s -E --number -n test1.txt
+-s -E --number -t test1.txt
+-s -E --number -v test1.txt
+-s -E --number -T test1.txt
+-s -E --number --number-nonblank test1.txt
+-s -E --number --squeeze-blank test1.txt
+-s -E --squeeze-blank -b test1.txt
+-s -E --squeeze-blank -e test1.txt
+-s -E --squeeze-blank -n test1.txt
+-s -E --squeeze-blank -t test1.txt
+-s -E --squeeze-blank -v test1.txt
+-s -E --squeeze-blank -T test1.txt
+-s -E --squeeze-blank --number-nonblank test1.txt
+-s -E --squeeze-blank --number test1.txt
+-s -T -b -e test1.txt
+-s -T -b -n test1.txt
+-s -T -b -t test1.txt
+-s -T -b -v test1.txt
+-s -T -b -E test1.txt
+-s -T -b --number-nonblank test1.txt
+-s -T -b --number test1.txt
+-s -T -b --squeeze-blank test1.txt
+-s -T -e -b test1.txt
+-s -T -e -n test1.txt
+-s -T -e -t test1.txt
+-s -T -e -v test1.txt
+-s -T -e -E test1.txt
+-s -T -e --number-nonblank test1.txt
+-s -T -e --number test1.txt
+-s -T -e --squeeze-blank test1.txt
+-s -T -n -b test1.txt
+-s -T -n -e test1.txt
+-s -T -n -t test1.txt
+-s -T -n -v test1.txt
+-s -T -n -E test1.txt
+-s -T -n --number-nonblank test1.txt
+-s -T -n --number test1.txt
+-s -T -n --squeeze-blank test1.txt
+-s -T -t -b test1.txt
+-s -T -t -e test1.txt
+-s -T -t -n test1.txt
+-s -T -t -v test1.txt
+-s -T -t -E test1.txt
+-s -T -t --number-nonblank test1.txt
+-s -T -t --number test1.txt
+-s -T -t --squeeze-blank test1.txt
+-s -T -v -b test1.txt
+-s -T -v -e test1.txt
+-s -T -v -n test1.txt
+-s -T -v -t test1.txt
+-s -T -v -E test1.txt
+-s -T -v --number-nonblank test1.txt
+-s -T -v --number test1.txt
+-s -T -v --squeeze-blank test1.txt
+-s -T -E -b test1.txt
+-s -T -E -e test1.txt
+-s -T -E -n test1.txt
+-s -T -E -t test1.txt
+-s -T -E -v test1.txt
+-s -T -E --number-nonblank test1.txt
+-s -T -E --number test1.txt
+-s -T -E --squeeze-blank test1.txt
+-s -T --number-nonblank -b test1.txt
+-s -T --number-nonblank -e test1.txt
+-s -T --number-nonblank -n test1.txt
+-s -T --number-nonblank -t test1.txt
+-s -T --number-nonblank -v test1.txt
+-s -T --number-nonblank -E test1.txt
+-s -T --number-nonblank --number test1.txt
+-s -T --number-nonblank --squeeze-blank test1.txt
+-s -T --number -b test1.txt
+-s -T --number -e test1.txt
+-s -T --number -n test1.txt
+-s -T --number -t test1.txt
+-s -T --number -v test1.txt
+-s -T --number -E test1.txt
+-s -T --number --number-nonblank test1.txt
+-s -T --number --squeeze-blank test1.txt
+-s -T --squeeze-blank -b test1.txt
+-s -T --squeeze-blank -e test1.txt
+-s -T --squeeze-blank -n test1.txt
+-s -T --squeeze-blank -t test1.txt
+-s -T --squeeze-blank -v test1.txt
+-s -T --squeeze-blank -E test1.txt
+-s -T --squeeze-blank --number-nonblank test1.txt
+-s -T --squeeze-blank --number test1.txt
+-s --number-nonblank -b -e test1.txt
+-s --number-nonblank -b -n test1.txt
+-s --number-nonblank -b -t test1.txt
+-s --number-nonblank -b -v test1.txt
+-s --number-nonblank -b -E test1.txt
+-s --number-nonblank -b -T test1.txt
+-s --number-nonblank -b --number test1.txt
+-s --number-nonblank -b --squeeze-blank test1.txt
+-s --number-nonblank -e -b test1.txt
+-s --number-nonblank -e -n test1.txt
+-s --number-nonblank -e -t test1.txt
+-s --number-nonblank -e -v test1.txt
+-s --number-nonblank -e -E test1.txt
+-s --number-nonblank -e -T test1.txt
+-s --number-nonblank -e --number test1.txt
+-s --number-nonblank -e --squeeze-blank test1.txt
+-s --number-nonblank -n -b test1.txt
+-s --number-nonblank -n -e test1.txt
+-s --number-nonblank -n -t test1.txt
+-s --number-nonblank -n -v test1.txt
+-s --number-nonblank -n -E test1.txt
+-s --number-nonblank -n -T test1.txt
+-s --number-nonblank -n --number test1.txt
+-s --number-nonblank -n --squeeze-blank test1.txt
+-s --number-nonblank -t -b test1.txt
+-s --number-nonblank -t -e test1.txt
+-s --number-nonblank -t -n test1.txt
+-s --number-nonblank -t -v test1.txt
+-s --number-nonblank -t -E test1.txt
+-s --number-nonblank -t -T test1.txt
+-s --number-nonblank -t --number test1.txt
+-s --number-nonblank -t --squeeze-blank test1.txt
+-s --number-nonblank -v -b test1.txt
+-s --number-nonblank -v -e test1.txt
+-s --number-nonblank -v -n test1.txt
+-s --number-nonblank -v -t test1.txt
+-s --number-nonblank -v -E test1.txt
+-s --number-nonblank -v -T test1.txt
+-s --number-nonblank -v --number test1.txt
+-s --number-nonblank -v --squeeze-blank test1.txt
+-s --number-nonblank -E -b test1.txt
+-s --number-nonblank -E -e test1.txt
+-s --number-nonblank -E -n test1.txt
+-s --number-nonblank -E -t test1.txt
+-s --number-nonblank -E -v test1.txt
+-s --number-nonblank -E -T test1.txt
+-s --number-nonblank -E --number test1.txt
+-s --number-nonblank -E --squeeze-blank test1.txt
+-s --number-nonblank -T -b test1.txt
+-s --number-nonblank -T -e test1.txt
+-s --number-nonblank -T -n test1.txt
+-s --number-nonblank -T -t test1.txt
+-s --number-nonblank -T -v test1.txt
+-s --number-nonblank -T -E test1.txt
+-s --number-nonblank -T --number test1.txt
+-s --number-nonblank -T --squeeze-blank test1.txt
+-s --number-nonblank --number -b test1.txt
+-s --number-nonblank --number -e test1.txt
+-s --number-nonblank --number -n test1.txt
+-s --number-nonblank --number -t test1.txt
+-s --number-nonblank --number -v test1.txt
+-s --number-nonblank --number -E test1.txt
+-s --number-nonblank --number -T test1.txt
+-s --number-nonblank --number --squeeze-blank test1.txt
+-s --number-nonblank --squeeze-blank -b test1.txt
+-s --number-nonblank --squeeze-blank -e test1.txt
+-s --number-nonblank --squeeze-blank -n test1.txt
+-s --number-nonblank --squeeze-blank -t test1.txt
+-s --number-nonblank --squeeze-blank -v test1.txt
+-s --number-nonblank --squeeze-blank -E test1.txt
+-s --number-nonblank --squeeze-blank -T test1.txt
+-s --number-nonblank --squeeze-blank --number test1.txt
+-s --number -b -e test1.txt
+-s --number -b -n test1.txt
+-s --number -b -t test1.txt
+-s --number -b -v test1.txt
+-s --number -b -E test1.txt
+-s --number -b -T test1.txt
+-s --number -b --number-nonblank test1.txt
+-s --number -b --squeeze-blank test1.txt
+-s --number -e -b test1.txt
+-s --number -e -n test1.txt
+-s --number -e -t test1.txt
+-s --number -e -v test1.txt
+-s --number -e -E test1.txt
+-s --number -e -T test1.txt
+-s --number -e --number-nonblank test1.txt
+-s --number -e --squeeze-blank test1.txt
+-s --number -n -b test1.txt
+-s --number -n -e test1.txt
+-s --number -n -t test1.txt
+-s --number -n -v test1.txt
+-s --number -n -E test1.txt
+-s --number -n -T test1.txt
+-s --number -n --number-nonblank test1.txt
+-s --number -n --squeeze-blank test1.txt
+-s --number -t -b test1.txt
+-s --number -t -e test1.txt
+-s --number -t -n test1.txt
+-s --number -t -v test1.txt
+-s --number -t -E test1.txt
+-s --number -t -T test1.txt
+-s --number -t --number-nonblank test1.txt
+-s --number -t --squeeze-blank test1.txt
+-s --number -v -b test1.txt
+-s --number -v -e test1.txt
+-s --number -v -n test1.txt
+-s --number -v -t test1.txt
+-s --number -v -E test1.txt
+-s --number -v -T test1.txt
+-s --number -v --number-nonblank test1.txt
+-s --number -v --squeeze-blank test1.txt
+-s --number -E -b test1.txt
+-s --number -E -e test1.txt
+-s --number -E -n test1.txt
+-s --number -E -t test1.txt
+-s --number -E -v test1.txt
+-s --number -E -T test1.txt
+-s --number -E --number-nonblank test1.txt
+-s --number -E --squeeze-blank test1.txt
+-s --number -T -b test1.txt
+-s --number -T -e test1.txt
+-s --number -T -n test1.txt
+-s --number -T -t test1.txt
+-s --number -T -v test1.txt
+-s --number -T -E test1.txt
+-s --number -T --number-nonblank test1.txt
+-s --number -T --squeeze-blank test1.txt
+-s --number --number-nonblank -b test1.txt
+-s --number --number-nonblank -e test1.txt
+-s --number --number-nonblank -n test1.txt
+-s --number --number-nonblank -t test1.txt
+-s --number --number-nonblank -v test1.txt
+-s --number --number-nonblank -E test1.txt
+-s --number --number-nonblank -T test1.txt
+-s --number --number-nonblank --squeeze-blank test1.txt
+-s --number --squeeze-blank -b test1.txt
+-s --number --squeeze-blank -e test1.txt
+-s --number --squeeze-blank -n test1.txt
+-s --number --squeeze-blank -t test1.txt
+-s --number --squeeze-blank -v test1.txt
+-s --number --squeeze-blank -E test1.txt
+-s --number --squeeze-blank -T test1.txt
+-s --number --squeeze-blank --number-nonblank test1.txt
+-s --squeeze-blank -b -e test1.txt
+-s --squeeze-blank -b -n test1.txt
+-s --squeeze-blank -b -t test1.txt
+-s --squeeze-blank -b -v test1.txt
+-s --squeeze-blank -b -E test1.txt
+-s --squeeze-blank -b -T test1.txt
+-s --squeeze-blank -b --number-nonblank test1.txt
+-s --squeeze-blank -b --number test1.txt
+-s --squeeze-blank -e -b test1.txt
+-s --squeeze-blank -e -n test1.txt
+-s --squeeze-blank -e -t test1.txt
+-s --squeeze-blank -e -v test1.txt
+-s --squeeze-blank -e -E test1.txt
+-s --squeeze-blank -e -T test1.txt
+-s --squeeze-blank -e --number-nonblank test1.txt
+-s --squeeze-blank -e --number test1.txt
+-s --squeeze-blank -n -b test1.txt
+-s --squeeze-blank -n -e test1.txt
+-s --squeeze-blank -n -t test1.txt
+-s --squeeze-blank -n -v test1.txt
+-s --squeeze-blank -n -E test1.txt
+-s --squeeze-blank -n -T test1.txt
+-s --squeeze-blank -n --number-nonblank test1.txt
+-s --squeeze-blank -n --number test1.txt
+-s --squeeze-blank -t -b test1.txt
+-s --squeeze-blank -t -e test1.txt
+-s --squeeze-blank -t -n test1.txt
+-s --squeeze-blank -t -v test1.txt
+-s --squeeze-blank -t -E test1.txt
+-s --squeeze-blank -t -T test1.txt
+-s --squeeze-blank -t --number-nonblank test1.txt
+-s --squeeze-blank -t --number test1.txt
+-s --squeeze-blank -v -b test1.txt
+-s --squeeze-blank -v -e test1.txt
+-s --squeeze-blank -v -n test1.txt
+-s --squeeze-blank -v -t test1.txt
+-s --squeeze-blank -v -E test1.txt
+-s --squeeze-blank -v -T test1.txt
+-s --squeeze-blank -v --number-nonblank test1.txt
+-s --squeeze-blank -v --number test1.txt
+-s --squeeze-blank -E -b test1.txt
+-s --squeeze-blank -E -e test1.txt
+-s --squeeze-blank -E -n test1.txt
+-s --squeeze-blank -E -t test1.txt
+-s --squeeze-blank -E -v test1.txt
+-s --squeeze-blank -E -T test1.txt
+-s --squeeze-blank -E --number-nonblank test1.txt
+-s --squeeze-blank -E --number test1.txt
+-s --squeeze-blank -T -b test1.txt
+-s --squeeze-blank -T -e test1.txt
+-s --squeeze-blank -T -n test1.txt
+-s --squeeze-blank -T -t test1.txt
+-s --squeeze-blank -T -v test1.txt
+-s --squeeze-blank -T -E test1.txt
+-s --squeeze-blank -T --number-nonblank test1.txt
+-s --squeeze-blank -T --number test1.txt
+-s --squeeze-blank --number-nonblank -b test1.txt
+-s --squeeze-blank --number-nonblank -e test1.txt
+-s --squeeze-blank --number-nonblank -n test1.txt
+-s --squeeze-blank --number-nonblank -t test1.txt
+-s --squeeze-blank --number-nonblank -v test1.txt
+-s --squeeze-blank --number-nonblank -E test1.txt
+-s --squeeze-blank --number-nonblank -T test1.txt
+-s --squeeze-blank --number-nonblank --number test1.txt
+-s --squeeze-blank --number -b test1.txt
+-s --squeeze-blank --number -e test1.txt
+-s --squeeze-blank --number -n test1.txt
+-s --squeeze-blank --number -t test1.txt
+-s --squeeze-blank --number -v test1.txt
+-s --squeeze-blank --number -E test1.txt
+-s --squeeze-blank --number -T test1.txt
+-s --squeeze-blank --number --number-nonblank test1.txt
+-t -b -e -E test1.txt
+-t -b -e -T test1.txt
+-t -b -e --number-nonblank test1.txt
+-t -b -e --number test1.txt
+-t -b -e --squeeze-blank test1.txt
+-t -b -n -E test1.txt
+-t -b -n -T test1.txt
+-t -b -n --number-nonblank test1.txt
+-t -b -n --number test1.txt
+-t -b -n --squeeze-blank test1.txt
+-t -b -s -E test1.txt
+-t -b -s -T test1.txt
+-t -b -s --number-nonblank test1.txt
+-t -b -s --number test1.txt
+-t -b -s --squeeze-blank test1.txt
+-t -b -v -E test1.txt
+-t -b -v -T test1.txt
+-t -b -v --number-nonblank test1.txt
+-t -b -v --number test1.txt
+-t -b -v --squeeze-blank test1.txt
+-t -b -E -e test1.txt
+-t -b -E -n test1.txt
+-t -b -E -s test1.txt
+-t -b -E -v test1.txt
+-t -b -E -T test1.txt
+-t -b -E --number-nonblank test1.txt
+-t -b -E --number test1.txt
+-t -b -E --squeeze-blank test1.txt
+-t -b -T -e test1.txt
+-t -b -T -n test1.txt
+-t -b -T -s test1.txt
+-t -b -T -v test1.txt
+-t -b -T -E test1.txt
+-t -b -T --number-nonblank test1.txt
+-t -b -T --number test1.txt
+-t -b -T --squeeze-blank test1.txt
+-t -b --number-nonblank -e test1.txt
+-t -b --number-nonblank -n test1.txt
+-t -b --number-nonblank -s test1.txt
+-t -b --number-nonblank -v test1.txt
+-t -b --number-nonblank -E test1.txt
+-t -b --number-nonblank -T test1.txt
+-t -b --number-nonblank --number test1.txt
+-t -b --number-nonblank --squeeze-blank test1.txt
+-t -b --number -e test1.txt
+-t -b --number -n test1.txt
+-t -b --number -s test1.txt
+-t -b --number -v test1.txt
+-t -b --number -E test1.txt
+-t -b --number -T test1.txt
+-t -b --number --number-nonblank test1.txt
+-t -b --number --squeeze-blank test1.txt
+-t -b --squeeze-blank -e test1.txt
+-t -b --squeeze-blank -n test1.txt
+-t -b --squeeze-blank -s test1.txt
+-t -b --squeeze-blank -v test1.txt
+-t -b --squeeze-blank -E test1.txt
+-t -b --squeeze-blank -T test1.txt
+-t -b --squeeze-blank --number-nonblank test1.txt
+-t -b --squeeze-blank --number test1.txt
+-t -e -b -E test1.txt
+-t -e -b -T test1.txt
+-t -e -b --number-nonblank test1.txt
+-t -e -b --number test1.txt
+-t -e -b --squeeze-blank test1.txt
+-t -e -n -E test1.txt
+-t -e -n -T test1.txt
+-t -e -n --number-nonblank test1.txt
+-t -e -n --number test1.txt
+-t -e -n --squeeze-blank test1.txt
+-t -e -s -E test1.txt
+-t -e -s -T test1.txt
+-t -e -s --number-nonblank test1.txt
+-t -e -s --number test1.txt
+-t -e -s --squeeze-blank test1.txt
+-t -e -v -E test1.txt
+-t -e -v -T test1.txt
+-t -e -v --number-nonblank test1.txt
+-t -e -v --number test1.txt
+-t -e -v --squeeze-blank test1.txt
+-t -e -E -b test1.txt
+-t -e -E -n test1.txt
+-t -e -E -s test1.txt
+-t -e -E -v test1.txt
+-t -e -E -T test1.txt
+-t -e -E --number-nonblank test1.txt
+-t -e -E --number test1.txt
+-t -e -E --squeeze-blank test1.txt
+-t -e -T -b test1.txt
+-t -e -T -n test1.txt
+-t -e -T -s test1.txt
+-t -e -T -v test1.txt
+-t -e -T -E test1.txt
+-t -e -T --number-nonblank test1.txt
+-t -e -T --number test1.txt
+-t -e -T --squeeze-blank test1.txt
+-t -e --number-nonblank -b test1.txt
+-t -e --number-nonblank -n test1.txt
+-t -e --number-nonblank -s test1.txt
+-t -e --number-nonblank -v test1.txt
+-t -e --number-nonblank -E test1.txt
+-t -e --number-nonblank -T test1.txt
+-t -e --number-nonblank --number test1.txt
+-t -e --number-nonblank --squeeze-blank test1.txt
+-t -e --number -b test1.txt
+-t -e --number -n test1.txt
+-t -e --number -s test1.txt
+-t -e --number -v test1.txt
+-t -e --number -E test1.txt
+-t -e --number -T test1.txt
+-t -e --number --number-nonblank test1.txt
+-t -e --number --squeeze-blank test1.txt
+-t -e --squeeze-blank -b test1.txt
+-t -e --squeeze-blank -n test1.txt
+-t -e --squeeze-blank -s test1.txt
+-t -e --squeeze-blank -v test1.txt
+-t -e --squeeze-blank -E test1.txt
+-t -e --squeeze-blank -T test1.txt
+-t -e --squeeze-blank --number-nonblank test1.txt
+-t -e --squeeze-blank --number test1.txt
+-t -n -b -E test1.txt
+-t -n -b -T test1.txt
+-t -n -b --number-nonblank test1.txt
+-t -n -b --number test1.txt
+-t -n -b --squeeze-blank test1.txt
+-t -n -e -E test1.txt
+-t -n -e -T test1.txt
+-t -n -e --number-nonblank test1.txt
+-t -n -e --number test1.txt
+-t -n -e --squeeze-blank test1.txt
+-t -n -s -E test1.txt
+-t -n -s -T test1.txt
+-t -n -s --number-nonblank test1.txt
+-t -n -s --number test1.txt
+-t -n -s --squeeze-blank test1.txt
+-t -n -v -E test1.txt
+-t -n -v -T test1.txt
+-t -n -v --number-nonblank test1.txt
+-t -n -v --number test1.txt
+-t -n -v --squeeze-blank test1.txt
+-t -n -E -b test1.txt
+-t -n -E -e test1.txt
+-t -n -E -s test1.txt
+-t -n -E -v test1.txt
+-t -n -E -T test1.txt
+-t -n -E --number-nonblank test1.txt
+-t -n -E --number test1.txt
+-t -n -E --squeeze-blank test1.txt
+-t -n -T -b test1.txt
+-t -n -T -e test1.txt
+-t -n -T -s test1.txt
+-t -n -T -v test1.txt
+-t -n -T -E test1.txt
+-t -n -T --number-nonblank test1.txt
+-t -n -T --number test1.txt
+-t -n -T --squeeze-blank test1.txt
+-t -n --number-nonblank -b test1.txt
+-t -n --number-nonblank -e test1.txt
+-t -n --number-nonblank -s test1.txt
+-t -n --number-nonblank -v test1.txt
+-t -n --number-nonblank -E test1.txt
+-t -n --number-nonblank -T test1.txt
+-t -n --number-nonblank --number test1.txt
+-t -n --number-nonblank --squeeze-blank test1.txt
+-t -n --number -b test1.txt
+-t -n --number -e test1.txt
+-t -n --number -s test1.txt
+-t -n --number -v test1.txt
+-t -n --number -E test1.txt
+-t -n --number -T test1.txt
+-t -n --number --number-nonblank test1.txt
+-t -n --number --squeeze-blank test1.txt
+-t -n --squeeze-blank -b test1.txt
+-t -n --squeeze-blank -e test1.txt
+-t -n --squeeze-blank -s test1.txt
+-t -n --squeeze-blank -v test1.txt
+-t -n --squeeze-blank -E test1.txt
+-t -n --squeeze-blank -T test1.txt
+-t -n --squeeze-blank --number-nonblank test1.txt
+-t -n --squeeze-blank --number test1.txt
+-t -s -b -E test1.txt
+-t -s -b -T test1.txt
+-t -s -b --number-nonblank test1.txt
+-t -s -b --number test1.txt
+-t -s -b --squeeze-blank test1.txt
+-t -s -e -E test1.txt
+-t -s -e -T test1.txt
+-t -s -e --number-nonblank test1.txt
+-t -s -e --number test1.txt
+-t -s -e --squeeze-blank test1.txt
+-t -s -n -E test1.txt
+-t -s -n -T test1.txt
+-t -s -n --number-nonblank test1.txt
+-t -s -n --number test1.txt
+-t -s -n --squeeze-blank test1.txt

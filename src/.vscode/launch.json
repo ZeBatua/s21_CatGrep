@@ -8,8 +8,9 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/a.out",
-            "args": [],
+            "program": "${workspaceFolder}/cat/s21_cat",
+            "args": ["-b", "-e",
+                "${workspaceFolder}/cat/test1.txt",],
             "cwd": "${workspaceFolder}"
         }
     ]
