@@ -2,9 +2,9 @@
 COUNTER_SUCCESS=0
 COUNTER_FAIL=0
 DIFF_RES=""
-TEST_FILE="test1.txt"
+TEST_FILE="s21.txt"
 echo "" > log.txt
-for var in -b -e -n -s -t   -v -E -T --number-nonblank --number --squeeze-blank
+for var in -b -e -n -s -t #  -v -E -T --number-nonblank --number --squeeze-blank
 do
           TEST1="$var $TEST_FILE"
           echo "$TEST1"
@@ -20,9 +20,9 @@ do
           fi
           rm s21_cat.txt cat.txt
 done
-for var in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+for var in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
 do
-  for var2 in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+  for var2 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
   do
         if [ $var != $var2 ]
         then
@@ -42,11 +42,11 @@ do
         fi
   done
 done
-for var in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+for var in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
 do
-  for var2 in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+  for var2 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
   do
-      for var3 in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+      for var3 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
       do
         if [ $var != $var2 ] && [ $var2 != $var3 ] && [ $var != $var3 ]
         then
@@ -67,13 +67,13 @@ do
       done
   done
 done
-for var in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+for var in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
 do
-  for var2 in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+  for var2 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
   do
-      for var3 in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+      for var3 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
       do
-          for var4 in -b -e -n -s -t -v -E -T --number-nonblank --number --squeeze-blank
+          for var4 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
           do
             if [ $var != $var2 ] && [ $var2 != $var3 ] && [ $var != $var3 ] && [ $var != $var4 ] && [ $var2 != $var4 ] && [ $var3 != $var4 ]
             then

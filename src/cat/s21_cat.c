@@ -20,7 +20,7 @@ const struct option long_options[] = {
 int getFlags(int ARGC, char* ARGV[]) {
     int find_f;
     int option_index = 0;
-    find_f = getopt_long(ARGC, ARGV, "YbenstETv", long_options, &option_index);
+    find_f = getopt_long(ARGC, ARGV, "YbenstETv-", long_options, &option_index);
     if (find_f != -1) {
         switch (find_f) {
             case 'b':
@@ -53,18 +53,25 @@ int getFlags(int ARGC, char* ARGV[]) {
     return find_f;
 }
 
-void s21_cat(char* argv[]) {
+void s21_cat(char* ARGV[]) {
+    int d = 0;
+    // printf("kek = |%s|", *ARGV);
+    // if (*ARGV == "-" || *ARGV == "--") {
+    //     d = 1; 
+    // }
+    // printf("%d\n", d);
     FILE *file = NULL;
-    file = fopen(*argv, "r");
-
-    if (file == NULL) {
-        fprintf(stderr, "s21_cat: %s: No such file or directory\n", *argv);
+    file = fopen(*ARGV, "r");
+    if (d == 1) {
+    } else if (file == NULL) {
+        fprintf(stderr, "s21_cat: %s: No such file or directory\n", *ARGV);
     } else {
         int count_line = 1;
-        int empty_lines = -1;
+        int empty_lines = 0;
         char read_char = '\0';
         char last = '\n';
         int counter_for_b = 0;
+        int costil = 0;
         while ((read_char = fgetc(file)) != EOF) {
             if (flags.s_flag == 1 && read_char == '\n') {
                 if (empty_lines >= 1) {
@@ -101,6 +108,7 @@ void s21_cat(char* argv[]) {
             fprintf(stdout, "%c", read_char);
             last = read_char;
             counter_for_b = 0;
+            // costil = 0;
         }
     }
     fclose(file);
@@ -113,17 +121,15 @@ int main(int ARGC, char *ARGV[]) {  //  подается  s21_cat -l test.txt
     for (int i = 1; i < ARGC; i++){
         error = getFlags(ARGC, ARGV);
         if (error == -1) {
-            // flags_num++;
-            int do_nothing = 0;
-            do_nothing++;
         } else if (error == '?') {
             exit(0);
         } else {
             flags_num++;
         }
     }
-    for (int i = 1 + flags_num; i < ARGC; i++) {
-        s21_cat(&ARGV[i]);
+    int j = 0;
+    for (j = 1 + flags_num; j < ARGC; j++) {
+        s21_cat(&ARGV[j]);
     }
     return 0; // 0 если все ок, 1 если произошла любая ошибка
 
