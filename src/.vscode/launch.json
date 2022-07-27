@@ -8,9 +8,8 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/cat/s21_cat",
-            "args": ["-b", "-e",
-                "${workspaceFolder}/cat/test1.txt",],
+            "program": "/Users/thalassa/C3_SimpleBashUtils-0/src/grep/s21_grep",
+            "args": ["-i", "(", "/Users/thalassa/C3_SimpleBashUtils-0/src/grep/some_text.txt"],
             "cwd": "${workspaceFolder}"
         }
     ]

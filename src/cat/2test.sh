@@ -1,29 +1,29 @@
 #!/bin/bash
+echo Test 1-------------------------------------------------
+# Test_1
+./s21_cat test/test1.txt > s21_cat_test
+cat test/test1.txt > cat
+diff -s s21_cat_test cat
 
-# # Test_1
-# ./s21_cat test/test1.txt > s21_cat_test
-# cat test/test1.txt > cat
-# diff -s s21_cat_test cat
+# Test_2
+./s21_cat test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
 
-# # Test_2
-# ./s21_cat test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
-# cat test/test1.txt test/test2.txt test/test3.txt > cat
-# diff -s s21_cat_test cat
+# Test_3
+./s21_cat -b test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -b test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
 
-# # Test_3
-# ./s21_cat -b test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
-# cat -b test/test1.txt test/test2.txt test/test3.txt > cat
-# diff -s s21_cat_test cat
+# Test_4
+./s21_cat -e -v test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -e -v test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
 
-# # Test_4
-# ./s21_cat -e -v test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
-# cat -e -v test/test1.txt test/test2.txt test/test3.txt > cat
-# diff -s s21_cat_test cat
-
-# # Test_5
-# ./s21_cat -n test/test1.txt test/test2.txt > s21_cat_test
-# cat -n test/test1.txt test/test2.txt > cat
-# diff -s s21_cat_test cat
+# Test_5
+./s21_cat -n test/test1.txt test/test2.txt > s21_cat_test
+cat -n test/test1.txt test/test2.txt > cat
+diff -s s21_cat_test cat
 
 # Test_6
 ./s21_cat -s test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
@@ -71,6 +71,11 @@ cat -b test/test1.txt test/test2.txt test/test3.txt > cat
 diff -s s21_cat_test cat
 
 # Test_15
-./s21_cat -- test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
-cat -- test/test1.txt test/test2.txt test/test3.txt > cat
+./s21_cat -e -v test/test2.txt > s21_cat_test
+cat -e -v test/test2.txt > cat
 diff -s s21_cat_test cat
+
+# # Test_16
+# ./s21_cat -- test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+# cat -- test/test1.txt test/test2.txt test/test3.txt > cat
+# diff -s s21_cat_test cat

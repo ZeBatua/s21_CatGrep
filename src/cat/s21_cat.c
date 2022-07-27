@@ -20,7 +20,7 @@ const struct option long_options[] = {
 int getFlags(int ARGC, char* ARGV[]) {
     int find_f;
     int option_index = 0;
-    find_f = getopt_long(ARGC, ARGV, "YbenstETv-", long_options, &option_index);
+    find_f = getopt_long(ARGC, ARGV, "YbenstETv", long_options, &option_index);
     if (find_f != -1) {
         switch (find_f) {
             case 'b':
@@ -54,16 +54,9 @@ int getFlags(int ARGC, char* ARGV[]) {
 }
 
 void s21_cat(char* ARGV[]) {
-    int d = 0;
-    // printf("kek = |%s|", *ARGV);
-    // if (*ARGV == "-" || *ARGV == "--") {
-    //     d = 1; 
-    // }
-    // printf("%d\n", d);
     FILE *file = NULL;
     file = fopen(*ARGV, "r");
-    if (d == 1) {
-    } else if (file == NULL) {
+    if (file == NULL) {
         fprintf(stderr, "s21_cat: %s: No such file or directory\n", *ARGV);
     } else {
         int count_line = 1;
@@ -108,14 +101,13 @@ void s21_cat(char* ARGV[]) {
             fprintf(stdout, "%c", read_char);
             last = read_char;
             counter_for_b = 0;
-            // costil = 0;
         }
     }
     fclose(file);
 }
 
 
-int main(int ARGC, char *ARGV[]) {  //  подается  s21_cat -l test.txt
+int main(int ARGC, char *ARGV[]) {
     int error = 0;
     int flags_num = 0;
     for (int i = 1; i < ARGC; i++){
@@ -128,8 +120,8 @@ int main(int ARGC, char *ARGV[]) {  //  подается  s21_cat -l test.txt
         }
     }
     int j = 0;
-    for (j = 1 + flags_num; j < ARGC; j++) {
-        s21_cat(&ARGV[j]);
+    for (j = 1 + flags_num; j < ARGC; j++) { 
+        s21_cat(&ARGV[j]); // разобраться 
     }
     return 0; // 0 если все ок, 1 если произошла любая ошибка
 
