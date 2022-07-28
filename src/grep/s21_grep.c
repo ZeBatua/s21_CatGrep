@@ -26,7 +26,7 @@ int main(int ARGC, char *ARGV[]) { // нужна проверка то что п
     int amount_flag = 0;
     int i = 0;
     // char char_for_f[] = "-f";
-    for (i = 1; i < ARGC; i++) {
+    for (i = 0; i < ARGC; i++) {
         error = find_flag(ARGC, ARGV);
         if (error == -1) {
             break;
@@ -51,7 +51,7 @@ int main(int ARGC, char *ARGV[]) { // нужна проверка то что п
 
 
     for (int print = i + 1; print < ARGC; print++) {
-        // printf("&ARGV[print] = %s\nARGV[i] = %s\n", *&ARGV[print], ARGV[i-1]);
+        printf("&ARGV[print] = %s\nARGV[i] = %s\ncount file  = %d\n", *&ARGV[print], ARGV[i-1], (ARGC - i - 1));
 
         s21_grep(&ARGV[print], ARGV[i], (ARGC - i - 1)); //  надо чтобы f ожидал файл
     }
@@ -111,7 +111,7 @@ void s21_grep(char* ARGV[], char* pattern, int count_file) {
     // int pattern_count = 0;
     char* read_char = NULL;
     regex_t preg;
-    regmatch_t pmatch[1];
+    regmatch_t pmatch[1]; // jump
     size_t k = 0;
     // int move = 0;
     file = fopen(*ARGV, "r");
@@ -121,8 +121,61 @@ void s21_grep(char* ARGV[], char* pattern, int count_file) {
         exit(0);
     }
     if (file == NULL) {
-        fprintf(stdout, "s21_grep: %s: No such file or directory\n", *ARGV);
+        fprintf(stdout, "!!!s21_grep: %s: No such file or directory\n", *ARGV);
     } else {
+        if (flag.e_flag == 1) {
+            printf("|||%s|||\n", ARGV[count_file - 1]);
+            if (ARGV[count_file - 1] == (char *)"-e") {
+                ARGV[count_file] = pattern;
+                //-----------------------------------------------------------------------------------------//
+                if (ARGV[count_file] == (char *)"-e") { // из этого надо сделать функцию change_glags
+                    flag.e_flag = 0;
+                } 
+                if (ARGV[count_file] == (char *)"-i") {
+                    flag.i_flag = 0;
+                } 
+                if (ARGV[count_file] == (char *)"-v") {
+                    flag.v_flag = 0;
+                } 
+                if (ARGV[count_file] == (char *)"-c") {
+                    flag.c_flag = 0;
+                } 
+                if (ARGV[count_file] == (char *)"-l") {
+                    flag.l_flag = 0;
+                } 
+                if (ARGV[count_file] == (char *)"-n") {
+                    flag.n_flag = 0;
+                } 
+                if (ARGV[count_file] == (char *)"-h") {
+                    flag.h_flag = 0;
+                }
+                if (ARGV[count_file] == (char *)"-s") {
+                    flag.s_flag = 0;
+                }
+                if (ARGV[count_file] == (char *)"-f") {
+                    flag.f_flag = 0;
+                }
+                if (ARGV[count_file] == (char *)"-o") {
+                    flag.o_flag = 0;
+                }
+            }
+                //------------------------------------------------------------------------------------//
+            int i = 0;
+            if (e_counter > 0) {
+                    strcat(pattern, "|");
+            }
+            // printf("||||%s|||||\n\n", ARGV[i - 2]);
+            if (!ARGV[i + 1]) {
+                exit(1);
+            }
+            i++;
+            if (!strcmp(ARGV[i], "\0")) {
+                ARGV[i] = "\n";
+            } 
+            strcat(pattern, ARGV[i]);
+            e_counter++;
+            
+        }
         if (flag.f_flag == 1) { // куда это
             char regfile[1024];
             char *file = regfile;
@@ -306,3 +359,24 @@ void output_string(int amount_str, char* string, char* ARGV[], int amount_file) 
         }
     }
 }
+
+//если флаг е подан больше 1 раза то надо выводить с названием файла или нет....
+//если много файлов то выводить с названием, 1 - без 
+//grep develop ➜ grep -e 'z?opa' test/test1.txt test/test2.txt
+// test/test1.txt:raz?opabbit2
+// test/test1.txt:7rabbitz?opa
+// test/test1.txt:1234p56z?opa
+// test/test1.txt:123cz?opa
+// test/test1.txt:qweqweqweqweqweqrabbitweqweqweqweqz?opaweqweqweqweqweqweqweqwe
+// test/test1.txt:qwez?opa
+// test/test1.txt:z?opa
+// grep develop ➜ ./s21_grep -e 'z?opa' test/test1.txt test/test2.txt
+// test/test1.txt:raz?opabbit2
+// test/test1.txt:4zopa
+// test/test1.txt:7rabbitz?opa
+// test/test1.txt:1234p56z?opa
+// test/test1.txt:123cz?opa
+// test/test1.txt:qweqweqweqweqweqrabbitweqweqweqweqz?opaweqweqweqweqweqweqweqwe
+// test/test1.txt:qwez?opa
+// test/test1.txt:z?opa
+// grep develop ➜ 
