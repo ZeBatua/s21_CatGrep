@@ -1,5 +1,5 @@
 CC = gcc -g
-CFLAGS = -Wall -Wextra -Werror
+# CFLAGS = -Wall -Wextra -Werror
 
 all: clean s21_grep
 

@@ -4,6 +4,7 @@
 #include <regex.h>
 #include <limits.h>
 #include <string.h>
+
 struct grep_flag {
     int e_flag;
     int i_flag;
@@ -17,49 +18,379 @@ struct grep_flag {
     int o_flag;
 } flag;
 
-int find_flag(int ARGC, char *ARGV[]);
-void output_string(int amount_str, char* string, char* ARGV[], int amount_file);
-void s21_grep(char* ARGV[], char* pattern, int count_65file);
+int find_flag(int ARGC, char **ARGV);
+void cycle_output_string(int amount_str, char* string, char *fp, int count_file);
+void s21_grep(char* filenames, char* pattern_names, int counter_pars_files);
+void once_output_string(char* fp, int count_file, int same_str);
+void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, char* pattern);
+char pars_files(char **ARGV, char* filenames, int* counter_pars_files);
+int pars_string(int ARGC, char **ARGV, int *mass);
+char *eq_flag_status(char **ARGV, char *ch);
+char pars_patterns(char* ARGV[], char* pattern_names, int* counter_pars_patterns);
+void disable_flag (char *ch);
 
-int main(int ARGC, char *ARGV[]) { // нужна проверка то что присутствует необходимое кол-во файлов 
-    int error = 0;
-    int amount_flag = 0;
-    int i = 0;
-    // char char_for_f[] = "-f";
-    for (i = 0; i < ARGC; i++) {
-        error = find_flag(ARGC, ARGV);
-        if (error == -1) {
-            break;
-        } else if (error == '?') {
-            exit(0);
-        } else {
-            amount_flag++;
+
+
+int main(int ARGC, char **ARGV) { // нужна проверка то что присутствует необходимое кол-во файлов 
+    char filenames[4096] = {'\0'};
+    char pattern_names[4096] = {'\0'};
+    int mass[1024] = {0};
+    int counter_pars_patterns = 0;
+    int counter_pars_files = 0;
+
+
+    for (int i = 0; i < ARGC; i++) {
+        find_flag(ARGC, ARGV);
+    }
+    //----------change_flags----------//
+    if (flag.c_flag == 1) {
+        flag.l_flag = 0;
+    }
+    //----------change_flags----------//
+
+
+
+    pars_string(ARGC, ARGV, mass); // массив 3 2 1
+
+  
+
+    for (int b = 0; b <= ARGC; b++) {
+        if (mass[b] == 1) {
+            // printf("|||%s|||", ARGV[b]);
+            // printf("|||%d|||", b);
+            pars_files(&ARGV[b], filenames, &counter_pars_files); 
         }
     }
-    // нужен цикл который скажет что i-ый это -f, следовательно то i+1 ожидается быть файлом-паттерном, иначе лох
-    // for (int j = 0; j < ARGC; j++) {
-    //     printf("%s\n", ARGV[j]);
-    //     if (flag.f_flag == 1 && memcmp(ARGV[j], char_for_f, 5) == 0) {
-    //         FILE *file = NULL;
-    //         file = fopen((char *)ARGV[j + 1], "r");
-    //         if (file == NULL) {
-    //             fprintf(stdout, "s21_grep: %s: No such file or directory\n", (char *)ARGV[j + 1]);
-    //         }
-    //     }
-    // }
+    // printf("counter_pars_files %d\n", counter_pars_files);
+
+    // printf("files: ");
+    // for (int j = 0; j < 40; j++) {
+    //     printf("%c", filenames[j]);
+    // } 
+    // printf("\n");
+
+
+    // printf("mass: ");
+    // for (int j = 0; j < 40; j++) {
+    //     printf("%c", mass[j]);
+    // } 
+    // printf("\n");
 
 
 
-    for (int print = i + 1; print < ARGC; print++) {
-        printf("&ARGV[print] = %s\nARGV[i] = %s\ncount file  = %d\n", *&ARGV[print], ARGV[i-1], (ARGC - i - 1));
 
-        s21_grep(&ARGV[print], ARGV[i], (ARGC - i - 1)); //  надо чтобы f ожидал файл
+    for (int b = 0; b < ARGC; b++) {
+        if (mass[b] == 2) {
+          pars_patterns(&ARGV[b], pattern_names, &counter_pars_patterns); 
+        }
     }
+
+    s21_grep(filenames, pattern_names, counter_pars_files);  
+
     return 0;
 }
 
+char pars_patterns(char* ARGV[], char* pattern_names, int* counter_pars_patterns) {
+        if (*counter_pars_patterns > 0) {
+            strcat(pattern_names, "|");
+        }
+        strcat(pattern_names, *ARGV);
+        *counter_pars_patterns++;
+    return *pattern_names;
+}
 
-int find_flag(int ARGC, char *ARGV[]) {
+
+void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
+    char string[LINE_MAX];
+    
+    // int e_counter = 0;
+    int amount_str = 0;
+    int same_str = 0;
+
+    regex_t preg;
+    regmatch_t pmatch[1] = {0};
+  
+    char pattern_for_f[4096] = {'\0'};
+
+    char *fp = NULL;
+
+    fp = strtok(filenames, "|");
+    // int abv = 0;
+// MFOENFOUBWEFUBWUFBWIEBUFIWUFBIBEFUIBWEFB
+    while (fp != NULL) {
+        same_str = 0;
+        // abv++;
+        FILE *file;
+        if ((file = fopen(fp, "r")) != NULL) {
+
+
+            // if (flag.e_flag == 1) {
+                
+                // printf("|||%s|||\n", ARGV[x - count_file]);
+                // if (strcmp(ARGV[x - count_file], "-e") == 0) { 
+                //     printf("GGGGGGGGGG");
+                //     ARGV[x - count_file - 1] = pattern;
+                //     //-----------------------------------------------------------------------------------------//
+                //     if (ARGV[count_file] == (char *)"-e") { // из этого надо сделать функцию change_flags
+                //         flag.e_flag = 0;
+                //     } 
+                //     if (ARGV[count_file] == (char *)"-i") {
+                //         flag.i_flag = 0;
+                //     } 
+                //     if (ARGV[count_file] == (char *)"-v") {
+                //         flag.v_flag = 0;
+                //     } 
+                //     if (ARGV[count_file] == (char *)"-c") {
+                //         flag.c_flag = 0;
+                //     } 
+                //     if (ARGV[count_file] == (char *)"-l") {
+                //         flag.l_flag = 0;
+                //     } 
+                //     if (ARGV[count_file] == (char *)"-n") {
+                //         flag.n_flag = 0;
+                //     } 
+                //     if (ARGV[count_file] == (char *)"-h") {
+                //         flag.h_flag = 0;
+                //     }
+                //     if (ARGV[count_file] == (char *)"-s") {
+                //         flag.s_flag = 0;
+                //     }
+                //     if (ARGV[count_file] == (char *)"-f") {
+                //         flag.f_flag = 0;
+                //     }
+                //     if (ARGV[count_file] == (char *)"-o") {
+                //         flag.o_flag = 0;
+                //     }
+                // }
+                    //------------------------------------------------------------------------------------//
+                // int i = 0;
+                // if (e_counter > 0) {
+                //         strcat(pattern, "|");
+                // }
+                // printf("||||%s|||||\n\n", ARGV[i - 2]);
+                // if (!ARGV[i + 1]) {
+                //     exit(1);
+                // }
+                // i++;
+                // if (!strcmp(ARGV[i], "\0")) {
+                //     ARGV[i] = "\n";
+                // } 
+                // strcat(pattern, ARGV[i]);
+                // e_counter++;
+                
+            // }
+
+            // if (flag.f_flag == 1) { // куда это
+                // char regfile[1024];
+                // char *file = regfile;
+                // file = ARGV[count_file - 2];
+                // FILE *f;
+                // char str[4097] = {'\0'};
+                // char *cc = str;
+                // if ((f = fopen(file, "r")) != NULL) {
+                //     for (size_t j = 0; fgets(cc, 4096, f); j++) {
+                //         if (e_counter > 0) {
+                //             strcat(pattern_for_f, "|");
+                //         }
+                //         if (strchr(cc, '\n')) { // Указатель на первое вхождение символа в строку. Если значение не найдено, функция возвращает нулевой указатель.
+                //             *(cc + strlen(cc) - 1) = '\0';
+                //         }
+                //         if (!strcmp(cc, "\0")) { // сравнивает строки и выводит <>=
+                //             cc = "\n";
+                //         }
+                //         strcat(pattern_for_f, cc); // закидывает в конец строки строку
+                //         e_counter++;
+                //         memset(cc, '\0', 4096);  // 4096 символов заполнит \0
+                    
+                //     fclose(f);
+                //     } else {
+                //         fprintf(stderr, "s21_grep: %s: No such file or directory\n", file);
+                //     }
+                // }
+            // }
+
+            char* p_pattern = NULL;
+
+            if (flag.f_flag != 1) {
+                if (flag.i_flag == 1) {
+                    regcomp(&preg, pattern_names, REG_ICASE | REG_EXTENDED);
+                } else {
+                    regcomp(&preg, pattern_names, REG_EXTENDED);
+                }
+                p_pattern = pattern_names;
+            } else {
+                if (flag.i_flag == 1) {
+                    regcomp(&preg, pattern_for_f, REG_ICASE | REG_EXTENDED);
+                } else {
+                    regcomp(&preg, pattern_for_f, REG_EXTENDED);
+                }
+                p_pattern = pattern_for_f;
+            }
+
+            while (fgets(string, LINE_MAX, file) != NULL) {
+                if (strrchr(string, '\n') == NULL) {
+                    strcat(string, "\n");
+                }
+                if (flag.n_flag == 1) {
+                    amount_str++;
+                }
+                if (flag.c_flag == 1 || flag.l_flag == 1) {
+                    if (flag.v_flag == 1) {
+                        if (regexec(&preg, string, 1, pmatch, 0) != 0) {
+                            same_str++;
+                        }
+                    } else {
+                        if (regexec(&preg, string, 1, pmatch, 0) == 0) {
+                            same_str++;
+                        }
+                    }
+                } else {
+                    if (flag.v_flag == 1) {
+                        if (regexec(&preg, string, 1, pmatch, 0) != 0) {
+                            // printf("pattern = %s\n", pattern);
+                            cycle_output_string(amount_str, string, fp, counter_pars_files);
+
+                        }
+                    } else if (flag.f_flag == 1) {
+                        if (regexec(&preg, string, 1, pmatch, 0) == 0) {
+                            cycle_output_string(amount_str, string, fp, counter_pars_files);
+
+                        }
+                    } else if ((flag.o_flag != 1)){  // свободный выход // i не обрабатывает "("
+                        // printf("строка %s\n", string);
+                        // printf("паттерн %s\n", pattern);
+                        if (regexec(&preg, string, 1, pmatch, 0) == 0) {
+                            cycle_output_string(amount_str, string, fp, counter_pars_files);
+                        }
+                    }
+                }
+            }
+            print_for_flag_o(fp, counter_pars_files, string, p_pattern, pattern_names);
+            once_output_string(fp, counter_pars_files, same_str);
+            fclose(file);
+        }
+        fp = strtok(NULL, "|");
+    }
+    regfree(&preg);
+}
+
+int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны частные случаи флагов 
+    int counter_for_mass = 1;
+    int amount_file = 0;
+    char ch[1024] = {'\0'};
+    FILE *check;
+    char* e_check = "-e";
+    for (int i = 1; i < ARGC; i++) { // 1 - файл, 2 - паттерн, 3 - флаг.
+        if ((check = fopen(ARGV[i], "r")) == NULL) {
+            // printf("%s\n\n", ARGV[i - 1]);
+            if ((strcmp(ARGV[i - 1], e_check) == 0) && 
+            (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0)) {
+                disable_flag(ch);
+                mass[counter_for_mass] = 2;
+                counter_for_mass++;
+            } else if (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0) {
+                mass[counter_for_mass] = 3;  // проверка что i флаг 
+                counter_for_mass++;
+                memset(ch, '\0', sizeof(ch));
+            } else if (strcmp(ARGV[i - 1], "./s21_grep") == 0) {
+                mass[counter_for_mass] = 2; // перед i запуск и i не флаг -> паттерн
+                counter_for_mass++;
+            } else if (strcmp(ARGV[i - 1], eq_flag_status(&ARGV[i - 1], ch)) == 0) {
+                mass[counter_for_mass] = 2; // если  i не флаг, а i - 1 не флаг 
+                counter_for_mass++;
+                memset(ch, '\0', sizeof(ch));
+            } else {
+                fprintf(stdout, "grep: %s: No such file or directory\n", ARGV[i]);
+                counter_for_mass++;
+            }
+        } else if (strcmp(ARGV[i - 1], "-e") == 0) {
+                mass[counter_for_mass] = 2;
+                counter_for_mass++;
+        } else if (strcmp(ARGV[i - 1], "./s21_grep") == 0) { //  пока не обрабатываю same_name
+            mass[counter_for_mass] = 2; // паттерн перед s21_grep
+            counter_for_mass++;
+        } else if (strcmp(ARGV[i - 1], eq_flag_status((&ARGV[i - 1]), ch)) == 0) {
+            mass[counter_for_mass] = 2; // паттерн перед флагом
+            counter_for_mass++;
+            memset(ch, '\0', sizeof(ch));
+        } else {
+            mass[counter_for_mass] = 1; // найден файл
+            counter_for_mass++;
+            amount_file++;
+        }
+    }
+    return amount_file;
+}
+
+void disable_flag (char *ch) {
+    if (strcmp(&ch[1], "e") == 0){
+        flag.e_flag = 0;
+    } else if (strcmp(&ch[1], "v") == 0) {
+        flag.v_flag = 0;
+    } else if (strcmp(&ch[1], "c") == 0) {
+        flag.c_flag = 0;
+    } else if (strcmp(&ch[1], "l") == 0) {
+        flag.l_flag = 0;
+    } else if (strcmp(&ch[1], "n") == 0) {
+        flag.n_flag = 0;
+    } else if (strcmp(&ch[1], "h") == 0) {
+        flag.h_flag = 0;
+    } else if (strcmp(&ch[1], "s") == 0) {
+        flag.s_flag = 0;
+    } else if (strcmp(&ch[1], "f") == 0) {
+        flag.f_flag = 0;
+    } else if (strcmp(&ch[1], "o") == 0) {
+        flag.o_flag = 0;
+    }
+}
+
+char *eq_flag_status(char **ARGV, char *ch) {
+    if (strcmp(*ARGV, "-e") == 0) {
+        strcat(ch, "-e"); 
+    } else if (strcmp(*ARGV, "-i") == 0) {
+        strcat(ch, "-i"); 
+    } else if (strcmp(*ARGV, "-v") == 0) {
+        strcat(ch, "-v"); 
+    } else if (strcmp(*ARGV, "-c") == 0) {
+        strcat(ch, "-c"); 
+    } else if (strcmp(*ARGV, "-l") == 0) {
+        strcat(ch, "-l"); 
+    } else if (strcmp(*ARGV, "-n") == 0) {
+        strcat(ch, "-n"); 
+    } else if (strcmp(*ARGV, "-h") == 0) {
+        strcat(ch, "-h"); 
+    } else if (strcmp(*ARGV, "-s") == 0) {
+        strcat(ch, "-s"); 
+    } else if (strcmp(*ARGV, "-f") == 0) {
+        strcat(ch, "-f"); 
+    } else if (strcmp(*ARGV, "-o") == 0) {
+        strcat(ch, "-o"); 
+    }
+    return ch;
+}
+
+
+char pars_files(char* ARGV[], char *filenames, int* counter_pars_files) { //   вызови эту хуйню и 
+    // FILE *f;
+    // if ((f = fopen(*ARGV, "r")) != NULL) {
+    //     fclose(f);
+        if (*counter_pars_files > 0) {
+            strcat(filenames, "|");
+        }
+        strcat(filenames, *ARGV);
+        *counter_pars_files+=1;
+        // printf("329 %d\n", *counter_pars_files);
+    // } /* else {
+            // if (flag.c_flag == 0) {
+            //     fprintf(stdout, "s21_grep: %s: No such file or directory\n", ARGV[i]);
+            // }
+            // counter_pars_files++;
+        // } */
+    return *filenames;
+}
+
+
+int find_flag(int ARGC, char **ARGV) {
     int findF;
     findF = getopt(ARGC, ARGV, "eivclnhsfo"); // : надо  ли
     if (findF != -1) {
@@ -101,171 +432,62 @@ int find_flag(int ARGC, char *ARGV[]) {
     return findF;
 }
 
-void s21_grep(char* ARGV[], char* pattern, int count_file) {
-    FILE *file = NULL;
-    char string[LINE_MAX];
-    
-    int e_counter = 0;
-    int amount_str = 0;
-    int same_str = 0;
-    // int pattern_count = 0;
-    char* read_char = NULL;
-    regex_t preg;
-    regmatch_t pmatch[1]; // jump
-    size_t k = 0;
-    // int move = 0;
-    file = fopen(*ARGV, "r");
-    // printf("|%s|\n\n", *ARGV);
-    char pattern_for_f[4096] = {'\0'};
-    if (flag.s_flag == 1 && file == NULL) {
-        exit(0);
-    }
-    if (file == NULL) {
-        fprintf(stdout, "!!!s21_grep: %s: No such file or directory\n", *ARGV);
-    } else {
-        if (flag.e_flag == 1) {
-            printf("|||%s|||\n", ARGV[count_file - 1]);
-            if (ARGV[count_file - 1] == (char *)"-e") {
-                ARGV[count_file] = pattern;
-                //-----------------------------------------------------------------------------------------//
-                if (ARGV[count_file] == (char *)"-e") { // из этого надо сделать функцию change_glags
-                    flag.e_flag = 0;
-                } 
-                if (ARGV[count_file] == (char *)"-i") {
-                    flag.i_flag = 0;
-                } 
-                if (ARGV[count_file] == (char *)"-v") {
-                    flag.v_flag = 0;
-                } 
-                if (ARGV[count_file] == (char *)"-c") {
-                    flag.c_flag = 0;
-                } 
-                if (ARGV[count_file] == (char *)"-l") {
-                    flag.l_flag = 0;
-                } 
-                if (ARGV[count_file] == (char *)"-n") {
-                    flag.n_flag = 0;
-                } 
-                if (ARGV[count_file] == (char *)"-h") {
-                    flag.h_flag = 0;
-                }
-                if (ARGV[count_file] == (char *)"-s") {
-                    flag.s_flag = 0;
-                }
-                if (ARGV[count_file] == (char *)"-f") {
-                    flag.f_flag = 0;
-                }
-                if (ARGV[count_file] == (char *)"-o") {
-                    flag.o_flag = 0;
-                }
-            }
-                //------------------------------------------------------------------------------------//
-            int i = 0;
-            if (e_counter > 0) {
-                    strcat(pattern, "|");
-            }
-            // printf("||||%s|||||\n\n", ARGV[i - 2]);
-            if (!ARGV[i + 1]) {
-                exit(1);
-            }
-            i++;
-            if (!strcmp(ARGV[i], "\0")) {
-                ARGV[i] = "\n";
-            } 
-            strcat(pattern, ARGV[i]);
-            e_counter++;
-            
-        }
-        if (flag.f_flag == 1) { // куда это
-            char regfile[1024];
-            char *file = regfile;
-            file = ARGV[count_file - 2];
-            FILE *f;
-            char str[4097] = {'\0'};
-            char *cc = str;
-                if ((f = fopen(file, "r")) != NULL) {
-                    for (size_t j = 0; fgets(cc, 4096, f); j++) {
-                        if (e_counter > 0) {
-                            strcat(pattern_for_f, "|");
-                        }
-                        if (strchr(cc, '\n')) { // Указатель на первое вхождение символа в строку. Если значение не найдено, функция возвращает нулевой указатель.
-                            *(cc + strlen(cc) - 1) = '\0';
-                        }
-                        if (!strcmp(cc, "\0")) { // сравнивает строки и выводит <>=
-                            cc = "\n";
-                        }
-                        strcat(pattern_for_f, cc); // закидывает в конец строки строку
-                        e_counter++;
-                        memset(cc, '\0', 4096);  // 4096 символов заполнит \0
-                    }
-                    fclose(f);
-                } else {
-            fprintf(stderr, "s21_grep: %s: No such file or directory\n", file);
-            }
-        }
-        char* p_pattern = NULL;
-        if (flag.f_flag != 1) {
-            if (flag.i_flag == 1) {
-                regcomp(&preg, pattern, REG_ICASE | REG_EXTENDED);
-            } else {
-                regcomp(&preg, pattern, REG_EXTENDED);
-            }
-            p_pattern = pattern;
+
+
+void cycle_output_string(int amount_str, char* string, char* fp, int count_file) {
+    if (count_file > 1) { // если файлов > 1
+        if (flag.n_flag == 1) {
+            fprintf(stdout, "%s:%d:%s", fp, amount_str, string);
         } else {
-            if (flag.i_flag == 1) {
-                regcomp(&preg, pattern_for_f, REG_ICASE | REG_EXTENDED);
-            } else {
-                regcomp(&preg, pattern_for_f, REG_EXTENDED);
-            }
-            p_pattern = pattern_for_f;
+            fprintf(stdout, "%s:%s", fp, string);
         }
-
-        while (fgets(string, LINE_MAX, file) != NULL) {
-            if (strrchr(string, '\n') == NULL) {
-                strcat(string, "\n");
-            }
-            if (flag.n_flag == 1) {
-                amount_str++;
-            }
-            if (flag.c_flag == 1 || flag.l_flag == 1) {
-                if (flag.v_flag == 1) {
-                    if (regexec(&preg, string, 1, pmatch, 0) != 0) {
-                        same_str++;
-                    }
-                } else {
-                    if (regexec(&preg, string, 1, pmatch, 0) == 0) {
-                        same_str++;
-                    }
-                }
-            } else {
-                if (flag.v_flag == 1) {
-                    if (regexec(&preg, string, 1, pmatch, 0) != 0) {
-                        output_string(amount_str, string, ARGV, count_file);
-
-                    }
-                } else if (flag.f_flag == 1) {
-                    if (regexec(&preg, string, 1, pmatch, 0) == 0) {
-                        output_string(amount_str, string, ARGV, count_file);
-
-                    }
-                } else if ((flag.o_flag != 1)){  // свободный выход // i не обрабатывает "("
-                    // printf("строка %s\n", string);
-                    // printf("паттерн %s\n", pattern);
-                    if (regexec(&preg, string, 1, pmatch, 0) == 0) {
-                        output_string(amount_str, string, ARGV, count_file);
-                    }
-                }
-            }
+    } else { // если файл 1
+        if (flag.n_flag == 1 && flag.h_flag == 1) {
+            fprintf(stdout, "%d:%s", amount_str, string);
+        } else if (flag.n_flag != 1 && flag.h_flag == 1) {
+            fprintf(stdout, "%s", string);
+        } else if (flag.n_flag == 1) {
+            fprintf(stdout, "%d:%s", amount_str, string);
+        } else{
+            fprintf(stdout, "%s", string);
         }
-        fclose(file);
+    }
+}
 
-        //------------------------------------------------------------------------------//
-        
+void once_output_string(char* fp, int count_file, int same_str) {
+    if (flag.c_flag == 1 && flag.l_flag != 1) {
+        if (count_file > 1) {
+            fprintf(stdout, "%s:%d\n", fp, same_str);
+        } else {
+            fprintf(stdout, "%d\n", same_str);
+        }
+    } else if (flag.c_flag == 1 && flag.l_flag == 1) {
+        if (count_file > 1) {
+            if (same_str > 0) {
+                same_str = 1;
+            }
+            fprintf(stdout, "%s:%d\n%s\n", fp, same_str, fp);
+        } else {
+            if (same_str > 0) {
+                same_str = 1;
+            }
+            fprintf(stdout, "%d\n%s\n", same_str, fp);
+        }
+    } else if (flag.l_flag == 1 && same_str > 0) {
+        fprintf(stdout, "%s\n", fp);
+    }
+}
+
+void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, char* pattern) {
     if (flag.o_flag == 1 && flag.c_flag != 1 && flag.l_flag != 1 && flag.v_flag != 1) {
-        file = fopen(*ARGV, "r");
+        FILE *file = NULL;
+        file = fopen(fp, "r"); // тут мб хуйня
+        char* read_char = NULL;
         int amount_str_2 = 0;
         int more_counters = 0;
         size_t j = 0;
+        size_t k = 0;
+// ARG
         while ((read_char = fgets(string, LINE_MAX, file)) != NULL) {
             amount_str_2++;
             for (;j != strlen(string); j++) {
@@ -290,7 +512,7 @@ void s21_grep(char* ARGV[], char* pattern, int count_file) {
                                 if (more_counters > 0){
                                     fprintf(stdout, "%s\n", pattern);
                                 } else {
-                                    fprintf(stdout, "%s:%s\n", *ARGV, pattern);
+                                    fprintf(stdout, "%s:%s\n", fp, pattern);
                                     more_counters++;
                                 }
                                 k = 0;
@@ -298,7 +520,7 @@ void s21_grep(char* ARGV[], char* pattern, int count_file) {
                                 if (more_counters > 0) {
                                     fprintf(stdout, "%s\n", pattern);
                                 } else {
-                                    fprintf(stdout, "%s:%d:%s\n", *ARGV, amount_str_2, pattern);
+                                    fprintf(stdout, "%s:%d:%s\n", fp, amount_str_2, pattern);
                                     more_counters++;
                                 }
                                 k = 0;
@@ -312,71 +534,21 @@ void s21_grep(char* ARGV[], char* pattern, int count_file) {
             more_counters = 0;
         }
     }
-        //---------------------------------------------------------------------//
-
-        if (flag.c_flag == 1 && flag.l_flag != 1) {
-            if (count_file > 1) {
-                fprintf(stdout, "%s:%d\n", *ARGV, same_str);
-            } else {
-                fprintf(stdout, "%d\n", same_str);
-            }
-        } else if (flag.c_flag == 1 && flag.l_flag == 1) {
-            if (count_file > 1) {
-                if (same_str > 0) {
-                    same_str = 1;
-                }
-                fprintf(stdout, "%s:%d\n%s\n", *ARGV, same_str, *ARGV);
-            } else {
-                if (same_str > 0) {
-                    same_str = 1;
-                }
-                fprintf(stdout, "%d\n%s\n", same_str, *ARGV);
-            }
-        } else if (flag.l_flag == 1 && same_str > 0) {
-            fprintf(stdout, "%s\n", *ARGV);
-        }
-    regfree(&preg);
-    fclose(file);
-    }
 }
 
-void output_string(int amount_str, char* string, char* ARGV[], int amount_file) {
-    if (amount_file > 1) { // если файлов > 1
-        if (flag.n_flag == 1) {
-            fprintf(stdout, "%s:%d:%s", *ARGV, amount_str, string);
-        } else {
-            fprintf(stdout, "%s:%s", *ARGV, string);
-        }
-    } else { // если файл 1
-        if (flag.n_flag == 1 && flag.h_flag == 1) {
-            fprintf(stdout, "%d:%s", amount_str, string);
-        } else if (flag.n_flag != 1 && flag.h_flag == 1) {
-            fprintf(stdout, "%s", string);
-        } else if (flag.n_flag == 1) {
-            fprintf(stdout, "%d:%s", amount_str, string);
-        } else{
-            fprintf(stdout, "%s", string);
-        }
-    }
-}
+   /*
+    1) получение флагов
+    2) принять за файлы то что открывается. Если один из "файлов" соответсвует флагу /
+       ошибку не выводить, иначе вывести ошибку что файла не существует.
+    3) в случае флага е уточнить что после него 100% паттерн.
+    4) похоже нужен парсер для регулярок 
 
-//если флаг е подан больше 1 раза то надо выводить с названием файла или нет....
-//если много файлов то выводить с названием, 1 - без 
-//grep develop ➜ grep -e 'z?opa' test/test1.txt test/test2.txt
-// test/test1.txt:raz?opabbit2
-// test/test1.txt:7rabbitz?opa
-// test/test1.txt:1234p56z?opa
-// test/test1.txt:123cz?opa
-// test/test1.txt:qweqweqweqweqweqrabbitweqweqweqweqz?opaweqweqweqweqweqweqweqwe
-// test/test1.txt:qwez?opa
-// test/test1.txt:z?opa
-// grep develop ➜ ./s21_grep -e 'z?opa' test/test1.txt test/test2.txt
-// test/test1.txt:raz?opabbit2
-// test/test1.txt:4zopa
-// test/test1.txt:7rabbitz?opa
-// test/test1.txt:1234p56z?opa
-// test/test1.txt:123cz?opa
-// test/test1.txt:qweqweqweqweqweqrabbitweqweqweqweqz?opaweqweqweqweqweqweqweqwe
-// test/test1.txt:qwez?opa
-// test/test1.txt:z?opa
-// grep develop ➜ 
+    итого: получение флагов. инициализация элементов строки файл / не файл
+    */
+
+// добавить обработку s в парсере
+// у меня количество файлов считает amount_file
+// попробуй через фолдер воркспейс файлы закинуть 
+// -o не обработает регулярки
+// -e создает едиственный возможный паттерн за исключением тех случаев когда -е вызван несколько раз
+// следовательно то что типа паттерн но не стоит после -е надо вывести несуществующий файл

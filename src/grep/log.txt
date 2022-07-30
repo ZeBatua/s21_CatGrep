@@ -1,9 +1,14 @@
 
+-e -i qwe regular.txt
 -e -v qwe regular.txt
 -e -c qwe regular.txt
+-e -l qwe regular.txt
+-e -n qwe regular.txt
+-e -h qwe regular.txt
+-e -s qwe regular.txt
+-e -f qwe regular.txt
+-e -o qwe regular.txt
 -v -f qwe regular.txt
--c -l qwe regular.txt
 -c -f qwe regular.txt
--l -c qwe regular.txt
 -f -v qwe regular.txt
 -f -c qwe regular.txt

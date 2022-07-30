@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo Test 1-------------------------------------------------
-./s21_grep -o 123 some_text.txt > s21_grep_test
-grep -o 123 some_text.txt > grep
+./s21_grep 123 some_text.txt > s21_grep_test
+grep 123 some_text.txt > grep
 diff -s s21_grep_test grep
 echo Test 2-------------------------------------------------
 ./s21_grep -i rabbit test/test1.txt > s21_grep_test
