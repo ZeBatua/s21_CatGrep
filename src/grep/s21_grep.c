@@ -37,7 +37,7 @@ int main(int ARGC, char **ARGV) { // нужна проверка то что п�
     int mass[1024] = {0};
     int counter_pars_patterns = 0;
     int counter_pars_files = 0;
-
+    int amount_some_file = 0;
 
     for (int i = 0; i < ARGC; i++) {
         find_flag(ARGC, ARGV);
@@ -50,7 +50,7 @@ int main(int ARGC, char **ARGV) { // нужна проверка то что п�
 
 
 
-    pars_string(ARGC, ARGV, mass); // массив 3 2 1
+    amount_some_file = pars_string(ARGC, ARGV, mass); // массив 3 2 1
 
   
 
@@ -85,7 +85,7 @@ int main(int ARGC, char **ARGV) { // нужна проверка то что п�
         }
     }
 
-    s21_grep(filenames, pattern_names, counter_pars_files);  
+    s21_grep(filenames, pattern_names, amount_some_file);  
 
     return 0;
 }
@@ -116,98 +116,41 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
 
     fp = strtok(filenames, "|");
     // int abv = 0;
-// MFOENFOUBWEFUBWUFBWIEBUFIWUFBIBEFUIBWEFB
+    // MFOENFOUBWEFUBWUFBWIEBUFIWUFBIBEFUIBWEFB
     while (fp != NULL) {
         same_str = 0;
         // abv++;
         FILE *file;
         if ((file = fopen(fp, "r")) != NULL) {
-
-
-            // if (flag.e_flag == 1) {
+            if (flag.f_flag == 1) { // куда это
+                char regfile[1024];
+                char *file = regfile;
+                file = fp;
+                FILE *f;
+                char str[4097] = {'\0'};
+                char *cc = str;
+                int e_counter = 0;
+                if ((f = fopen(file, "r")) != NULL) {
+                    for (size_t j = 0; fgets(cc, 4096, f); j++) {
+                        if (e_counter > 0) {
+                            strcat(pattern_for_f, "|");
+                        }
+                        if (strchr(cc, '\n')) { // Указатель на первое вхождение символа в строку. Если значение не найдено, функция возвращает нулевой указатель.
+                            *(cc + strlen(cc) - 1) = '\0';
+                        }
+                        if (!strcmp(cc, "\0")) { // сравнивает строки и выводит <>=
+                            cc = "\n";
+                        }
+                        strcat(pattern_for_f, cc); // закидывает в конец строки строку
+                        e_counter++;
+                        memset(cc, '\0', 4096);  // 4096 символов заполнит \0
+                    }
+                    fclose(f);
+                } else {
+                    fprintf(stderr, "s21_grep: %s: No such file or directory\n", file);
+                }   
                 
-                // printf("|||%s|||\n", ARGV[x - count_file]);
-                // if (strcmp(ARGV[x - count_file], "-e") == 0) { 
-                //     printf("GGGGGGGGGG");
-                //     ARGV[x - count_file - 1] = pattern;
-                //     //-----------------------------------------------------------------------------------------//
-                //     if (ARGV[count_file] == (char *)"-e") { // из этого надо сделать функцию change_flags
-                //         flag.e_flag = 0;
-                //     } 
-                //     if (ARGV[count_file] == (char *)"-i") {
-                //         flag.i_flag = 0;
-                //     } 
-                //     if (ARGV[count_file] == (char *)"-v") {
-                //         flag.v_flag = 0;
-                //     } 
-                //     if (ARGV[count_file] == (char *)"-c") {
-                //         flag.c_flag = 0;
-                //     } 
-                //     if (ARGV[count_file] == (char *)"-l") {
-                //         flag.l_flag = 0;
-                //     } 
-                //     if (ARGV[count_file] == (char *)"-n") {
-                //         flag.n_flag = 0;
-                //     } 
-                //     if (ARGV[count_file] == (char *)"-h") {
-                //         flag.h_flag = 0;
-                //     }
-                //     if (ARGV[count_file] == (char *)"-s") {
-                //         flag.s_flag = 0;
-                //     }
-                //     if (ARGV[count_file] == (char *)"-f") {
-                //         flag.f_flag = 0;
-                //     }
-                //     if (ARGV[count_file] == (char *)"-o") {
-                //         flag.o_flag = 0;
-                //     }
-                // }
-                    //------------------------------------------------------------------------------------//
-                // int i = 0;
-                // if (e_counter > 0) {
-                //         strcat(pattern, "|");
-                // }
-                // printf("||||%s|||||\n\n", ARGV[i - 2]);
-                // if (!ARGV[i + 1]) {
-                //     exit(1);
-                // }
-                // i++;
-                // if (!strcmp(ARGV[i], "\0")) {
-                //     ARGV[i] = "\n";
-                // } 
-                // strcat(pattern, ARGV[i]);
-                // e_counter++;
-                
-            // }
-
-            // if (flag.f_flag == 1) { // куда это
-                // char regfile[1024];
-                // char *file = regfile;
-                // file = ARGV[count_file - 2];
-                // FILE *f;
-                // char str[4097] = {'\0'};
-                // char *cc = str;
-                // if ((f = fopen(file, "r")) != NULL) {
-                //     for (size_t j = 0; fgets(cc, 4096, f); j++) {
-                //         if (e_counter > 0) {
-                //             strcat(pattern_for_f, "|");
-                //         }
-                //         if (strchr(cc, '\n')) { // Указатель на первое вхождение символа в строку. Если значение не найдено, функция возвращает нулевой указатель.
-                //             *(cc + strlen(cc) - 1) = '\0';
-                //         }
-                //         if (!strcmp(cc, "\0")) { // сравнивает строки и выводит <>=
-                //             cc = "\n";
-                //         }
-                //         strcat(pattern_for_f, cc); // закидывает в конец строки строку
-                //         e_counter++;
-                //         memset(cc, '\0', 4096);  // 4096 символов заполнит \0
-                    
-                //     fclose(f);
-                //     } else {
-                //         fprintf(stderr, "s21_grep: %s: No such file or directory\n", file);
-                //     }
-                // }
-            // }
+            }
 
             char* p_pattern = NULL;
 
@@ -280,14 +223,19 @@ int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны
     char ch[1024] = {'\0'};
     FILE *check;
     char* e_check = "-e";
+    char* f_check = "-f";
     for (int i = 1; i < ARGC; i++) { // 1 - файл, 2 - паттерн, 3 - флаг.
         if ((check = fopen(ARGV[i], "r")) == NULL) {
             // printf("%s\n\n", ARGV[i - 1]);
             if ((strcmp(ARGV[i - 1], e_check) == 0) && 
-            (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0)) {
+            (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0) &&
+            flag.e_flag == 1) {
                 disable_flag(ch);
                 mass[counter_for_mass] = 2;
                 counter_for_mass++;
+            } else if (strcmp(ARGV[i - 1], f_check) == 0 && flag.f_flag == 1) {
+                fprintf(stdout, "grep: %s: No such file or directory\n", ARGV[i]);
+                exit(0);
             } else if (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0) {
                 mass[counter_for_mass] = 3;  // проверка что i флаг 
                 counter_for_mass++;
@@ -302,6 +250,7 @@ int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны
             } else {
                 fprintf(stdout, "grep: %s: No such file or directory\n", ARGV[i]);
                 counter_for_mass++;
+                amount_file++;
             }
         } else if (strcmp(ARGV[i - 1], "-e") == 0) {
                 mass[counter_for_mass] = 2;
@@ -366,6 +315,16 @@ char *eq_flag_status(char **ARGV, char *ch) {
     } else if (strcmp(*ARGV, "-o") == 0) {
         strcat(ch, "-o"); 
     }
+
+    for ()
+
+    strcmp(*ARGV, ) == 0
+    // здесь должно быть 2 перменных i  и j. одна не меняется другая бывает во всех вохможных значениях
+    // когда она всех значениях побывала - другая должна изменится. каждая комбинация должна быть в стркмп
+    // как только ты находишь ту самую комбинации делаешь стоп и записываешь в ch получившееся значение.
+    // Однако помни про случаи f или e будут первыми, более того даже если они будут вторыми, то тебе надо будет
+    // то тебе это тоже надо не проебать! удачи RoflanPominki
+    // тут мне нужно проверять на комбинации типа -iv -ef -ee и тд
     return ch;
 }
 
@@ -548,7 +507,12 @@ void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, c
 
 // добавить обработку s в парсере
 // у меня количество файлов считает amount_file
-// попробуй через фолдер воркспейс файлы закинуть 
+
 // -o не обработает регулярки
 // -e создает едиственный возможный паттерн за исключением тех случаев когда -е вызван несколько раз
 // следовательно то что типа паттерн но не стоит после -е надо вывести несуществующий файл
+//  а что если -e -e получается я выключу -e. Получается мне нужно исключение 
+// если  f не нашел файл то мы ливаем нахуй grep develop ➜ grep -e 123 -f qwe regular.txt
+//                                          grep: qwe: No such file or directory
+// возможно следует отказаться от первого гетопта и включать флаги только тогда когдя я захочу в парсере
+// если e в конце то ебаш grep: option requires an argument -- e
