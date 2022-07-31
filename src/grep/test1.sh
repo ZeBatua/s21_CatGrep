@@ -18,7 +18,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm s21_grep.txt grep.txt
+          # rm s21_grep.txt grep.txt
 done
 for var in -e -i -v -c -l -n -h -s -f -o #-E -T --number-nonblank --number --squeeze-blank
 do
@@ -38,7 +38,7 @@ do
               echo "$TEST1" >> log.txt
               (( COUNTER_FAIL++ ))
           fi
-          rm s21_grep.txt grep.txt
+          # rm s21_grep.txt grep.txt
         fi
   done
 done

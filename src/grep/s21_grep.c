@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h> // -( не работает
 #include <stdlib.h>
 #include <getopt.h>
 #include <regex.h>
@@ -24,20 +24,26 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files);
 void once_output_string(char* fp, int count_file, int same_str);
 void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, char* pattern);
 char pars_files(char **ARGV, char* filenames, int* counter_pars_files);
-int pars_string(int ARGC, char **ARGV, int *mass);
-char *eq_flag_status(char **ARGV, char *ch);
+int pars_string(int ARGC, char **ARGV, int *mass, char* buff_pattern, char* buff_file);
+char *eq_flag_status(char **ARGV, char *ch, char* buff_pattern, char* buff_file);
 char pars_patterns(char* ARGV[], char* pattern_names, int* counter_pars_patterns);
-void disable_flag (char *ch);
+void disable_once_flag (char *ch);
 
 
 
 int main(int ARGC, char **ARGV) { // нужна проверка то что присутствует необходимое кол-во файлов 
     char filenames[4096] = {'\0'};
     char pattern_names[4096] = {'\0'};
-    int mass[1024] = {0};
+    char buff_pattern[4096] = {'\0'}; // пока не отправляю в парсер
+    char buff_file[4096] = {'\0'}; // пока не отправляю в парсер
+    int  mass[1024] = {0};
     int counter_pars_patterns = 0;
     int counter_pars_files = 0;
     int amount_some_file = 0;
+
+    // for (int i = 0; i < ARGC; i++) {
+    //     printf("%s\n", ARGV[i]);
+    // }
 
     for (int i = 0; i < ARGC; i++) {
         find_flag(ARGC, ARGV);
@@ -50,7 +56,7 @@ int main(int ARGC, char **ARGV) { // нужна проверка то что п�
 
 
 
-    amount_some_file = pars_string(ARGC, ARGV, mass); // массив 3 2 1
+    amount_some_file = pars_string(ARGC, ARGV, mass, buff_pattern, buff_file); // массив 3 2 1
 
   
 
@@ -117,6 +123,7 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
     fp = strtok(filenames, "|");
     // int abv = 0;
     // MFOENFOUBWEFUBWUFBWIEBUFIWUFBIBEFUIBWEFB
+    char cc[4097] = {'\0'};
     while (fp != NULL) {
         same_str = 0;
         // abv++;
@@ -169,6 +176,9 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
                 }
                 p_pattern = pattern_for_f;
             }
+            if (flag.o_flag == 1) {
+                regexec(&preg, cc, 1, pmatch, 0);
+            }
 
             while (fgets(string, LINE_MAX, file) != NULL) {
                 if (strrchr(string, '\n') == NULL) {
@@ -177,6 +187,22 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
                 if (flag.n_flag == 1) {
                     amount_str++;
                 }
+                // for (size_t i = 0; fgets(cc, 4096, file); i++) {
+                //     if (flag.o_flag == 0) {
+                //         char *pstr = cc;
+                //         int error = 0;
+                //         while (!error) {
+                //             if (pmatch[0].rm_eo == pmatch[0].rm_so) {
+                //                 break;
+                //             }
+                //             printf("%.*s\n", (int)(pmatch[0].rm_eo - pmatch[0].rm_so),
+                //             pstr + pmatch[0].rm_so);
+                //             pstr += pmatch[0].rm_eo;
+                //             error = regexec(&preg, pstr, 1, pmatch, REG_NOTBOL);               
+                //         }
+                //     }
+                // }
+            
                 if (flag.c_flag == 1 || flag.l_flag == 1) {
                     if (flag.v_flag == 1) {
                         if (regexec(&preg, string, 1, pmatch, 0) != 0) {
@@ -217,7 +243,7 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
     regfree(&preg);
 }
 
-int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны частные случаи флагов 
+int pars_string(int ARGC, char **ARGV, int *mass, char* buff_pattern, char* buff_file) { // не обработаны частные случаи флагов 
     int counter_for_mass = 1;
     int amount_file = 0;
     char ch[1024] = {'\0'};
@@ -226,24 +252,26 @@ int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны
     char* f_check = "-f";
     for (int i = 1; i < ARGC; i++) { // 1 - файл, 2 - паттерн, 3 - флаг.
         if ((check = fopen(ARGV[i], "r")) == NULL) {
-            // printf("%s\n\n", ARGV[i - 1]);
+            // printf("|||%s|||\n\n", ARGV[i]);
+            //  printf("=== |%s|\n\n", ARGV[i - 1]);  // если последний элемент &ARGV равен е то следующий элмент - паттерн
             if ((strcmp(ARGV[i - 1], e_check) == 0) && 
-            (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0) &&
+            (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch, buff_pattern, buff_file)) == 0) &&
             flag.e_flag == 1) {
-                disable_flag(ch);
+                disable_once_flag(ch);
                 mass[counter_for_mass] = 2;
                 counter_for_mass++;
             } else if (strcmp(ARGV[i - 1], f_check) == 0 && flag.f_flag == 1) {
                 fprintf(stdout, "grep: %s: No such file or directory\n", ARGV[i]);
-                exit(0);
-            } else if (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch)) == 0) {
+                exit(1);
+            } else if (strcmp(ARGV[i], eq_flag_status(&ARGV[i], ch, buff_pattern, buff_file)) == 0) {
                 mass[counter_for_mass] = 3;  // проверка что i флаг 
                 counter_for_mass++;
                 memset(ch, '\0', sizeof(ch));
             } else if (strcmp(ARGV[i - 1], "./s21_grep") == 0) {
+                // printf("271\n")
                 mass[counter_for_mass] = 2; // перед i запуск и i не флаг -> паттерн
                 counter_for_mass++;
-            } else if (strcmp(ARGV[i - 1], eq_flag_status(&ARGV[i - 1], ch)) == 0) {
+            } else if (strcmp(ARGV[i - 1], eq_flag_status(&ARGV[i - 1], buff_pattern, buff_file, ch)) == 0) {
                 mass[counter_for_mass] = 2; // если  i не флаг, а i - 1 не флаг 
                 counter_for_mass++;
                 memset(ch, '\0', sizeof(ch));
@@ -258,9 +286,10 @@ int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны
         } else if (strcmp(ARGV[i - 1], "./s21_grep") == 0) { //  пока не обрабатываю same_name
             mass[counter_for_mass] = 2; // паттерн перед s21_grep
             counter_for_mass++;
-        } else if (strcmp(ARGV[i - 1], eq_flag_status((&ARGV[i - 1]), ch)) == 0) {
-            mass[counter_for_mass] = 2; // паттерн перед флагом
+        } else if (strcmp(ARGV[i - 1], eq_flag_status((&ARGV[i - 1]), ch, buff_pattern, buff_file)) == 0) {
+            mass[counter_for_mass] = 1; // паттерн перед флагом
             counter_for_mass++;
+            amount_file++;
             memset(ch, '\0', sizeof(ch));
         } else {
             mass[counter_for_mass] = 1; // найден файл
@@ -271,60 +300,170 @@ int pars_string(int ARGC, char **ARGV, int *mass) { // не обработаны
     return amount_file;
 }
 
-void disable_flag (char *ch) {
-    if (strcmp(&ch[1], "e") == 0){
-        flag.e_flag = 0;
-    } else if (strcmp(&ch[1], "v") == 0) {
-        flag.v_flag = 0;
-    } else if (strcmp(&ch[1], "c") == 0) {
-        flag.c_flag = 0;
-    } else if (strcmp(&ch[1], "l") == 0) {
-        flag.l_flag = 0;
-    } else if (strcmp(&ch[1], "n") == 0) {
-        flag.n_flag = 0;
-    } else if (strcmp(&ch[1], "h") == 0) {
-        flag.h_flag = 0;
-    } else if (strcmp(&ch[1], "s") == 0) {
-        flag.s_flag = 0;
-    } else if (strcmp(&ch[1], "f") == 0) {
-        flag.f_flag = 0;
-    } else if (strcmp(&ch[1], "o") == 0) {
-        flag.o_flag = 0;
+void disable_once_flag (char *ch) {
+    if (strcmp(&ch[0], "-")) {
+        if (strcmp(&ch[1], "e") == 0){
+            flag.e_flag = 0;
+        } else if (strcmp(&ch[1], "v") == 0) {
+            flag.v_flag = 0;
+        } else if (strcmp(&ch[1], "c") == 0) {
+            flag.c_flag = 0;
+        } else if (strcmp(&ch[1], "l") == 0) {
+            flag.l_flag = 0;
+        } else if (strcmp(&ch[1], "n") == 0) {
+            flag.n_flag = 0;
+        } else if (strcmp(&ch[1], "h") == 0) {
+            flag.h_flag = 0;
+        } else if (strcmp(&ch[1], "s") == 0) {
+            flag.s_flag = 0;
+        } else if (strcmp(&ch[1], "f") == 0) {
+            flag.f_flag = 0;
+        } else if (strcmp(&ch[1], "o") == 0) {
+            flag.o_flag = 0;
+        }
     }
 }
 
-char *eq_flag_status(char **ARGV, char *ch) {
-    if (strcmp(*ARGV, "-e") == 0) {
-        strcat(ch, "-e"); 
-    } else if (strcmp(*ARGV, "-i") == 0) {
-        strcat(ch, "-i"); 
-    } else if (strcmp(*ARGV, "-v") == 0) {
-        strcat(ch, "-v"); 
-    } else if (strcmp(*ARGV, "-c") == 0) {
-        strcat(ch, "-c"); 
-    } else if (strcmp(*ARGV, "-l") == 0) {
-        strcat(ch, "-l"); 
-    } else if (strcmp(*ARGV, "-n") == 0) {
-        strcat(ch, "-n"); 
-    } else if (strcmp(*ARGV, "-h") == 0) {
-        strcat(ch, "-h"); 
-    } else if (strcmp(*ARGV, "-s") == 0) {
-        strcat(ch, "-s"); 
-    } else if (strcmp(*ARGV, "-f") == 0) {
-        strcat(ch, "-f"); 
-    } else if (strcmp(*ARGV, "-o") == 0) {
-        strcat(ch, "-o"); 
+char *eq_flag_status(char **ARGV, char *ch, char* buff_pattern, char* buff_file) {
+    int a = strlen(*ARGV);
+    char *b =  *ARGV;
+    // printf("длина %d", a);
+    if (strlen(*ARGV) == 2) {
+        if (strcmp(*ARGV, "-e") == 0) { // здесь возможно нужно уточнить что аргв состоит из двух элементов - и v
+            strcat(ch, "-e"); 
+        } else if (strcmp(*ARGV, "-i") == 0) {
+            strcat(ch, "-i"); 
+        } else if (strcmp(*ARGV, "-v") == 0) {
+            strcat(ch, "-v"); 
+        } else if (strcmp(*ARGV, "-c") == 0) {
+            strcat(ch, "-c"); 
+        } else if (strcmp(*ARGV, "-l") == 0) {
+            strcat(ch, "-l"); 
+        } else if (strcmp(*ARGV, "-n") == 0) {
+            strcat(ch, "-n"); 
+        } else if (strcmp(*ARGV, "-h") == 0) {
+            strcat(ch, "-h"); 
+        } else if (strcmp(*ARGV, "-s") == 0) {
+            strcat(ch, "-s"); 
+        } else if (strcmp(*ARGV, "-f") == 0) {
+            strcat(ch, "-f"); 
+        } else if (strcmp(*ARGV, "-o") == 0) {
+            strcat(ch, "-o"); 
+        } else {
+            strcat(ch, *ARGV); 
+        }
+    } else if (strlen(*ARGV) == 1) {
+        strcat(ch, "\0"); 
+    } else if (strcmp(ARGV[0], "-") == 0) {
+        // получение строки
+        int i = 0;
+        char *buff_for_flag_string[1024] = {'\0'};
+        char *a;
+        a = ARGV[i];
+        while (ARGV[i] != NULL/* && ARGV[0] == "-"*/) { // получил строку флагов
+            strcat((char *)buff_for_flag_string, ARGV[i]);
+            strcat(ch, ARGV[i]);
+            i++;
+        }
+        
+        char double_flags[] = {'e', 'i', 'v', 'c', 'l', 'n', 'h', 's', 'f', 'o'};
+        char buff[1024] = {'\0'};
+        int error = 0;
+        int f = 0;
+        int f2 = 0;
+        int f3 = 0;
+        int p = 0;
+        int errror = 0;
+        for (int j = 0; (strcmp(buff_for_flag_string[j], '\0') != 0) || 
+        (strcmp(buff_for_flag_string[j - 1], "e") != 0) ||
+        (strcmp(buff_for_flag_string[j - 1], "e") != 0); j++) { // иду по строке, встречаю флаги, делаю выводы
+            for (int h = 0; strcmp(buff_for_flag_string[j],&double_flags[h]) != 0; h++) {
+                error++;
+            }
+            if (errror == 10) {
+                fprintf(stdout, "grep: Invalid argument\n");
+                exit(0);
+            }
+            if (strcmp(buff_for_flag_string[j], "e") == 0) { // если флаг е
+                if (strcmp(buff_for_flag_string[j + 1], '\0' != 0)) { // если после флага е что то есть в ARGV !!!! если нет то делать проверку надо еще в парс_стринг
+                    f = j;
+                    for (; strcmp(buff_for_flag_string[f], '\0') != 0; f++) {
+                        strcat(buff_pattern, buff_for_flag_string[f]); //!! все еще не готов buff_pattern
+                        f2 = f;
+                        for (;buff_for_flag_string[f2]; f2++) {
+                            if (strcmp (buff_for_flag_string[f2], "e")){ // проверить равен ли f2 флагу и если да то вырубить его
+                                flag.e_flag = 0;
+                            } else if (buff_for_flag_string[f2], "i") {
+                                flag.i_flag = 0;
+                            } else if (buff_for_flag_string[f2], "v") {
+                                flag.v_flag = 0;
+                            } else if (buff_for_flag_string[f2], "c") {
+                                flag.c_flag = 0;
+                            } else if (buff_for_flag_string[f2], "l") {
+                                flag.l_flag = 0;
+                            } else if (buff_for_flag_string[f2], "n") {
+                                flag.n_flag = 0;
+                            } else if (buff_for_flag_string[f2], "h") {
+                                flag.h_flag = 0;
+                            } else if (buff_for_flag_string[f2], "s") {
+                                flag.s_flag = 0;
+                            } else if (buff_for_flag_string[f2], "f") {
+                                flag.f_flag = 0;
+                            } else if (buff_for_flag_string[f2], "o") {
+                                flag.o_flag = 0;
+                            }
+                        }
+                    }
+                    break;
+                }
+            } else if (strcmp(buff_for_flag_string[j], "f") == 0) {  // ВАЖНО твой файл после f отправится в стрток и там на всякий пропиши условие что если не нал то пошел на exit(0)
+                p = j + 1;
+                for (; strcmp(buff_for_flag_string[p], '\0') != 0; p++) {
+                    strcat(buff_file, buff_for_flag_string[p]);  // buff_file тоже надо создать
+                    f3 = f;
+                    for (;buff_for_flag_string[f3]; f3++) {
+                        if (strcmp (buff_for_flag_string[f3], "e")){ // проверить равен ли f2 флагу и если да то вырубить его
+                            flag.e_flag = 0;
+                        } else if (buff_for_flag_string[f3], "i") {
+                            flag.i_flag = 0;
+                        } else if (buff_for_flag_string[f3], "v") {
+                            flag.v_flag = 0;
+                        } else if (buff_for_flag_string[f3], "c") {
+                            flag.c_flag = 0;
+                        } else if (buff_for_flag_string[f3], "l") {
+                            flag.l_flag = 0;
+                        } else if (buff_for_flag_string[f3], "n") {
+                            flag.n_flag = 0;
+                        } else if (buff_for_flag_string[f3], "h") {
+                            flag.h_flag = 0;
+                        } else if (buff_for_flag_string[f3], "s") {
+                            flag.s_flag = 0;
+                        } else if (buff_for_flag_string[f3], "f") {
+                            flag.f_flag = 0;
+                        } else if (buff_for_flag_string[f3], "o") {
+                            flag.o_flag = 0;
+                        }
+                    }
+                }
+            }
+        }
     }
+    // for(int j = 0 w = 1; j < 10 && w < strlen(*ARGV); j++) {
+    //     if (strcmp(*ARGV[w], double_flags[j]) == 0) {
+    //         strcat(buff, double_flags);
+    //         j = 0;
+    //         break;
+    //     }
+    // }
 
-    for ()
 
-    strcmp(*ARGV, ) == 0
     // здесь должно быть 2 перменных i  и j. одна не меняется другая бывает во всех вохможных значениях
     // когда она всех значениях побывала - другая должна изменится. каждая комбинация должна быть в стркмп
     // как только ты находишь ту самую комбинации делаешь стоп и записываешь в ch получившееся значение.
     // Однако помни про случаи f или e будут первыми, более того даже если они будут вторыми, то тебе надо будет
     // то тебе это тоже надо не проебать! удачи RoflanPominki
     // тут мне нужно проверять на комбинации типа -iv -ef -ee и тд
+    // по хорошему надо считать сколько флагов поступило в ARGV 
     return ch;
 }
 
@@ -495,16 +634,6 @@ void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, c
     }
 }
 
-   /*
-    1) получение флагов
-    2) принять за файлы то что открывается. Если один из "файлов" соответсвует флагу /
-       ошибку не выводить, иначе вывести ошибку что файла не существует.
-    3) в случае флага е уточнить что после него 100% паттерн.
-    4) похоже нужен парсер для регулярок 
-
-    итого: получение флагов. инициализация элементов строки файл / не файл
-    */
-
 // добавить обработку s в парсере
 // у меня количество файлов считает amount_file
 
@@ -516,3 +645,11 @@ void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, c
 //                                          grep: qwe: No such file or directory
 // возможно следует отказаться от первого гетопта и включать флаги только тогда когдя я захочу в парсере
 // если e в конце то ебаш grep: option requires an argument -- e
+// получается паттерн я могу получить прямо из строки флагов, но обычно паттерны я поулчаю указывая
+// сторку ARGV поэтому надо завести переменную в мейне которая будет в себя принемать как раз такие флаги
+// так же надо обработать случаи когда после е ничего нет (именно в строке флагов)
+// смотри чтобы строковая е не сделала из следующего элемента паттерн
+
+// ВАЖНО 1 - если предыдущий флаг && 2 - предыдущий длинный флаг && 3 последний элемент 'e'
+// чтобы избавиться от кое какой ошибки можно попробовать в гетопт отправлять только то что ты хочешь (3), не всю строку
+// но эта идея залажает флаги типа ivl!e!vim  то есть ты не включишь ivl 
