@@ -30,70 +30,6 @@ TEST --o
 TEST --s
 TEST --h
 TEST --h
-TEST -ii abc some_text.txt
-TEST -ic abc some_text.txt
-TEST -iv abc some_text.txt
-TEST -il abc some_text.txt
-TEST -ih abc some_text.txt
-TEST -io abc some_text.txt
-TEST -in abc some_text.txt
-TEST -is abc some_text.txt
-TEST -ci abc some_text.txt
-TEST -cc abc some_text.txt
-TEST -cv abc some_text.txt
-TEST -cl abc some_text.txt
-TEST -ch abc some_text.txt
-TEST -co abc some_text.txt
-TEST -cn abc some_text.txt
-TEST -cs abc some_text.txt
-TEST -vi abc some_text.txt
-TEST -vc abc some_text.txt
-TEST -vv abc some_text.txt
-TEST -vl abc some_text.txt
-TEST -vh abc some_text.txt
-TEST -vo abc some_text.txt
-TEST -vn abc some_text.txt
-TEST -vs abc some_text.txt
-TEST -li abc some_text.txt
-TEST -lc abc some_text.txt
-TEST -lv abc some_text.txt
-TEST -ll abc some_text.txt
-TEST -lh abc some_text.txt
-TEST -lo abc some_text.txt
-TEST -ln abc some_text.txt
-TEST -ls abc some_text.txt
-TEST -hi abc some_text.txt
-TEST -hc abc some_text.txt
-TEST -hv abc some_text.txt
-TEST -hl abc some_text.txt
-TEST -hh abc some_text.txt
-TEST -ho abc some_text.txt
-TEST -hn abc some_text.txt
-TEST -hs abc some_text.txt
-TEST -oi abc some_text.txt
-TEST -oc abc some_text.txt
-TEST -ov abc some_text.txt
-TEST -ol abc some_text.txt
-TEST -oh abc some_text.txt
-TEST -oo abc some_text.txt
-TEST -on abc some_text.txt
-TEST -os abc some_text.txt
-TEST -ni abc some_text.txt
-TEST -nc abc some_text.txt
-TEST -nv abc some_text.txt
-TEST -nl abc some_text.txt
-TEST -nh abc some_text.txt
-TEST -no abc some_text.txt
-TEST -nn abc some_text.txt
-TEST -ns abc some_text.txt
-TEST -si abc some_text.txt
-TEST -sc abc some_text.txt
-TEST -sv abc some_text.txt
-TEST -sl abc some_text.txt
-TEST -sh abc some_text.txt
-TEST -so abc some_text.txt
-TEST -sn abc some_text.txt
-TEST -ss abc some_text.txt
 for s21_grep.c s21_grep.h Makefile -e -i -v
 for s21_grep.c -e -i -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -e -i -v
@@ -107,9 +43,7 @@ for s21_grep.c -e -i -c
 -e regex -e ^print s21_grep.c -e -i -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -e -i -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -e -i -l
-for s21_grep.c -e -i -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -e -i -l
--e for -e ^int s21_grep.c -e -i -l
 -e regex -e ^print s21_grep.c -e -i -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -e -i -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -e -i -n
@@ -131,9 +65,7 @@ for s21_grep.c -e -v -c
 -e regex -e ^print s21_grep.c -e -v -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -e -v -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -e -v -l
-for s21_grep.c -e -v -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -e -v -l
--e for -e ^int s21_grep.c -e -v -l
 -e regex -e ^print s21_grep.c -e -v -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -e -v -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -e -v -n
@@ -209,33 +141,27 @@ for s21_grep.c -e -n -c
 -e regex -e ^print s21_grep.c -e -n -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -e -n -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -e -n -l
-for s21_grep.c -e -n -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -e -n -l
--e for -e ^int s21_grep.c -e -n -l
 -e regex -e ^print s21_grep.c -e -n -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -e -n -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -e -v
 for s21_grep.c -i -e -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -e -v
--e for -e ^int s21_grep.c -i -e -v
 -e regex -e ^print s21_grep.c -i -e -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -e -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -e -c
 for s21_grep.c -i -e -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -e -c
--e for -e ^int s21_grep.c -i -e -c
 -e regex -e ^print s21_grep.c -i -e -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -e -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -e -l
 for s21_grep.c -i -e -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -e -l
--e for -e ^int s21_grep.c -i -e -l
 -e regex -e ^print s21_grep.c -i -e -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -e -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -e -n
 for s21_grep.c -i -e -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -e -n
--e for -e ^int s21_grep.c -i -e -n
 -e regex -e ^print s21_grep.c -i -e -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -e -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -v -e
@@ -243,23 +169,16 @@ for s21_grep.c -i -v -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -v -e
 -e for -e ^int s21_grep.c -i -v -e
 -e regex -e ^print s21_grep.c -i -v -e -f pattern.txt
--e while -e void s21_grep.c Makefile -i -v -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -v -c
-for s21_grep.c -i -v -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -v -c
--e for -e ^int s21_grep.c -i -v -c
 -e regex -e ^print s21_grep.c -i -v -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -v -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -v -l
-for s21_grep.c -i -v -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -v -l
--e for -e ^int s21_grep.c -i -v -l
 -e regex -e ^print s21_grep.c -i -v -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -v -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -v -n
-for s21_grep.c -i -v -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -v -n
--e for -e ^int s21_grep.c -i -v -n
 -e regex -e ^print s21_grep.c -i -v -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -v -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -c -e
@@ -267,11 +186,8 @@ for s21_grep.c -i -c -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -c -e
 -e for -e ^int s21_grep.c -i -c -e
 -e regex -e ^print s21_grep.c -i -c -e -f pattern.txt
--e while -e void s21_grep.c Makefile -i -c -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -c -v
-for s21_grep.c -i -c -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -c -v
--e for -e ^int s21_grep.c -i -c -v
 -e regex -e ^print s21_grep.c -i -c -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -c -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -c -l
@@ -281,21 +197,15 @@ for s21_grep.c -i -c -l
 -e regex -e ^print s21_grep.c -i -c -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -c -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -c -n
-for s21_grep.c -i -c -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -c -n
--e for -e ^int s21_grep.c -i -c -n
 -e regex -e ^print s21_grep.c -i -c -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -c -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -l -e
 for s21_grep.c -i -l -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -l -e
 -e for -e ^int s21_grep.c -i -l -e
--e regex -e ^print s21_grep.c -i -l -e -f pattern.txt
--e while -e void s21_grep.c Makefile -i -l -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -l -v
-for s21_grep.c -i -l -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -l -v
--e for -e ^int s21_grep.c -i -l -v
 -e regex -e ^print s21_grep.c -i -l -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -l -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -l -c
@@ -305,9 +215,7 @@ for s21_grep.c -i -l -c
 -e regex -e ^print s21_grep.c -i -l -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -l -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -l -n
-for s21_grep.c -i -l -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -l -n
--e for -e ^int s21_grep.c -i -l -n
 -e regex -e ^print s21_grep.c -i -l -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -l -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -n -e
@@ -315,47 +223,36 @@ for s21_grep.c -i -n -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -n -e
 -e for -e ^int s21_grep.c -i -n -e
 -e regex -e ^print s21_grep.c -i -n -e -f pattern.txt
--e while -e void s21_grep.c Makefile -i -n -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -n -v
-for s21_grep.c -i -n -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -n -v
--e for -e ^int s21_grep.c -i -n -v
 -e regex -e ^print s21_grep.c -i -n -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -n -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -n -c
-for s21_grep.c -i -n -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -n -c
--e for -e ^int s21_grep.c -i -n -c
 -e regex -e ^print s21_grep.c -i -n -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -n -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -i -n -l
-for s21_grep.c -i -n -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -i -n -l
--e for -e ^int s21_grep.c -i -n -l
 -e regex -e ^print s21_grep.c -i -n -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -i -n -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -e -i
 for s21_grep.c -v -e -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -e -i
--e for -e ^int s21_grep.c -v -e -i
 -e regex -e ^print s21_grep.c -v -e -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -e -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -e -c
 for s21_grep.c -v -e -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -e -c
--e for -e ^int s21_grep.c -v -e -c
 -e regex -e ^print s21_grep.c -v -e -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -e -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -e -l
 for s21_grep.c -v -e -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -e -l
--e for -e ^int s21_grep.c -v -e -l
 -e regex -e ^print s21_grep.c -v -e -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -e -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -e -n
 for s21_grep.c -v -e -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -e -n
--e for -e ^int s21_grep.c -v -e -n
 -e regex -e ^print s21_grep.c -v -e -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -e -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -i -e
@@ -363,23 +260,16 @@ for s21_grep.c -v -i -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -i -e
 -e for -e ^int s21_grep.c -v -i -e
 -e regex -e ^print s21_grep.c -v -i -e -f pattern.txt
--e while -e void s21_grep.c Makefile -v -i -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -i -c
-for s21_grep.c -v -i -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -i -c
--e for -e ^int s21_grep.c -v -i -c
 -e regex -e ^print s21_grep.c -v -i -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -i -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -i -l
-for s21_grep.c -v -i -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -i -l
--e for -e ^int s21_grep.c -v -i -l
 -e regex -e ^print s21_grep.c -v -i -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -i -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -i -n
-for s21_grep.c -v -i -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -i -n
--e for -e ^int s21_grep.c -v -i -n
 -e regex -e ^print s21_grep.c -v -i -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -i -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -c -e
@@ -387,11 +277,8 @@ for s21_grep.c -v -c -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -c -e
 -e for -e ^int s21_grep.c -v -c -e
 -e regex -e ^print s21_grep.c -v -c -e -f pattern.txt
--e while -e void s21_grep.c Makefile -v -c -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -c -i
-for s21_grep.c -v -c -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -c -i
--e for -e ^int s21_grep.c -v -c -i
 -e regex -e ^print s21_grep.c -v -c -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -c -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -c -l
@@ -401,21 +288,15 @@ for s21_grep.c -v -c -l
 -e regex -e ^print s21_grep.c -v -c -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -c -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -c -n
-for s21_grep.c -v -c -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -c -n
--e for -e ^int s21_grep.c -v -c -n
 -e regex -e ^print s21_grep.c -v -c -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -c -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -l -e
 for s21_grep.c -v -l -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -l -e
 -e for -e ^int s21_grep.c -v -l -e
--e regex -e ^print s21_grep.c -v -l -e -f pattern.txt
--e while -e void s21_grep.c Makefile -v -l -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -l -i
-for s21_grep.c -v -l -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -l -i
--e for -e ^int s21_grep.c -v -l -i
 -e regex -e ^print s21_grep.c -v -l -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -l -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -l -c
@@ -425,9 +306,7 @@ for s21_grep.c -v -l -c
 -e regex -e ^print s21_grep.c -v -l -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -l -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -l -n
-for s21_grep.c -v -l -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -l -n
--e for -e ^int s21_grep.c -v -l -n
 -e regex -e ^print s21_grep.c -v -l -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -l -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -n -e
@@ -435,47 +314,36 @@ for s21_grep.c -v -n -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -n -e
 -e for -e ^int s21_grep.c -v -n -e
 -e regex -e ^print s21_grep.c -v -n -e -f pattern.txt
--e while -e void s21_grep.c Makefile -v -n -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -n -i
-for s21_grep.c -v -n -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -n -i
--e for -e ^int s21_grep.c -v -n -i
 -e regex -e ^print s21_grep.c -v -n -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -n -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -n -c
-for s21_grep.c -v -n -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -n -c
--e for -e ^int s21_grep.c -v -n -c
 -e regex -e ^print s21_grep.c -v -n -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -n -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -v -n -l
-for s21_grep.c -v -n -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -v -n -l
--e for -e ^int s21_grep.c -v -n -l
 -e regex -e ^print s21_grep.c -v -n -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -v -n -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -e -i
 for s21_grep.c -c -e -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -e -i
--e for -e ^int s21_grep.c -c -e -i
 -e regex -e ^print s21_grep.c -c -e -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -e -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -e -v
 for s21_grep.c -c -e -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -e -v
--e for -e ^int s21_grep.c -c -e -v
 -e regex -e ^print s21_grep.c -c -e -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -e -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -e -l
 for s21_grep.c -c -e -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -e -l
--e for -e ^int s21_grep.c -c -e -l
 -e regex -e ^print s21_grep.c -c -e -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -e -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -e -n
 for s21_grep.c -c -e -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -e -n
--e for -e ^int s21_grep.c -c -e -n
 -e regex -e ^print s21_grep.c -c -e -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -e -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -i -e
@@ -483,11 +351,8 @@ for s21_grep.c -c -i -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -i -e
 -e for -e ^int s21_grep.c -c -i -e
 -e regex -e ^print s21_grep.c -c -i -e -f pattern.txt
--e while -e void s21_grep.c Makefile -c -i -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -i -v
-for s21_grep.c -c -i -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -i -v
--e for -e ^int s21_grep.c -c -i -v
 -e regex -e ^print s21_grep.c -c -i -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -i -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -i -l
@@ -497,9 +362,7 @@ for s21_grep.c -c -i -l
 -e regex -e ^print s21_grep.c -c -i -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -i -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -i -n
-for s21_grep.c -c -i -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -i -n
--e for -e ^int s21_grep.c -c -i -n
 -e regex -e ^print s21_grep.c -c -i -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -i -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -v -e
@@ -507,11 +370,8 @@ for s21_grep.c -c -v -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -v -e
 -e for -e ^int s21_grep.c -c -v -e
 -e regex -e ^print s21_grep.c -c -v -e -f pattern.txt
--e while -e void s21_grep.c Makefile -c -v -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -v -i
-for s21_grep.c -c -v -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -v -i
--e for -e ^int s21_grep.c -c -v -i
 -e regex -e ^print s21_grep.c -c -v -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -v -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -v -l
@@ -521,9 +381,7 @@ for s21_grep.c -c -v -l
 -e regex -e ^print s21_grep.c -c -v -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -v -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -v -n
-for s21_grep.c -c -v -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -v -n
--e for -e ^int s21_grep.c -c -v -n
 -e regex -e ^print s21_grep.c -c -v -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -v -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -l -e
@@ -555,17 +413,12 @@ for s21_grep.c -c -n -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -n -e
 -e for -e ^int s21_grep.c -c -n -e
 -e regex -e ^print s21_grep.c -c -n -e -f pattern.txt
--e while -e void s21_grep.c Makefile -c -n -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -n -i
-for s21_grep.c -c -n -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -n -i
--e for -e ^int s21_grep.c -c -n -i
 -e regex -e ^print s21_grep.c -c -n -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -n -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -n -v
-for s21_grep.c -c -n -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -c -n -v
--e for -e ^int s21_grep.c -c -n -v
 -e regex -e ^print s21_grep.c -c -n -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -n -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -c -n -l
@@ -575,15 +428,11 @@ for s21_grep.c -c -n -l
 -e regex -e ^print s21_grep.c -c -n -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -c -n -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -e -i
-for s21_grep.c -l -e -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -e -i
--e for -e ^int s21_grep.c -l -e -i
 -e regex -e ^print s21_grep.c -l -e -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -e -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -e -v
-for s21_grep.c -l -e -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -e -v
--e for -e ^int s21_grep.c -l -e -v
 -e regex -e ^print s21_grep.c -l -e -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -e -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -e -c
@@ -593,21 +442,15 @@ for s21_grep.c -l -e -c
 -e regex -e ^print s21_grep.c -l -e -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -e -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -e -n
-for s21_grep.c -l -e -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -e -n
--e for -e ^int s21_grep.c -l -e -n
 -e regex -e ^print s21_grep.c -l -e -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -e -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -i -e
 for s21_grep.c -l -i -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -i -e
 -e for -e ^int s21_grep.c -l -i -e
--e regex -e ^print s21_grep.c -l -i -e -f pattern.txt
--e while -e void s21_grep.c Makefile -l -i -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -i -v
-for s21_grep.c -l -i -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -i -v
--e for -e ^int s21_grep.c -l -i -v
 -e regex -e ^print s21_grep.c -l -i -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -i -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -i -c
@@ -617,21 +460,15 @@ for s21_grep.c -l -i -c
 -e regex -e ^print s21_grep.c -l -i -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -i -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -i -n
-for s21_grep.c -l -i -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -i -n
--e for -e ^int s21_grep.c -l -i -n
 -e regex -e ^print s21_grep.c -l -i -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -i -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -v -e
 for s21_grep.c -l -v -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -v -e
 -e for -e ^int s21_grep.c -l -v -e
--e regex -e ^print s21_grep.c -l -v -e -f pattern.txt
--e while -e void s21_grep.c Makefile -l -v -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -v -i
-for s21_grep.c -l -v -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -v -i
--e for -e ^int s21_grep.c -l -v -i
 -e regex -e ^print s21_grep.c -l -v -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -v -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -v -c
@@ -641,9 +478,7 @@ for s21_grep.c -l -v -c
 -e regex -e ^print s21_grep.c -l -v -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -v -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -v -n
-for s21_grep.c -l -v -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -v -n
--e for -e ^int s21_grep.c -l -v -n
 -e regex -e ^print s21_grep.c -l -v -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -v -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -c -e
@@ -674,18 +509,12 @@ for s21_grep.c s21_grep.h Makefile -l -n -e
 for s21_grep.c -l -n -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -n -e
 -e for -e ^int s21_grep.c -l -n -e
--e regex -e ^print s21_grep.c -l -n -e -f pattern.txt
--e while -e void s21_grep.c Makefile -l -n -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -n -i
-for s21_grep.c -l -n -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -n -i
--e for -e ^int s21_grep.c -l -n -i
 -e regex -e ^print s21_grep.c -l -n -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -n -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -n -v
-for s21_grep.c -l -n -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -l -n -v
--e for -e ^int s21_grep.c -l -n -v
 -e regex -e ^print s21_grep.c -l -n -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -l -n -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -l -n -c
@@ -697,25 +526,21 @@ for s21_grep.c -l -n -c
 for s21_grep.c s21_grep.h Makefile -n -e -i
 for s21_grep.c -n -e -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -e -i
--e for -e ^int s21_grep.c -n -e -i
 -e regex -e ^print s21_grep.c -n -e -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -e -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -e -v
 for s21_grep.c -n -e -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -e -v
--e for -e ^int s21_grep.c -n -e -v
 -e regex -e ^print s21_grep.c -n -e -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -e -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -e -c
 for s21_grep.c -n -e -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -e -c
--e for -e ^int s21_grep.c -n -e -c
 -e regex -e ^print s21_grep.c -n -e -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -e -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -e -l
 for s21_grep.c -n -e -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -e -l
--e for -e ^int s21_grep.c -n -e -l
 -e regex -e ^print s21_grep.c -n -e -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -e -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -i -e
@@ -723,23 +548,16 @@ for s21_grep.c -n -i -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -i -e
 -e for -e ^int s21_grep.c -n -i -e
 -e regex -e ^print s21_grep.c -n -i -e -f pattern.txt
--e while -e void s21_grep.c Makefile -n -i -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -i -v
-for s21_grep.c -n -i -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -i -v
--e for -e ^int s21_grep.c -n -i -v
 -e regex -e ^print s21_grep.c -n -i -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -i -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -i -c
-for s21_grep.c -n -i -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -i -c
--e for -e ^int s21_grep.c -n -i -c
 -e regex -e ^print s21_grep.c -n -i -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -i -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -i -l
-for s21_grep.c -n -i -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -i -l
--e for -e ^int s21_grep.c -n -i -l
 -e regex -e ^print s21_grep.c -n -i -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -i -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -v -e
@@ -747,23 +565,16 @@ for s21_grep.c -n -v -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -v -e
 -e for -e ^int s21_grep.c -n -v -e
 -e regex -e ^print s21_grep.c -n -v -e -f pattern.txt
--e while -e void s21_grep.c Makefile -n -v -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -v -i
-for s21_grep.c -n -v -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -v -i
--e for -e ^int s21_grep.c -n -v -i
 -e regex -e ^print s21_grep.c -n -v -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -v -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -v -c
-for s21_grep.c -n -v -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -v -c
--e for -e ^int s21_grep.c -n -v -c
 -e regex -e ^print s21_grep.c -n -v -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -v -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -v -l
-for s21_grep.c -n -v -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -v -l
--e for -e ^int s21_grep.c -n -v -l
 -e regex -e ^print s21_grep.c -n -v -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -v -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -c -e
@@ -771,17 +582,12 @@ for s21_grep.c -n -c -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -c -e
 -e for -e ^int s21_grep.c -n -c -e
 -e regex -e ^print s21_grep.c -n -c -e -f pattern.txt
--e while -e void s21_grep.c Makefile -n -c -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -c -i
-for s21_grep.c -n -c -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -c -i
--e for -e ^int s21_grep.c -n -c -i
 -e regex -e ^print s21_grep.c -n -c -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -c -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -c -v
-for s21_grep.c -n -c -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -c -v
--e for -e ^int s21_grep.c -n -c -v
 -e regex -e ^print s21_grep.c -n -c -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -c -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -c -l
@@ -794,18 +600,12 @@ for s21_grep.c s21_grep.h Makefile -n -l -e
 for s21_grep.c -n -l -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -l -e
 -e for -e ^int s21_grep.c -n -l -e
--e regex -e ^print s21_grep.c -n -l -e -f pattern.txt
--e while -e void s21_grep.c Makefile -n -l -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -l -i
-for s21_grep.c -n -l -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -l -i
--e for -e ^int s21_grep.c -n -l -i
 -e regex -e ^print s21_grep.c -n -l -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -l -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -l -v
-for s21_grep.c -n -l -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -n -l -v
--e for -e ^int s21_grep.c -n -l -v
 -e regex -e ^print s21_grep.c -n -l -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -n -l -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -n -l -c
@@ -816,32 +616,22 @@ for s21_grep.c -n -l -c
 -e while -e void s21_grep.c Makefile -n -l -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -e -i
 for s21_grep.c -s -e -i
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -e -i
--e for -e ^int s21_grep.c -s -e -i
 -e regex -e ^print s21_grep.c -s -e -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -e -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -e -v
 for s21_grep.c -s -e -v
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -e -v
--e for -e ^int s21_grep.c -s -e -v
 -e regex -e ^print s21_grep.c -s -e -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -e -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -e -c
 for s21_grep.c -s -e -c
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -e -c
--e for -e ^int s21_grep.c -s -e -c
 -e regex -e ^print s21_grep.c -s -e -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -e -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -e -l
 for s21_grep.c -s -e -l
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -e -l
--e for -e ^int s21_grep.c -s -e -l
 -e regex -e ^print s21_grep.c -s -e -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -e -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -e -n
 for s21_grep.c -s -e -n
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -e -n
--e for -e ^int s21_grep.c -s -e -n
 -e regex -e ^print s21_grep.c -s -e -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -e -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -i -e
@@ -849,29 +639,12 @@ for s21_grep.c -s -i -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -s -i -e
 -e for -e ^int s21_grep.c -s -i -e
 -e regex -e ^print s21_grep.c -s -i -e -f pattern.txt
--e while -e void s21_grep.c Makefile -s -i -e -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -i -v
-for s21_grep.c -s -i -v
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -i -v
--e for -e ^int s21_grep.c -s -i -v
 -e regex -e ^print s21_grep.c -s -i -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -i -v -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -i -c
-for s21_grep.c -s -i -c
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -i -c
--e for -e ^int s21_grep.c -s -i -c
 -e regex -e ^print s21_grep.c -s -i -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -i -c -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -i -l
-for s21_grep.c -s -i -l
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -i -l
--e for -e ^int s21_grep.c -s -i -l
 -e regex -e ^print s21_grep.c -s -i -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -i -l -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -i -n
-for s21_grep.c -s -i -n
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -i -n
--e for -e ^int s21_grep.c -s -i -n
 -e regex -e ^print s21_grep.c -s -i -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -i -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -v -e
@@ -879,29 +652,12 @@ for s21_grep.c -s -v -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -s -v -e
 -e for -e ^int s21_grep.c -s -v -e
 -e regex -e ^print s21_grep.c -s -v -e -f pattern.txt
--e while -e void s21_grep.c Makefile -s -v -e -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -v -i
-for s21_grep.c -s -v -i
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -v -i
--e for -e ^int s21_grep.c -s -v -i
 -e regex -e ^print s21_grep.c -s -v -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -v -i -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -v -c
-for s21_grep.c -s -v -c
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -v -c
--e for -e ^int s21_grep.c -s -v -c
 -e regex -e ^print s21_grep.c -s -v -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -v -c -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -v -l
-for s21_grep.c -s -v -l
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -v -l
--e for -e ^int s21_grep.c -s -v -l
 -e regex -e ^print s21_grep.c -s -v -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -v -l -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -v -n
-for s21_grep.c -s -v -n
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -v -n
--e for -e ^int s21_grep.c -s -v -n
 -e regex -e ^print s21_grep.c -s -v -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -v -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -c -e
@@ -909,17 +665,8 @@ for s21_grep.c -s -c -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -s -c -e
 -e for -e ^int s21_grep.c -s -c -e
 -e regex -e ^print s21_grep.c -s -c -e -f pattern.txt
--e while -e void s21_grep.c Makefile -s -c -e -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -c -i
-for s21_grep.c -s -c -i
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -c -i
--e for -e ^int s21_grep.c -s -c -i
 -e regex -e ^print s21_grep.c -s -c -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -c -i -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -c -v
-for s21_grep.c -s -c -v
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -c -v
--e for -e ^int s21_grep.c -s -c -v
 -e regex -e ^print s21_grep.c -s -c -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -c -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -c -l
@@ -928,28 +675,14 @@ for s21_grep.c -s -c -l
 -e for -e ^int s21_grep.c -s -c -l
 -e regex -e ^print s21_grep.c -s -c -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -c -l -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -c -n
-for s21_grep.c -s -c -n
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -c -n
--e for -e ^int s21_grep.c -s -c -n
 -e regex -e ^print s21_grep.c -s -c -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -c -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -l -e
 for s21_grep.c -s -l -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -s -l -e
 -e for -e ^int s21_grep.c -s -l -e
--e regex -e ^print s21_grep.c -s -l -e -f pattern.txt
--e while -e void s21_grep.c Makefile -s -l -e -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -l -i
-for s21_grep.c -s -l -i
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -l -i
--e for -e ^int s21_grep.c -s -l -i
 -e regex -e ^print s21_grep.c -s -l -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -l -i -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -l -v
-for s21_grep.c -s -l -v
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -l -v
--e for -e ^int s21_grep.c -s -l -v
 -e regex -e ^print s21_grep.c -s -l -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -l -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -l -c
@@ -958,10 +691,6 @@ for s21_grep.c -s -l -c
 -e for -e ^int s21_grep.c -s -l -c
 -e regex -e ^print s21_grep.c -s -l -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -l -c -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -l -n
-for s21_grep.c -s -l -n
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -l -n
--e for -e ^int s21_grep.c -s -l -n
 -e regex -e ^print s21_grep.c -s -l -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -l -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -s -n -e
@@ -969,137 +698,92 @@ for s21_grep.c -s -n -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -s -n -e
 -e for -e ^int s21_grep.c -s -n -e
 -e regex -e ^print s21_grep.c -s -n -e -f pattern.txt
--e while -e void s21_grep.c Makefile -s -n -e -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -n -i
-for s21_grep.c -s -n -i
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -n -i
--e for -e ^int s21_grep.c -s -n -i
 -e regex -e ^print s21_grep.c -s -n -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -n -i -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -n -v
-for s21_grep.c -s -n -v
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -n -v
--e for -e ^int s21_grep.c -s -n -v
 -e regex -e ^print s21_grep.c -s -n -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -n -v -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -n -c
-for s21_grep.c -s -n -c
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -n -c
--e for -e ^int s21_grep.c -s -n -c
 -e regex -e ^print s21_grep.c -s -n -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -n -c -f pattern.txt
-for s21_grep.c s21_grep.h Makefile -s -n -l
-for s21_grep.c -s -n -l
--e for -e ^int s21_grep.c s21_grep.h Makefile -s -n -l
--e for -e ^int s21_grep.c -s -n -l
 -e regex -e ^print s21_grep.c -s -n -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -s -n -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -e -i
 for s21_grep.c -h -e -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -e -i
--e for -e ^int s21_grep.c -h -e -i
 -e regex -e ^print s21_grep.c -h -e -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -e -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -e -v
 for s21_grep.c -h -e -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -e -v
--e for -e ^int s21_grep.c -h -e -v
 -e regex -e ^print s21_grep.c -h -e -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -e -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -e -c
 for s21_grep.c -h -e -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -e -c
--e for -e ^int s21_grep.c -h -e -c
 -e regex -e ^print s21_grep.c -h -e -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -e -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -e -l
 for s21_grep.c -h -e -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -e -l
--e for -e ^int s21_grep.c -h -e -l
 -e regex -e ^print s21_grep.c -h -e -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -e -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -e -n
 for s21_grep.c -h -e -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -e -n
--e for -e ^int s21_grep.c -h -e -n
 -e regex -e ^print s21_grep.c -h -e -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -e -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -i -e
 for s21_grep.c -h -i -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -i -e
 -e for -e ^int s21_grep.c -h -i -e
--e regex -e ^print s21_grep.c -h -i -e -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -i -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -i -v
-for s21_grep.c -h -i -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -i -v
--e for -e ^int s21_grep.c -h -i -v
 -e regex -e ^print s21_grep.c -h -i -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -i -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -i -c
-for s21_grep.c -h -i -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -i -c
--e for -e ^int s21_grep.c -h -i -c
 -e regex -e ^print s21_grep.c -h -i -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -i -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -i -l
-for s21_grep.c -h -i -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -i -l
--e for -e ^int s21_grep.c -h -i -l
 -e regex -e ^print s21_grep.c -h -i -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -i -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -i -n
-for s21_grep.c -h -i -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -i -n
--e for -e ^int s21_grep.c -h -i -n
 -e regex -e ^print s21_grep.c -h -i -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -i -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -v -e
 for s21_grep.c -h -v -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -v -e
 -e for -e ^int s21_grep.c -h -v -e
--e regex -e ^print s21_grep.c -h -v -e -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -v -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -v -i
-for s21_grep.c -h -v -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -v -i
--e for -e ^int s21_grep.c -h -v -i
 -e regex -e ^print s21_grep.c -h -v -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -v -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -v -c
-for s21_grep.c -h -v -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -v -c
--e for -e ^int s21_grep.c -h -v -c
 -e regex -e ^print s21_grep.c -h -v -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -v -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -v -l
-for s21_grep.c -h -v -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -v -l
--e for -e ^int s21_grep.c -h -v -l
 -e regex -e ^print s21_grep.c -h -v -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -v -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -v -n
-for s21_grep.c -h -v -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -v -n
--e for -e ^int s21_grep.c -h -v -n
 -e regex -e ^print s21_grep.c -h -v -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -v -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -c -e
 for s21_grep.c -h -c -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -c -e
 -e for -e ^int s21_grep.c -h -c -e
--e regex -e ^print s21_grep.c -h -c -e -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -c -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -c -i
-for s21_grep.c -h -c -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -c -i
--e for -e ^int s21_grep.c -h -c -i
 -e regex -e ^print s21_grep.c -h -c -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -c -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -c -v
-for s21_grep.c -h -c -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -c -v
--e for -e ^int s21_grep.c -h -c -v
 -e regex -e ^print s21_grep.c -h -c -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -c -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -c -l
@@ -1109,27 +793,19 @@ for s21_grep.c -h -c -l
 -e regex -e ^print s21_grep.c -h -c -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -c -l -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -c -n
-for s21_grep.c -h -c -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -c -n
--e for -e ^int s21_grep.c -h -c -n
 -e regex -e ^print s21_grep.c -h -c -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -c -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -l -e
 for s21_grep.c -h -l -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -l -e
 -e for -e ^int s21_grep.c -h -l -e
--e regex -e ^print s21_grep.c -h -l -e -f pattern.txt
--e while -e void s21_grep.c Makefile -h -l -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -l -i
-for s21_grep.c -h -l -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -l -i
--e for -e ^int s21_grep.c -h -l -i
 -e regex -e ^print s21_grep.c -h -l -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -l -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -l -v
-for s21_grep.c -h -l -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -l -v
--e for -e ^int s21_grep.c -h -l -v
 -e regex -e ^print s21_grep.c -h -l -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -l -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -l -c
@@ -1139,38 +815,27 @@ for s21_grep.c -h -l -c
 -e regex -e ^print s21_grep.c -h -l -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -l -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -l -n
-for s21_grep.c -h -l -n
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -l -n
--e for -e ^int s21_grep.c -h -l -n
 -e regex -e ^print s21_grep.c -h -l -n -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -l -n -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -n -e
 for s21_grep.c -h -n -e
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -n -e
 -e for -e ^int s21_grep.c -h -n -e
--e regex -e ^print s21_grep.c -h -n -e -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -n -e -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -n -i
-for s21_grep.c -h -n -i
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -n -i
--e for -e ^int s21_grep.c -h -n -i
 -e regex -e ^print s21_grep.c -h -n -i -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -n -i -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -n -v
-for s21_grep.c -h -n -v
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -n -v
--e for -e ^int s21_grep.c -h -n -v
 -e regex -e ^print s21_grep.c -h -n -v -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -n -v -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -n -c
-for s21_grep.c -h -n -c
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -n -c
--e for -e ^int s21_grep.c -h -n -c
 -e regex -e ^print s21_grep.c -h -n -c -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -n -c -f pattern.txt
 for s21_grep.c s21_grep.h Makefile -h -n -l
-for s21_grep.c -h -n -l
 -e for -e ^int s21_grep.c s21_grep.h Makefile -h -n -l
--e for -e ^int s21_grep.c -h -n -l
 -e regex -e ^print s21_grep.c -h -n -l -f pattern.txt
 -e while -e void s21_grep.c Makefile -h -n -l -f pattern.txt
