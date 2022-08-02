@@ -168,14 +168,14 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
                         }
                     }
                 }
+                fclose(file);
                 print_for_flag_o(fp, counter_pars_files, string, p_pattern, pattern_names);
                 once_output_string(fp, counter_pars_files, same_str, &er_counter);
                 er_counter = 10;
-                fclose(file);
             }
+            regfree(&preg);
             fp = strtok(NULL, "|");
         }
-        regfree(&preg);
     }
 }
 
@@ -188,7 +188,7 @@ int pars_string(int ARGC, char **ARGV, int *mass) {
     char* e_check = "-e";
     char* f_check = "-f";
     int true_amount_file = 0;
-    for (int i = 1; i <= ARGC; i++) {  // 1 - файл, 2 - паттерн, 3 - флаг.
+    for (int i = 1; i < ARGC; i++) {  // 1 - файл, 2 - паттерн, 3 - флаг.
         if ((check = fopen(ARGV[i], "r")) == NULL) {
             if (ARGV[i] == NULL) {
             } else {
@@ -235,10 +235,13 @@ int pars_string(int ARGC, char **ARGV, int *mass) {
         } else if (strcmp(ARGV[i - 1], "-e") == 0) {
             mass[counter_for_mass] = 2;
             counter_for_mass++;
+            fclose(check);
         } else if (strcmp(ARGV[i - 1], "./s21_grep") == 0) {
             mass[counter_for_mass] = 2;
             counter_for_mass++;
+            fclose(check);
         } else if (strcmp(ARGV[i - 1], f_check) == 0 && flag.f_flag == 1) {
+            fclose(check);
             fprintf(stderr, "grep: %s: No such file or directory\n", ARGV[i]);
             exit(1);
         } else if (strcmp(ARGV[i - 1], eq_flag_status((&ARGV[i - 1]), ch)) == 0) {
@@ -247,11 +250,13 @@ int pars_string(int ARGC, char **ARGV, int *mass) {
             amount_file++;
             true_amount_file++;
             memset(ch, '\0', sizeof(ch));
+            fclose(check);
         } else {
             mass[counter_for_mass] = 1;
             counter_for_mass++;
             amount_file++;
             true_amount_file++;
+            fclose(check);
         }
     }
 
@@ -501,5 +506,6 @@ void print_for_flag_o(char* fp, int count_file, char* string, char* p_pattern, c
             j = 0;
             more_counters = 0;
         }
+        fclose(file);
     }
 }

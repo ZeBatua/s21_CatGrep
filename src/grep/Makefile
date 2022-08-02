@@ -24,7 +24,8 @@ valgrind:
      --track-origins=yes \
      --verbose \
      --log-file=valgrind-out.txt \
-     ./s21_grep -e -v -l -c -i 123 qwe *.c *.txt
+     ./s21_grep -e 123 *.txt
+#  ./s21_grep -e -v -l -c -i 123 qwe *.c *.txt
 
 clean: 
 	rm -rf s21_grep
