@@ -1,0 +1,87 @@
+==74121== Memcheck, a memory error detector
+==74121== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==74121== Using Valgrind-3.19.0.GIT-lbmacos-6ff08b6e31-20220212 and LibVEX; rerun with -h for copyright info
+==74121== Command: ./s21_grep -e -v -l -c -i 123 qwe s21_grep.c log.txt regular.txt some_text.txt
+==74121== Parent PID: 74120
+==74121== 
+--74121-- 
+--74121-- Valgrind options:
+--74121--    --leak-check=full
+--74121--    --show-leak-kinds=all
+--74121--    --track-origins=yes
+--74121--    --verbose
+--74121--    --log-file=valgrind-out.txt
+--74121-- Output from sysctl({CTL_KERN,KERN_VERSION}):
+--74121--   Darwin Kernel Version 20.6.0: Tue Apr 19 21:04:45 PDT 2022; root:xnu-7195.141.29~1/RELEASE_X86_64
+--74121-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand-rdseed
+--74121-- Page sizes: currently 4096, max supported 4096
+--74121-- Valgrind library directory: /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind
+--74121-- ./s21_grep (rx at 0x100000000, rw at 0x100004000)
+--74121--    reading syms   from primary file (13 50)
+--74121--    dSYM= ./s21_grep.dSYM/Contents/Resources/DWARF/s21_grep
+--74121--    reading dwarf3 from dsyms file
+--74121-- /usr/lib/dyld (rx at 0x100010000, rw at 0x1000ac000)
+--74121--    reading syms   from primary file (5 2905)
+--74121-- Scheduler: using generic scheduler lock implementation.
+--74121-- Reading suppressions file: /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/default.supp
+==74121== embedded gdbserver: reading from /var/folders/zz/zyxvpxvq6csfxvn_n000266m000jjn/T//vgdb-pipe-from-vgdb-to-74121-by-thalassa-on-???
+==74121== embedded gdbserver: writing to   /var/folders/zz/zyxvpxvq6csfxvn_n000266m000jjn/T//vgdb-pipe-to-vgdb-from-74121-by-thalassa-on-???
+==74121== embedded gdbserver: shared mem   /var/folders/zz/zyxvpxvq6csfxvn_n000266m000jjn/T//vgdb-pipe-shared-mem-vgdb-74121-by-thalassa-on-???
+==74121== 
+==74121== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==74121== don't want to do, unless you know exactly what you're doing,
+==74121== or are doing some strange experiment):
+==74121==   /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/../../bin/vgdb --pid=74121 ...command...
+==74121== 
+==74121== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==74121==   /path/to/gdb ./s21_grep
+==74121== and then give GDB the following command
+==74121==   target remote | /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/../../bin/vgdb --pid=74121
+==74121== --pid is optional if only one valgrind process is running
+==74121== 
+--74121-- REDIR: 0x100068c00 (dyld:strcmp) redirected to 0x258058676 (???)
+--74121-- REDIR: 0x100062b74 (dyld:arc4random) redirected to 0x258058714 (???)
+--74121-- REDIR: 0x100067fe0 (dyld:strlen) redirected to 0x258058645 (???)
+--74121-- REDIR: 0x100068f00 (dyld:strcpy) redirected to 0x258058692 (???)
+--74121-- REDIR: 0x100066017 (dyld:strcat) redirected to 0x258058656 (???)
+--74121-- REDIR: 0x100067dc7 (dyld:strlcat) redirected to 0x2580586af (???)
+==74121== Warning: set address range perms: large range [0x7fff203d7000, 0x8000201d7000) (defined)
+==74121== Warning: set address range perms: large range [0x7fff206ab000, 0x7fff7fd73000) (defined)
+==74121== Warning: set address range perms: large range [0x7fff8e63b000, 0x7fffc03d7000) (noaccess)
+==74121== Warning: set address range perms: large range [0x7fffc03d7000, 0x7fffe329b000) (defined)
+==74121== Warning: set address range perms: large range [0x7fffe329b000, 0x7fffffe00000) (noaccess)
+--74121-- /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/vgpreload_core-amd64-darwin.so (rx at 0x100128000, rw at 0x10012c000)
+--74121--    reading syms   from primary file (3 54)
+--74121--    dSYM= /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/vgpreload_core-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_core-amd64-darwin.so
+--74121-- /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/vgpreload_memcheck-amd64-darwin.so (rx at 0x100134000, rw at 0x10013c000)
+--74121--    reading syms   from primary file (75 63)
+--74121--    dSYM= /Users/thalassa/.brew/Cellar/valgrind/HEAD-6ff08b6/libexec/valgrind/vgpreload_memcheck-amd64-darwin.so.dSYM/Contents/Resources/DWARF/vgpreload_memcheck-amd64-darwin.so
+--74121-- /usr/local/lib/gcc/10/libgcc_s.1.dylib (rx at 0x100144000, rw at 0x10015c000)
+--74121--    reading syms   from primary file (159 1243)
+==74121== Syscall param open(filename) points to unaddressable byte(s)
+==74121==    at 0x7FFF206B0CD6: ??? (in /dev/ttys001)
+==74121==    by 0x7FFF206BC3FB: ??? (in /dev/ttys001)
+==74121==    by 0x7FFF205F4874: ??? (in /dev/ttys001)
+==74121==    by 0x100002442: pars_string (s21_grep.c:194)
+==74121==    by 0x100001C0D: main (s21_grep.c:43)
+==74121==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==74121== 
+==74121== 
+==74121== HEAP SUMMARY:
+==74121==     in use at exit: 0 bytes in 0 blocks
+==74121==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==74121== 
+==74121== All heap blocks were freed -- no leaks are possible
+==74121== 
+==74121== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+==74121== 
+==74121== 1 errors in context 1 of 1:
+==74121== Syscall param open(filename) points to unaddressable byte(s)
+==74121==    at 0x7FFF206B0CD6: ??? (in /dev/ttys001)
+==74121==    by 0x7FFF206BC3FB: ??? (in /dev/ttys001)
+==74121==    by 0x7FFF205F4874: ??? (in /dev/ttys001)
+==74121==    by 0x100002442: pars_string (s21_grep.c:194)
+==74121==    by 0x100001C0D: main (s21_grep.c:43)
+==74121==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==74121== 
+==74121== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

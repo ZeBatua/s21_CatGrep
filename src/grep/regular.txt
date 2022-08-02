@@ -1,7 +1,7 @@
 -v
 lol123
 gyg
-12=312==
+regular.txt12=312==
 3xt123=((()))
 2 regulartxt
--v (((((())))))
+-v (((((())))regular.txt

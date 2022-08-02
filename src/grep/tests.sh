@@ -9,11 +9,11 @@ echo Test 2-------------------------------------------------
 grep -i rabbit test/test1.txt > grep
 diff -s s21_grep_test grep
 echo Test 3-------------------------------------------------
-./s21_grep -i '(' test/test1.txt > s21_grep_test
+./s21_grep -i '\(' test/test1.txt > s21_grep_test
 grep -i '(' test/test1.txt > grep
 diff -s s21_grep_test grep
 echo Test 4-------------------------------------------------
-./s21_grep -i '(' test/test1.txt test/test2.txt > s21_grep_test
+./s21_grep -i '\(' test/test1.txt test/test2.txt > s21_grep_test
 grep -i '(' test/test1.txt test/test2.txt > grep
 diff -s s21_grep_test grep
 echo Test 5-------------------------------------------------
@@ -37,7 +37,7 @@ echo Test 9-------------------------------------------------
 grep -c zopa test/test1.txt test/test2.txt > grep
 diff -s s21_grep_test grep
 echo Test 10-------------------------------------------------
-./s21_grep -l '(' test/test1.txt test/test2.txt > s21_grep_test
+./s21_grep -l '\(' test/test1.txt test/test2.txt > s21_grep_test
 grep -l '(' test/test1.txt test/test2.txt > grep
 diff -s s21_grep_test grep
 echo Test 11-------------------------------------------------
@@ -137,6 +137,6 @@ echo Test 35-------------------------------------------------
 grep -e 'z*opa' test/test1.txt test/test2.txt > grep
 diff -s s21_grep_test grep
 echo Test 36-------------------------------------------------
-./s21_grep -e 'z?opa' test/test1.txt test/test2.txt > s21_grep_test
-grep -e 'z?opa' test/test1.txt test/test2.txt > grep
+./s21_grep -o -v qwe  regular.txt  > s21_grep_test
+grep -o -v qwe  regular.txt  > grep
 diff -s s21_grep_test grep

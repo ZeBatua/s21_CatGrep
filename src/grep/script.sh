@@ -23,8 +23,8 @@ done
 for flag in -i -v -c -l -n -o -s -h
 do
     echo "TEST $flag"
-    ./s21_grep $flag -e "" -e "abc" some_text.txt >s21_grep_result
-    grep $flag -e "" -e "abc" some_text.txt >grep_result
+    ./s21_grep $flag -e "1" -e "abc" some_text.txt >s21_grep_result
+    grep $flag -e "1" -e "abc" some_text.txt >grep_result
     DIFF_RES="$(diff -s s21_grep_result grep_result)"
     if [ "$DIFF_RES" == "Files s21_grep_result and grep_result are identical" ]
     then
