@@ -259,7 +259,6 @@ int pars_string(int ARGC, char **ARGV, int *mass) {
             fclose(check);
         }
     }
-
     if (counter_E > 0) {
         for (int t = 0; t != 1023; t++) {
             if (mass[t] == 2) {
@@ -271,7 +270,6 @@ int pars_string(int ARGC, char **ARGV, int *mass) {
             }
         }
     }
-
     if (amount_file == 0) {
         exit(1);
     }

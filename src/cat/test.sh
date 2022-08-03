@@ -1,99 +1,76 @@
 #!/bin/bash
-COUNTER_SUCCESS=0
-COUNTER_FAIL=0
-DIFF_RES=""
-TEST_FILE="s21.txt"
-echo "" > log.txt
-for var in -b -e -n -s -t #  -v -E -T --number-nonblank --number --squeeze-blank
-do
-          TEST1="$var $TEST_FILE"
-          echo "$TEST1"
-          ./s21_cat $TEST1 > s21_cat.txt
-          cat $TEST1 > cat.txt
-          DIFF_RES="$(diff -s s21_cat.txt cat.txt)"
-          if [ "$DIFF_RES" == "Files s21_cat.txt and cat.txt are identical" ]
-            then
-              (( COUNTER_SUCCESS++ ))
-            else
-              echo "$TEST1" >> log.txt
-              (( COUNTER_FAIL++ ))
-          fi
-          rm s21_cat.txt cat.txt
-done
-for var in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-do
-  for var2 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-  do
-        if [ $var != $var2 ]
-        then
-          TEST1="$var $var2 $TEST_FILE"
-          echo "$TEST1"
-          ./s21_cat $TEST1 > s21_cat.txt
-          cat $TEST1 > cat.txt
-          DIFF_RES="$(diff -s s21_cat.txt cat.txt)"
-          if [ "$DIFF_RES" == "Files s21_cat.txt and cat.txt are identical" ]
-            then
-              (( COUNTER_SUCCESS++ ))
-            else
-              echo "$TEST1" >> log.txt
-              (( COUNTER_FAIL++ ))
-          fi
-          rm s21_cat.txt cat.txt
-        fi
-  done
-done
-for var in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-do
-  for var2 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-  do
-      for var3 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-      do
-        if [ $var != $var2 ] && [ $var2 != $var3 ] && [ $var != $var3 ]
-        then
-          TEST1="$var $var2 $var3 $TEST_FILE"
-          echo "$TEST1"
-          ./s21_cat $TEST1 > s21_cat.txt
-          cat $TEST1 > cat.txt
-          DIFF_RES="$(diff -s s21_cat.txt cat.txt)"
-          if [ "$DIFF_RES" == "Files s21_cat.txt and cat.txt are identical" ]
-            then
-              (( COUNTER_SUCCESS++ ))
-            else
-              echo "$TEST1" >> log.txt
-              (( COUNTER_FAIL++ ))
-          fi
-          rm s21_cat.txt cat.txt
-        fi
-      done
-  done
-done
-for var in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-do
-  for var2 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-  do
-      for var3 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-      do
-          for var4 in -b -e -n -s -t -v #-E -T --number-nonblank --number --squeeze-blank
-          do
-            if [ $var != $var2 ] && [ $var2 != $var3 ] && [ $var != $var3 ] && [ $var != $var4 ] && [ $var2 != $var4 ] && [ $var3 != $var4 ]
-            then
-              TEST1="$var $var2 $var3 $var4 $TEST_FILE"
-              echo "$TEST1"
-              ./s21_cat $TEST1 > s21_cat.txt
-              cat $TEST1 > cat.txt
-              DIFF_RES="$(diff -s s21_cat.txt cat.txt)"
-              if [ "$DIFF_RES" == "Files s21_cat.txt and cat.txt are identical" ]
-                then
-                  (( COUNTER_SUCCESS++ ))
-                else
-                  echo "$TEST1" >> log.txt
-                  (( COUNTER_FAIL++ ))
-              fi
-              rm s21_cat.txt cat.txt
-            fi
-          done
-      done
-  done
-done
-echo "SUCCESS: $COUNTER_SUCCESS"
-echo "FAIL: $COUNTER_FAIL"
+echo Test 1-------------------------------------------------
+# Test_1
+./s21_cat test/test1.txt > s21_cat_test
+cat test/test1.txt > cat
+diff -s s21_cat_test cat
+echo Test 2-------------------------------------------------
+# Test_2
+./s21_cat test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 3-------------------------------------------------
+# Test_3
+./s21_cat -b test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -b test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 4-------------------------------------------------
+# Test_4
+./s21_cat -e -v test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -e -v test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 5-------------------------------------------------
+# Test_5
+./s21_cat -n test/test1.txt test/test2.txt > s21_cat_test
+cat -n test/test1.txt test/test2.txt > cat
+diff -s s21_cat_test cat
+echo Test 6-------------------------------------------------
+# Test_6
+./s21_cat -s test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -s test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 7-------------------------------------------------
+# Test_7
+./s21_cat -t -v test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -t -v test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 8-------------------------------------------------
+# Test_8
+./s21_cat -v test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -v test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 9-------------------------------------------------
+# Test_9
+./s21_cat -E test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -e test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 10-------------------------------------------------
+# Test_10
+./s21_cat --number test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -n test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 11-------------------------------------------------
+# Test_11
+./s21_cat --squeeze-blank test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -s test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 12-------------------------------------------------
+# Test_12
+./s21_cat -E test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -e test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 13-------------------------------------------------
+# Test_13
+./s21_cat -T test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -t test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 14-------------------------------------------------
+# Test_14
+./s21_cat --number-nonblank test/test1.txt test/test2.txt test/test3.txt > s21_cat_test
+cat -b test/test1.txt test/test2.txt test/test3.txt > cat
+diff -s s21_cat_test cat
+echo Test 15-------------------------------------------------
+# Test_15
+./s21_cat -e -v test/test2.txt > s21_cat_test
+cat -e -v test/test2.txt > cat
+diff -s s21_cat_test cat
