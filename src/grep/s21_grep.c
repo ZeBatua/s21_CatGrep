@@ -84,7 +84,6 @@ void s21_grep(char* filenames, char* pattern_names, int counter_pars_files) {
         while (fp != NULL) {
             same_str = 0;
             amount_str = 0;
-
             FILE *file;
             if ((file = fopen(fp, "r")) != NULL) {
                 if (flag.f_flag == 1) {
